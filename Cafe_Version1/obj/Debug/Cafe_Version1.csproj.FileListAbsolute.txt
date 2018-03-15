@@ -1,0 +1,10 @@
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\bin\Debug\Cafe_Version1.exe.config
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\bin\Debug\Cafe_Version1.exe
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\bin\Debug\Cafe_Version1.pdb
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\obj\Debug\Cafe_Version1.csprojResolveAssemblyReference.cache
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\obj\Debug\Cafe_Version1.Properties.Resources.resources
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\obj\Debug\Cafe_Version1.csproj.GenerateResource.Cache
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\obj\Debug\Cafe_Version1.exe
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\obj\Debug\Cafe_Version1.pdb
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Do An C#\He Quan Tri CSDL\Cafe_Version1\Cafe_Version1\obj\Debug\Cafe_Version1.fromDangNhap.resources
