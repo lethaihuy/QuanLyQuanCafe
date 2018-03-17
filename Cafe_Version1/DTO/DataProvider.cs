@@ -8,11 +8,28 @@ using System.Threading.Tasks;
 
 namespace Cafe_Version1.DTO
 {
-    public class DataProvider
+    class DataProvider
     {
         private string chuoiKetNoi = @"Data Source=HUY\SQLEXPRESS;Initial Catalog=CAFE_VERSION_1;Integrated Security=True";
+        private static DataProvider instance;
 
-        public IEnumerable<DataRow> Rows { get; internal set; }
+        internal static DataProvider Instance
+        {
+            get
+            {
+                if(instance == null)
+                {
+                    instance = new DataProvider();
+                }
+                return DataProvider.instance;
+            }
+
+            set
+            {
+                instance = value;
+            }
+        }
+
 
         //Trả về bảng khi thực thi câu lệnh select
         public DataTable ExecuteQuery(string query, object[] thamSo = null)

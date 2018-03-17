@@ -16,7 +16,7 @@ namespace Cafe_Version1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fromDangNhap());
+            Application.Run(new formDangNhap());
         }
     }
 }

@@ -8,21 +8,39 @@ using System.Threading.Tasks;
 
 namespace Cafe_Version1.DAL
 {
-    public class AccountDAL
+    class AccountDAL
     {
-        DataProvider data = new DataProvider();
-        public bool DangNhap(string username, string password)
+        private static AccountDAL instance;
+
+        internal static AccountDAL Instance
         {
-            string query = "SELECT * FROM WHERE username = '" + username + "' AND password='" + password + "'";
-            DataTable result = data.ExecuteQuery(query);
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AccountDAL();
+                }
+                return AccountDAL.instance;
+            }
+
+            set
+            {
+                instance = value;
+            }
+        }
+
+        public bool Login(string username, string password)
+        {
+            string query = "SELECT * FROM Account WHERE username = '" + username + "' AND password='" + password + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
 
         public Account LayTaiKhoanDangNhap(string name)
         {
-            DataTable duLieu = data.ExecuteQuery("SELECT * from Account WHERE username = '" + name + "'");
+            DataTable duLieu = DataProvider.Instance.ExecuteQuery("SELECT * from Account WHERE username = '" + name + "'");
 
-            foreach (DataRow item in data.Rows)
+            foreach (DataRow item in duLieu.Rows)
             {
                 return new Account(item);
             }

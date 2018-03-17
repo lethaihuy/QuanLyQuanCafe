@@ -11,7 +11,7 @@ namespace Cafe_Version1.DTO
     {
         private string username, password, tenHienThi;
         private int loaiTaiKhoan;
-        private DataRow item;
+        private static Account instance;
 
         public Account(string name, string password, string tenHienThi, int loaiTaiKhoan)
         {
@@ -23,7 +23,10 @@ namespace Cafe_Version1.DTO
 
         public Account(DataRow item)
         {
-            this.item = item;
+            this.username = item["username"].ToString();
+            this.password = item["password"].ToString();
+            this.tenHienThi = item["tenHienThi"].ToString();
+            this.loaiTaiKhoan = int.Parse(item["loaiTaiKhoan"].ToString());
         }
 
         public string Username
@@ -62,6 +65,19 @@ namespace Cafe_Version1.DTO
             set
             {
                 tenHienThi = value;
+            }
+        }
+
+        public static Account Instance
+        {
+            get
+            {
+                return instance;
+            }
+
+            set
+            {
+                instance = value;
             }
         }
     }
