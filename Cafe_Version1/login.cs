@@ -46,10 +46,5 @@ namespace Cafe_Version1
                 MessageBox.Show("Username hoặc password không đúng!");
             }
         }
-
-        private void formDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
