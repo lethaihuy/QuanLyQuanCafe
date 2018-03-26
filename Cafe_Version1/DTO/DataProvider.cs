@@ -17,7 +17,7 @@ namespace Cafe_Version1.DTO
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                 {
                     instance = new DataProvider();
                 }
@@ -45,8 +45,11 @@ namespace Cafe_Version1.DTO
                     int i = 0;
                     foreach (string item in danhSachThamSo)
                     {
-                        command.Parameters.AddWithValue(item, thamSo[i]);
-                        i++;
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, thamSo[i]);
+                            i++;
+                        }
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -70,14 +73,43 @@ namespace Cafe_Version1.DTO
                 int i = 0;
                 foreach (string item in danhSachThamSo)
                 {
-                    command.Parameters.AddWithValue(item, thamSo[i]);
-                    i++;
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, thamSo[i]);
+                        i++;
+                    }
                 }
             }
             soDong = command.ExecuteNonQuery();
             connect.Close();
 
             return soDong;
+        }
+
+        public object ExecuteScalar(string query, object[] thamSo = null)
+        {
+            object obj;
+            SqlConnection connect = new SqlConnection(chuoiKetNoi);
+            connect.Open();
+
+            SqlCommand command = new SqlCommand(query, connect);
+            if (thamSo != null)
+            {
+                string[] danhSachThamSo = query.Split(' ');
+                int i = 0;
+                foreach (string item in danhSachThamSo)
+                {
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, thamSo[i]);
+                        i++;
+                    }
+                }
+            }
+            obj = command.ExecuteScalar();
+            connect.Close();
+
+            return obj;
         }
 
     }

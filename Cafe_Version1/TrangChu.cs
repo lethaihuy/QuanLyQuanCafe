@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cafe_Version1.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,24 +15,29 @@ namespace Cafe_Version1
     {
         bool drag = false;
         Point startPoint = new Point(0, 0);
+        public DateTime time;
         public formTrangChu()
         {
             InitializeComponent();
             timer1.Start();
         }
 
-        private void btnHeThong_Click(object sender, EventArgs e)
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            pnLeft.Top = btnHeThong.Top;
-            pnLeft.Height = btnHeThong.Height;
+            pnLeft.Top = btnThanhToan.Top;
+            pnLeft.Height = btnThanhToan.Height;
             pnLeft.Visible = true;
             Color.FromArgb(128, 204, 255);
+            formHome home = new formHome();
+            this.Hide();
+            home.ShowDialog();
+            this.Show();
         }
 
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
             pnLeft.Visible = true;
-            btnHeThong.BackColor = Color.FromArgb(128, 204, 255);
+            btnThanhToan.BackColor = Color.FromArgb(128, 204, 255);
             pnLeft.Top = btnDanhMuc.Top;
             pnLeft.Height = btnDanhMuc.Height;
         }
@@ -58,11 +64,14 @@ namespace Cafe_Version1
 
         private void formTrangChu_Load(object sender, EventArgs e)
         {
+            this.pnLeft.Visible = false;
+            time = DateTime.Now;
+            this.tileItem2.Text = time.ToString("dddd") + Environment.NewLine + time.ToString("dd");     
         }
         int chay = 10;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime time = DateTime.Now;
+            time = DateTime.Now;
             lbThoiGian.Text = time.ToString("HH:mm:ss");
             lbNgay.Text = time.ToString("dddd, dd/MM/yyyy");
             lbXinChao.Location = new Point(lbXinChao.Location.X + chay, lbXinChao.Location.Y);
@@ -96,5 +105,12 @@ namespace Cafe_Version1
         {
             this.Hide();
         }
+
+        private void itemUser_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            formUser f = new formUser();
+            f.ShowDialog();
+        }
+
     }
 }
