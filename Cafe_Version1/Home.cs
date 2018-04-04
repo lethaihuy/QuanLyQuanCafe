@@ -21,7 +21,6 @@ namespace Cafe_Version1
             InitializeComponent();
             LoadDanhSachBan();
             LoadDanhSachDanhMuc();
-            //LoadDanhSachDoUongTheoDanhMuc();
         }
 
         public void LoadDanhSachBan()
@@ -47,12 +46,11 @@ namespace Cafe_Version1
                 {
                     btnBan.BackColor = Color.LightPink;
                 }
+
                 flpDanhSachBan.Controls.Add(btnBan);
             }
         }
-
-
-
+        
         public void LoadDanhSachDanhMuc()
         {
             List<DanhMuc> dsDanhMuc = DanhMucDAL.Instance.LayDanhSachDanhMuc();
@@ -73,7 +71,7 @@ namespace Cafe_Version1
                 listViewHoaDon.Items.Add(cacThanhPhanHoaDon);
                 tongTien += item.TongTien;
             }
-            this.lbTongTien.Text = "Tổng tiền = " + String.Format("{0:0,0 vnđ}", tongTien);
+            this.lbTongTien.Text = "Tổng tiền = " + String.Format("{0:0,0 VND}", tongTien);
 
         }
 
@@ -85,6 +83,7 @@ namespace Cafe_Version1
             //(sender as Button).Text += Environment.NewLine + "Xử lý";
             int IDBan = ((sender as Button).Tag as Ban)._ID;
             listViewHoaDon.Tag = (sender as Button).Tag;
+            lbDangChon.Text = "Đang chọn: " + ((sender as Button).Tag as Ban).TenBan;
             HienThiHoaDonTheoBan(IDBan);
         }
         private void cbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,9 +115,13 @@ namespace Cafe_Version1
 
         private void BtnDoUong_MouseDown(object sender, MouseEventArgs e)
         {
-            ListView ds = new ListView();
-            ds.Items.Add("Thêm nhiều");
-            ds.Items.Add("Hủy");
+           if(e.Button == MouseButtons.Right)
+            {
+                ContextMenuStrip menu = new ContextMenuStrip();
+                menu.Items.Add("Thêm nhiều");
+                menu.Items.Add("Hủy");
+                menu.Show(flpDoUongTheoDanhMuc, new Point(e.X, e.Y));
+            }
         }
 
         private void BtnDoUong_MouseClick(object sender, MouseEventArgs e)
@@ -143,22 +146,24 @@ namespace Cafe_Version1
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Ban ban = listViewHoaDon.Tag as Ban;
-            if(ban == null)
+            if (ban == null)
             {
                 MessageBox.Show("Chưa chọn bàn cần thanh toán !", "Thông báo");
             }
             else
             {
                 int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
-                if(idHoaDon != -1)
+                if (idHoaDon != -1)
                 {
-                    MessageBox.Show("Bạn muốn thanh toán " + ban.TenBan + " ?", "Thông báo");
-                    HoaDonDAL.Instance.ThanhToan(idHoaDon);
-                    HienThiHoaDonTheoBan(ban._ID);
-                   
+                    if (MessageBox.Show("Bạn muốn thanh toán " + ban.TenBan + " ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    {
+                        HoaDonDAL.Instance.ThanhToan(idHoaDon);
+                        HienThiHoaDonTheoBan(ban._ID);
+                        LoadDanhSachBan();
+                    }
                 }
             }
-            LoadDanhSachBan();
+
         }
 
         #endregion
@@ -193,7 +198,6 @@ namespace Cafe_Version1
         private void formHome_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'cAFE_VERSION_1DataSet.DanhMuc' table. You can move, or remove it, as needed.
-            this.danhMucTableAdapter.Fill(this.cAFE_VERSION_1DataSet.DanhMuc);
             listViewHoaDon.CheckBoxes = true;
         }
 

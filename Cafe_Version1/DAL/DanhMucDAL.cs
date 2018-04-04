@@ -15,7 +15,7 @@ namespace Cafe_Version1.DAL
         public List<DanhMuc> LayDanhSachDanhMuc()
         {
             List<DanhMuc> dsDanhMuc = new List<DanhMuc>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM DanhMuc");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM DanhMuc ORDER BY tenDanhMuc");
             foreach (DataRow item in data.Rows)
             {
                 DanhMuc dm = new DanhMuc(item);
@@ -33,6 +33,21 @@ namespace Cafe_Version1.DAL
                 dm = new DanhMuc(item);
             }
             return dm;
+        }
+
+        public bool ThemDanhMuc(string ten)
+        {
+            return DataProvider.Instance.ExecuteQuerySuccess("INSERT DanhMuc(tenDanhMuc) VALUES(N'" + ten + "')") > 0;
+        }
+
+        public bool SuaDanhMuc(int id, string ten)
+        {
+            return DataProvider.Instance.ExecuteQuerySuccess("UPDATE DanhMuc SET tenDanhMuc = N'" + ten + "' WHERE ID = " + id) > 0;
+        }
+
+        public bool XoaDanhMuc(int id)
+        {
+            return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM DanhMuc WHERE ID = " + id) > 0;
         }
         internal static DanhMucDAL Instance
         {

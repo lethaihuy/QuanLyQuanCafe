@@ -47,10 +47,8 @@
             this.flpDanhSachBan = new System.Windows.Forms.FlowLayoutPanel();
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cAFE_VERSION_1DataSet = new Cafe_Version1.CAFE_VERSION_1DataSet();
             this.flpDoUongTheoDanhMuc = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.danhMucTableAdapter = new Cafe_Version1.CAFE_VERSION_1DataSetTableAdapters.DanhMucTableAdapter();
             this.listViewHoaDon = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -66,13 +64,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbDangChon = new System.Windows.Forms.Label();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.btnGopBan = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pnHeaderHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cAFE_VERSION_1DataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tileGroup1
@@ -185,11 +188,12 @@
             // 
             // flpDanhSachBan
             // 
+            this.flpDanhSachBan.AutoScroll = true;
             this.flpDanhSachBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flpDanhSachBan.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpDanhSachBan.Location = new System.Drawing.Point(0, 30);
             this.flpDanhSachBan.Name = "flpDanhSachBan";
-            this.flpDanhSachBan.Size = new System.Drawing.Size(536, 570);
+            this.flpDanhSachBan.Size = new System.Drawing.Size(548, 570);
             this.flpDanhSachBan.TabIndex = 3;
             // 
             // cbDanhMuc
@@ -200,7 +204,7 @@
             this.cbDanhMuc.DisplayMember = "tenDanhMuc";
             this.cbDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDanhMuc.FormattingEnabled = true;
-            this.cbDanhMuc.Location = new System.Drawing.Point(546, 35);
+            this.cbDanhMuc.Location = new System.Drawing.Point(561, 35);
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(192, 27);
             this.cbDanhMuc.TabIndex = 4;
@@ -209,17 +213,12 @@
             // danhMucBindingSource
             // 
             this.danhMucBindingSource.DataMember = "DanhMuc";
-            this.danhMucBindingSource.DataSource = this.cAFE_VERSION_1DataSet;
-            // 
-            // cAFE_VERSION_1DataSet
-            // 
-            this.cAFE_VERSION_1DataSet.DataSetName = "CAFE_VERSION_1DataSet";
-            this.cAFE_VERSION_1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flpDoUongTheoDanhMuc
             // 
+            this.flpDoUongTheoDanhMuc.AutoScroll = true;
             this.flpDoUongTheoDanhMuc.BackColor = System.Drawing.Color.White;
-            this.flpDoUongTheoDanhMuc.Location = new System.Drawing.Point(546, 81);
+            this.flpDoUongTheoDanhMuc.Location = new System.Drawing.Point(561, 81);
             this.flpDoUongTheoDanhMuc.Name = "flpDoUongTheoDanhMuc";
             this.flpDoUongTheoDanhMuc.Size = new System.Drawing.Size(192, 303);
             this.flpDoUongTheoDanhMuc.TabIndex = 5;
@@ -228,10 +227,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // danhMucTableAdapter
-            // 
-            this.danhMucTableAdapter.ClearBeforeFill = true;
             // 
             // listViewHoaDon
             // 
@@ -287,7 +282,7 @@
             // 
             this.lbTongTien.AutoSize = true;
             this.lbTongTien.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbTongTien.Location = new System.Drawing.Point(760, 412);
+            this.lbTongTien.Location = new System.Drawing.Point(7, 54);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(72, 19);
             this.lbTongTien.TabIndex = 11;
@@ -295,7 +290,7 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(546, 437);
+            this.btnThanhToan.Location = new System.Drawing.Point(561, 411);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(104, 36);
             this.btnThanhToan.TabIndex = 12;
@@ -375,18 +370,67 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Đơn giá";
             // 
+            // lbDangChon
+            // 
+            this.lbDangChon.AutoSize = true;
+            this.lbDangChon.Location = new System.Drawing.Point(3, 22);
+            this.lbDangChon.Name = "lbDangChon";
+            this.lbDangChon.Size = new System.Drawing.Size(81, 19);
+            this.lbDangChon.TabIndex = 16;
+            this.lbDangChon.Text = "Đang chọn: ";
+            // 
+            // btnChuyenBan
+            // 
+            this.btnChuyenBan.Location = new System.Drawing.Point(561, 474);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(104, 32);
+            this.btnChuyenBan.TabIndex = 17;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = true;
+            // 
+            // btnGopBan
+            // 
+            this.btnGopBan.Location = new System.Drawing.Point(561, 530);
+            this.btnGopBan.Name = "btnGopBan";
+            this.btnGopBan.Size = new System.Drawing.Size(104, 32);
+            this.btnGopBan.TabIndex = 17;
+            this.btnGopBan.Text = "Gộp bàn";
+            this.btnGopBan.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.lbTongTien);
+            this.panel5.Controls.Add(this.lbDangChon);
+            this.panel5.Location = new System.Drawing.Point(887, 412);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 94);
+            this.panel5.TabIndex = 18;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 10);
+            this.panel6.TabIndex = 19;
+            // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1223, 600);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btnGopBan);
+            this.Controls.Add(this.btnChuyenBan);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThanhToan);
-            this.Controls.Add(this.lbTongTien);
             this.Controls.Add(this.listViewHoaDon);
             this.Controls.Add(this.flpDoUongTheoDanhMuc);
             this.Controls.Add(this.cbDanhMuc);
@@ -403,7 +447,6 @@
             this.Load += new System.EventHandler(this.formHome_Load);
             this.pnHeaderHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cAFE_VERSION_1DataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -412,8 +455,9 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -436,9 +480,7 @@
         private System.Windows.Forms.ComboBox cbDanhMuc;
         private System.Windows.Forms.FlowLayoutPanel flpDoUongTheoDanhMuc;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private CAFE_VERSION_1DataSet cAFE_VERSION_1DataSet;
         private System.Windows.Forms.BindingSource danhMucBindingSource;
-        private CAFE_VERSION_1DataSetTableAdapters.DanhMucTableAdapter danhMucTableAdapter;
         private System.Windows.Forms.ListView listViewHoaDon;
         private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Button btnThanhToan;
@@ -454,5 +496,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbDangChon;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnGopBan;
+        private System.Windows.Forms.Button btnChuyenBan;
     }
 }

@@ -1,0 +1,277 @@
+﻿using Cafe_Version1.DAL;
+using Cafe_Version1.DTO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Cafe_Version1
+{
+    public partial class formDanhMuc : Form
+    {
+        BindingSource dsBan = new BindingSource();
+        BindingSource dsDanhMuc = new BindingSource();
+        BindingSource dsDoUong = new BindingSource();
+
+        public formDanhMuc()
+        {
+            InitializeComponent();
+            LoadData();
+        }
+
+        public bool flag = false;
+        public bool sua = false;
+
+        public void LoadData()
+        {
+            LoadDanmuc();
+            LoadDanhSachBan();
+            LoadDanhSachDoUong();
+
+            //dgvDanhSachBan.DataSource = dsBan;
+            //dgvDanhMuc.DataSource = dsDanhMuc;
+            //dgvDoUong.DataSource = dsDoUong;
+
+            BindingBan();
+            BindingDanhMuc();
+            BindingDoUong();
+        }
+
+        public void LoadDanmuc()
+        {
+            dgvDanhMuc.DataSource = DanhMucDAL.Instance.LayDanhSachDanhMuc();
+        }
+        public void LoadDanhSachBan()
+        {
+            dgvDanhSachBan.DataSource = BanDAL.Instance.LayDanhSachBan();
+        }
+        public void LoadDanhSachDoUong()
+        {
+            dgvDoUong.DataSource = DoUongDAL.Instance.LayDanhSachDoUong();
+        }
+
+        #region Binding
+
+        void BindingBan()
+        {
+            this.txtIDBan.DataBindings.Add(new Binding("Text", dsBan, "_ID", true, DataSourceUpdateMode.Never));
+            this.txtTenBan.DataBindings.Add(new Binding("Text", dgvDanhSachBan.DataSource, "tenBan", true, DataSourceUpdateMode.Never));
+            this.cbTrangThai.DataBindings.Add(new Binding("text", dgvDanhSachBan.DataSource, "trangThai", true, DataSourceUpdateMode.Never));
+        }
+
+        void BindingDanhMuc()
+        {
+            this.txtIDDanhMuc.DataBindings.Add(new Binding("Text", dgvDanhMuc.DataSource, "_ID", true, DataSourceUpdateMode.Never));
+            this.txtTenDanhMuc.DataBindings.Add(new Binding("Text", dgvDanhMuc.DataSource, "tenDanhMuc", true, DataSourceUpdateMode.Never));
+        }
+
+        void BindingDoUong()
+        {
+            this.txtIDDoUong.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            this.txtTenDoUong.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "tenDoUong", true, DataSourceUpdateMode.Never));
+            this.cbThuocDanhMuc.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "IDDanhMuc", true, DataSourceUpdateMode.Never));
+            this.txtGiaTien.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "giaTien", true, DataSourceUpdateMode.Never));
+        }
+
+        #endregion
+
+        private void formDanhMuc_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cAFE_VERSION_1DataSet8.Ban' table. You can move, or remove it, as needed.
+
+        }
+
+        #region event
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            this.txtTenBan.Enabled = true;
+            this.txtTenBan.Focus();
+            this.flag = true;
+
+        }
+
+        private void btnSuaBan_Click(object sender, EventArgs e)
+        {
+            this.txtTenBan.Enabled = true;
+            this.txtTenBan.Focus();
+            this.sua = true;
+        }
+
+        private void btnSaveBan_Click(object sender, EventArgs e)
+        {
+            string tenBan = txtTenBan.Text;
+            int IDBan = int.Parse(txtIDBan.Text);
+
+
+            if (BanDAL.Instance.LayDanhSachBan().Equals(tenBan))
+            {
+                MessageBox.Show("Tên bàn bị trùng xin kiểm tra lại!", "Thông báo");
+                return;
+            }
+            else
+            {
+                if (this.flag == true)
+                {
+                    if (BanDAL.Instance.ThemBan(tenBan))
+                    {
+                        MessageBox.Show("Thêm Thành công!", "Thông báo");
+                        this.LoadDanhSachBan();
+                    }
+                }
+                else
+                {
+                    if (BanDAL.Instance.SuaBan(IDBan, tenBan))
+                    {
+                        MessageBox.Show("Sửa Thành công!", "Thông báo");
+                        this.LoadDanhSachBan();
+                    }
+                }
+                this.txtTenBan.Enabled = false;
+            }
+
+        }
+
+        private void btnXoaBan_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtIDBan.Text);
+            if (id != 0)
+            {
+                BanDAL.Instance.XoaBan(id);
+                this.LoadDanhSachBan();
+                MessageBox.Show("Xóa thành công !", "Thông báo");
+            }
+
+        }
+
+        private void btnThemDanhMuc_Click(object sender, EventArgs e)
+        {
+            this.txtTenDanhMuc.Enabled = true;
+            this.txtTenDanhMuc.Focus();
+            this.flag = true;
+        }
+
+        private void btnSuaDM_Click(object sender, EventArgs e)
+        {
+            this.txtTenDanhMuc.Enabled = true;
+            this.txtTenDanhMuc.Focus();
+        }
+
+        private void btnXoaDM_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtIDDanhMuc.Text);
+            if (DanhMucDAL.Instance.XoaDanhMuc(id))
+            {
+                LoadDanmuc();
+                MessageBox.Show("Đã xóa danh mục!", "Thông báo");
+            }
+        }
+
+        private void btnSaveDanhMuc_Click(object sender, EventArgs e)
+        {
+            string tenDM = txtTenDanhMuc.Text;
+            int id = int.Parse(txtIDDanhMuc.Text);
+
+            //tào lao
+            if (tenDanhMuc.Equals(tenDM))
+            {
+                MessageBox.Show("Tên danh mục trùng !", "Thông báo");
+            }
+            else
+            {
+                if (this.flag == true)
+                {
+                    if (DanhMucDAL.Instance.ThemDanhMuc(tenDM))
+                    {
+                        MessageBox.Show("Thêm Thành công!", "Thông báo");
+                        this.LoadDanmuc();
+                    }
+                }
+                else
+                {
+                    if (DanhMucDAL.Instance.SuaDanhMuc(id, tenDM))
+                    {
+                        MessageBox.Show("Sửa Thành công!", "Thông báo");
+                        this.LoadDanmuc();
+                    }
+                }
+                this.txtTenDanhMuc.Enabled = false;
+            }
+        }
+
+
+        private void btnThemDoUong_Click(object sender, EventArgs e)
+        {
+            this.txtTenDoUong.Enabled = true;
+            this.cbThuocDanhMuc.Enabled = true;
+            this.txtGiaTien.Enabled = true;
+            this.txtTenDoUong.Focus();
+            this.flag = true;
+        }
+
+        private void btnSuaDoUong_Click(object sender, EventArgs e)
+        {
+            this.txtTenDoUong.Enabled = true;
+            this.cbThuocDanhMuc.Enabled = true;
+            this.txtGiaTien.Enabled = true;
+            this.txtTenDoUong.Focus();
+        }
+
+        private void btnXoaDoUong_Click(object sender, EventArgs e)
+        {
+            int idDoUong = int.Parse(txtIDDoUong.Text);
+            if (DoUongDAL.Instance.XoaDoUong(idDoUong))
+            {
+                MessageBox.Show("Xóa thành công ", "Thông báo");
+                LoadDanhSachDoUong();
+            }
+        }
+
+        private void btnSaveDoUong_Click(object sender, EventArgs e)
+        {
+            int idDoUong = int.Parse(txtIDDoUong.Text);
+            string tenNuoc = this.txtTenDoUong.Text;
+            int thuocDM = (cbThuocDanhMuc.SelectedItem as DanhMuc)._ID;
+            string dm = (cbThuocDanhMuc.SelectedItem as DanhMuc).TenDanhMuc;
+
+            List<DanhMuc> dmDoUong = DanhMucDAL.Instance.LayDanhSachDanhMuc();
+            cbThuocDanhMuc.DataSource = dmDoUong;
+            cbThuocDanhMuc.DisplayMember = "tenDanhMuc";
+
+            float giaTien = float.Parse(this.txtGiaTien.Text);
+
+            if (tenDoUong.Equals(tenNuoc))
+            {
+                MessageBox.Show("Tên bị trùng rồi !");
+            }
+            else
+            {
+                if (flag)
+                {
+                    if (DoUongDAL.Instance.ThemDoUong(tenNuoc, thuocDM, giaTien))
+                    {
+                        LoadDanhSachDoUong();
+                        MessageBox.Show("Thêm thành công !", "Thông báo");
+                    }
+                }
+                else
+                {
+                    if (DoUongDAL.Instance.SuaDoUong(idDoUong, tenNuoc, thuocDM, giaTien))
+                    {
+                        LoadDanhSachDoUong();
+                        MessageBox.Show("Sữa thành công !", "Thông báo");
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+
+    }
+}

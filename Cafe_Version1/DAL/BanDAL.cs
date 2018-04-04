@@ -43,5 +43,22 @@ namespace Cafe_Version1.DAL
             }
             return dsBan;
         }
+
+        public bool ThemBan(string tenBan)
+        {
+            int a = DataProvider.Instance.ExecuteQuerySuccess("INSERT Ban(tenBan) VALUES(N'" + tenBan + "')");
+            return a > 0;
+        }
+
+        public bool SuaBan(int ID, string tenBan)
+        {
+            string query = "UPDATE Ban SET tenBan = N'" + tenBan + "' WHERE ID = " + ID;
+            int a = DataProvider.Instance.ExecuteQuerySuccess(query);
+            return a > 0;
+        }
+        public bool XoaBan(int id)
+        {
+            return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM Ban WHERE ID = " + id) > 0;
+        }
     }
 }

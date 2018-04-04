@@ -82,7 +82,6 @@ namespace Cafe_Version1.DTO
             }
             soDong = command.ExecuteNonQuery();
             connect.Close();
-
             return soDong;
         }
 

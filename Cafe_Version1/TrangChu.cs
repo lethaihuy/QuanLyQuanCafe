@@ -24,9 +24,6 @@ namespace Cafe_Version1
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            pnLeft.Top = btnThanhToan.Top;
-            pnLeft.Height = btnThanhToan.Height;
-            pnLeft.Visible = true;
             Color.FromArgb(128, 204, 255);
             formHome home = new formHome();
             this.Hide();
@@ -34,46 +31,70 @@ namespace Cafe_Version1
             this.Show();
         }
 
+        private void formTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
-            pnLeft.Visible = true;
-            btnThanhToan.BackColor = Color.FromArgb(128, 204, 255);
-            pnLeft.Top = btnDanhMuc.Top;
-            pnLeft.Height = btnDanhMuc.Height;
+            formDanhMuc fDanhMuc = new formDanhMuc();
+            fDanhMuc.ShowDialog();
         }
 
         private void btnDoUong_Click(object sender, EventArgs e)
         {
-            pnLeft.Top = btnDoUong.Top;
-            pnLeft.Height = btnDoUong.Height;
+
         }
 
         private void BtnBan_Click(object sender, EventArgs e)
         {
-            pnLeft.Visible = true;
-            pnLeft.Top = BtnBan.Top;
-            pnLeft.Height = BtnBan.Height;
+
         }
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-            pnLeft.Visible = true;
-            pnLeft.Top = btnDoanhThu.Top;
-            pnLeft.Height = btnDoanhThu.Height;
+
         }
 
-        private void formTrangChu_Load(object sender, EventArgs e)
-        {
-            this.pnLeft.Visible = false;
-            time = DateTime.Now;
-            this.tileItem2.Text = time.ToString("dddd") + Environment.NewLine + time.ToString("dd");     
-        }
+
         int chay = 10;
         private void timer1_Tick(object sender, EventArgs e)
         {
             time = DateTime.Now;
             lbThoiGian.Text = time.ToString("HH:mm:ss");
-            lbNgay.Text = time.ToString("dddd, dd/MM/yyyy");
+
+            lbNgay.Text = time.ToString("dd");
+            lbThangNam.Text = time.ToString("MM/yyyy");
+            if (time.DayOfWeek == DayOfWeek.Monday)
+            {
+                lbThu.Text = "Thứ 2";
+            }
+            else if (time.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                lbThu.Text = "Thứ 3";
+            }
+            else if (time.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                lbThu.Text = "Thứ 4";
+            }
+            else if (time.DayOfWeek == DayOfWeek.Thursday)
+            {
+                lbThu.Text = "Thứ 5";
+            }
+            else if (time.DayOfWeek == DayOfWeek.Friday)
+            {
+                lbThu.Text = "Thứ 6";
+            }
+            else if (time.DayOfWeek == DayOfWeek.Saturday)
+            {
+                lbThu.Text = "Thứ 7";
+            }
+            else if (time.DayOfWeek == DayOfWeek.Sunday)
+            {
+                lbThu.Text = "Chủ nhật";
+            }
+
             lbXinChao.Location = new Point(lbXinChao.Location.X + chay, lbXinChao.Location.Y);
             if (lbXinChao.Location.X > 877)
             {
