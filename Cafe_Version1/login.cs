@@ -24,11 +24,6 @@ namespace Cafe_Version1
             return AccountDAL.Instance.Login(username, password) == true;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -52,34 +47,15 @@ namespace Cafe_Version1
             this.ResetMouseEventArgs();
         }
 
-        private void txtUsername_Click(object sender, EventArgs e)
-        {
-            lbUsername.Location = new Point(340, 80);
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-            lbPassword.Location = new Point(340, 138);
-        }
 
         private void formDangNhap_MouseHover(object sender, EventArgs e)
         {
             this.formDangNhap_Load(sender, e);
         }
 
-        private void lbUsername_Click(object sender, EventArgs e)
+        private void lbThoat_Click(object sender, EventArgs e)
         {
-            lbUsername.Location = new Point(340, 80);
-        }
-
-        private void txtUsername_MouseHover(object sender, EventArgs e)
-        {
-            lbUsername.Location = new Point(340, 80);
-        }
-
-        private void txtPassword_MouseHover(object sender, EventArgs e)
-        {
-            lbPassword.Location = new Point(340, 138);
+            Application.Exit();
         }
     }
 }

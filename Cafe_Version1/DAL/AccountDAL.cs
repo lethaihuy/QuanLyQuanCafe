@@ -46,5 +46,34 @@ namespace Cafe_Version1.DAL
             }
             return null;
         }
+
+        public List<Account> LayDanhSachTaiKhoan()
+        {
+            List<Account> dsAcc = new List<Account>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Account");
+            foreach (DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                dsAcc.Add(acc);
+            }
+            return dsAcc;
+        }
+
+        public bool ThemTaiKhoan(string username, string password, string  tenHienThi, string loaiTK)
+        {
+            string query = string.Format("INSERT Account VALUES('{0}', '{1}', N'{2}', N'{3}')", username, password, tenHienThi, loaiTK);
+            return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
+        }
+
+        public bool SuaTaiKhoan(string username, string password, string tenHienThi, string loaiTK)
+        {
+            string query = string.Format("UPDATE Account SET password = '{0} , tenHienThi = N'{1}' , loaiTaiKhoan = N'{2}' WHERE username = '{3}')", password, tenHienThi, loaiTK, username);
+            return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
+        }
+
+        public bool XoaTaiKhoan(string username)
+        {
+            return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM Account WHERE username = '"+username+"'") > 0;
+        }
     }
 }

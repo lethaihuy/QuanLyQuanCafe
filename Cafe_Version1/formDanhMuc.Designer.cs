@@ -75,13 +75,17 @@
             this.txtIDDoUong = new System.Windows.Forms.TextBox();
             this.txtTenDoUong = new System.Windows.Forms.TextBox();
             this.dgvDoUong = new System.Windows.Forms.DataGridView();
-            this.banBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this._IDd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDoUong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDanhMucTrongDoUong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDDanhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnBackHome = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHuyBan = new System.Windows.Forms.Button();
+            this.btnHuyDanhMuc = new System.Windows.Forms.Button();
+            this.btnHuyDoUong = new System.Windows.Forms.Button();
             this.tbcAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBan)).BeginInit();
@@ -92,7 +96,7 @@
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoUong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.banBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcAdmin
@@ -129,6 +133,7 @@
             // dgvDanhSachBan
             // 
             this.dgvDanhSachBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSachBan.BackgroundColor = System.Drawing.Color.White;
             this.dgvDanhSachBan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDanhSachBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -209,6 +214,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHuyBan);
             this.groupBox1.Controls.Add(this.btnSaveBan);
             this.groupBox1.Controls.Add(this.cbTrangThai);
             this.groupBox1.Controls.Add(this.label2);
@@ -227,9 +233,9 @@
             // 
             this.btnSaveBan.BackColor = System.Drawing.Color.White;
             this.btnSaveBan.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveBan.Image")));
-            this.btnSaveBan.Location = new System.Drawing.Point(255, 149);
+            this.btnSaveBan.Location = new System.Drawing.Point(260, 149);
             this.btnSaveBan.Name = "btnSaveBan";
-            this.btnSaveBan.Size = new System.Drawing.Size(52, 36);
+            this.btnSaveBan.Size = new System.Drawing.Size(47, 36);
             this.btnSaveBan.TabIndex = 3;
             this.btnSaveBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveBan.UseVisualStyleBackColor = false;
@@ -363,6 +369,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnHuyDanhMuc);
             this.groupBox2.Controls.Add(this.btnSaveDanhMuc);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
@@ -379,9 +386,9 @@
             // 
             this.btnSaveDanhMuc.BackColor = System.Drawing.Color.White;
             this.btnSaveDanhMuc.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveDanhMuc.Image")));
-            this.btnSaveDanhMuc.Location = new System.Drawing.Point(263, 117);
+            this.btnSaveDanhMuc.Location = new System.Drawing.Point(268, 117);
             this.btnSaveDanhMuc.Name = "btnSaveDanhMuc";
-            this.btnSaveDanhMuc.Size = new System.Drawing.Size(52, 36);
+            this.btnSaveDanhMuc.Size = new System.Drawing.Size(47, 36);
             this.btnSaveDanhMuc.TabIndex = 3;
             this.btnSaveDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveDanhMuc.UseVisualStyleBackColor = false;
@@ -427,6 +434,7 @@
             // dgvDanhMuc
             // 
             this.dgvDanhMuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhMuc.BackgroundColor = System.Drawing.Color.White;
             this.dgvDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhMuc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._ID,
@@ -517,6 +525,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnHuyDoUong);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtGiaTien);
             this.groupBox3.Controls.Add(this.btnSaveDoUong);
@@ -556,9 +565,9 @@
             // 
             this.btnSaveDoUong.BackColor = System.Drawing.Color.White;
             this.btnSaveDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveDoUong.Image")));
-            this.btnSaveDoUong.Location = new System.Drawing.Point(255, 191);
+            this.btnSaveDoUong.Location = new System.Drawing.Point(260, 191);
             this.btnSaveDoUong.Name = "btnSaveDoUong";
-            this.btnSaveDoUong.Size = new System.Drawing.Size(52, 36);
+            this.btnSaveDoUong.Size = new System.Drawing.Size(47, 36);
             this.btnSaveDoUong.TabIndex = 3;
             this.btnSaveDoUong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveDoUong.UseVisualStyleBackColor = false;
@@ -614,6 +623,7 @@
             this.txtIDDoUong.Name = "txtIDDoUong";
             this.txtIDDoUong.Size = new System.Drawing.Size(214, 23);
             this.txtIDDoUong.TabIndex = 0;
+            this.txtIDDoUong.TextChanged += new System.EventHandler(this.txtIDDoUong_TextChanged);
             // 
             // txtTenDoUong
             // 
@@ -628,11 +638,12 @@
             // dgvDoUong
             // 
             this.dgvDoUong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDoUong.BackgroundColor = System.Drawing.Color.White;
             this.dgvDoUong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDoUong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._IDd,
             this.tenDoUong,
-            this.tenDanhMucTrongDoUong,
+            this.IDDanhMuc,
             this.giaTien});
             this.dgvDoUong.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvDoUong.Location = new System.Drawing.Point(426, 0);
@@ -640,25 +651,6 @@
             this.dgvDoUong.Name = "dgvDoUong";
             this.dgvDoUong.Size = new System.Drawing.Size(464, 441);
             this.dgvDoUong.TabIndex = 1;
-            // 
-            // banBindingSource
-            // 
-            this.banBindingSource.DataMember = "Ban";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 33);
-            this.panel1.TabIndex = 1;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // _IDd
             // 
@@ -672,17 +664,139 @@
             this.tenDoUong.HeaderText = "Tên đồ uống";
             this.tenDoUong.Name = "tenDoUong";
             // 
-            // tenDanhMucTrongDoUong
+            // IDDanhMuc
             // 
-            this.tenDanhMucTrongDoUong.DataPropertyName = "IDDanhMuc";
-            this.tenDanhMucTrongDoUong.HeaderText = "Thuộc DM";
-            this.tenDanhMucTrongDoUong.Name = "tenDanhMucTrongDoUong";
+            this.IDDanhMuc.DataPropertyName = "IDDanhMuc";
+            this.IDDanhMuc.HeaderText = "Thuộc DM";
+            this.IDDanhMuc.Name = "IDDanhMuc";
             // 
             // giaTien
             // 
             this.giaTien.DataPropertyName = "giaTien";
             this.giaTien.HeaderText = "Giá tiền";
             this.giaTien.Name = "giaTien";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(898, 33);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Activecolor = System.Drawing.Color.White;
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.BorderRadius = 0;
+            this.btnBack.ButtonText = "";
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBack.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBack.Iconimage = null;
+            this.btnBack.Iconimage_right = null;
+            this.btnBack.Iconimage_right_Selected = null;
+            this.btnBack.Iconimage_Selected = null;
+            this.btnBack.IconMarginLeft = 0;
+            this.btnBack.IconMarginRight = 0;
+            this.btnBack.IconRightVisible = true;
+            this.btnBack.IconRightZoom = 0D;
+            this.btnBack.IconVisible = true;
+            this.btnBack.IconZoom = 50D;
+            this.btnBack.IsTab = false;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Normalcolor = System.Drawing.Color.White;
+            this.btnBack.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBack.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBack.selected = false;
+            this.btnBack.Size = new System.Drawing.Size(34, 33);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Textcolor = System.Drawing.Color.White;
+            this.btnBack.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // btnBackHome
+            // 
+            this.btnBackHome.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBackHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBackHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBackHome.BorderRadius = 0;
+            this.btnBackHome.ButtonText = "     Bunifu Flat Button";
+            this.btnBackHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackHome.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBackHome.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBackHome.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBackHome.Iconimage")));
+            this.btnBackHome.Iconimage_right = null;
+            this.btnBackHome.Iconimage_right_Selected = null;
+            this.btnBackHome.Iconimage_Selected = null;
+            this.btnBackHome.IconMarginLeft = 0;
+            this.btnBackHome.IconMarginRight = 0;
+            this.btnBackHome.IconRightVisible = true;
+            this.btnBackHome.IconRightZoom = 0D;
+            this.btnBackHome.IconVisible = true;
+            this.btnBackHome.IconZoom = 90D;
+            this.btnBackHome.IsTab = false;
+            this.btnBackHome.Location = new System.Drawing.Point(0, 0);
+            this.btnBackHome.Name = "btnBackHome";
+            this.btnBackHome.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBackHome.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnBackHome.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBackHome.selected = false;
+            this.btnBackHome.Size = new System.Drawing.Size(241, 48);
+            this.btnBackHome.TabIndex = 0;
+            this.btnBackHome.Text = "     Bunifu Flat Button";
+            this.btnBackHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackHome.Textcolor = System.Drawing.Color.White;
+            this.btnBackHome.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnHuyBan
+            // 
+            this.btnHuyBan.BackColor = System.Drawing.Color.White;
+            this.btnHuyBan.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBan.Image")));
+            this.btnHuyBan.Location = new System.Drawing.Point(207, 149);
+            this.btnHuyBan.Name = "btnHuyBan";
+            this.btnHuyBan.Size = new System.Drawing.Size(47, 36);
+            this.btnHuyBan.TabIndex = 3;
+            this.btnHuyBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyBan.UseVisualStyleBackColor = false;
+            this.btnHuyBan.Click += new System.EventHandler(this.btnHuyBan_Click);
+            // 
+            // btnHuyDanhMuc
+            // 
+            this.btnHuyDanhMuc.BackColor = System.Drawing.Color.White;
+            this.btnHuyDanhMuc.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyDanhMuc.Image")));
+            this.btnHuyDanhMuc.Location = new System.Drawing.Point(210, 117);
+            this.btnHuyDanhMuc.Name = "btnHuyDanhMuc";
+            this.btnHuyDanhMuc.Size = new System.Drawing.Size(47, 36);
+            this.btnHuyDanhMuc.TabIndex = 4;
+            this.btnHuyDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyDanhMuc.UseVisualStyleBackColor = false;
+            this.btnHuyDanhMuc.Click += new System.EventHandler(this.btnHuyDanhMuc_Click);
+            // 
+            // btnHuyDoUong
+            // 
+            this.btnHuyDoUong.BackColor = System.Drawing.Color.White;
+            this.btnHuyDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyDoUong.Image")));
+            this.btnHuyDoUong.Location = new System.Drawing.Point(202, 191);
+            this.btnHuyDoUong.Name = "btnHuyDoUong";
+            this.btnHuyDoUong.Size = new System.Drawing.Size(47, 36);
+            this.btnHuyDoUong.TabIndex = 6;
+            this.btnHuyDoUong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyDoUong.UseVisualStyleBackColor = false;
+            this.btnHuyDoUong.Click += new System.EventHandler(this.btnHuyDoUong_Click);
             // 
             // formDanhMuc
             // 
@@ -695,6 +809,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "formDanhMuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDanhMuc";
             this.Load += new System.EventHandler(this.formDanhMuc_Load);
             this.tbcAdmin.ResumeLayout(false);
@@ -710,7 +825,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoUong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.banBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -729,7 +844,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenBan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource banBindingSource;
         private System.Windows.Forms.ComboBox cbTrangThai;
         private System.Windows.Forms.Button btnThemDanhMuc;
         private System.Windows.Forms.Button btnSaveBan;
@@ -765,9 +879,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtIDDoUong;
         private System.Windows.Forms.TextBox txtTenDoUong;
+        private Bunifu.Framework.UI.BunifuFlatButton btnBackHome;
         private System.Windows.Forms.DataGridViewTextBoxColumn _IDd;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDoUong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenDanhMucTrongDoUong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDDanhMuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaTien;
+        private Bunifu.Framework.UI.BunifuFlatButton btnBack;
+        private System.Windows.Forms.Button btnHuyBan;
+        private System.Windows.Forms.Button btnHuyDanhMuc;
+        private System.Windows.Forms.Button btnHuyDoUong;
     }
 }

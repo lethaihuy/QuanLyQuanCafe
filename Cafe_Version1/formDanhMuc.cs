@@ -33,33 +33,34 @@ namespace Cafe_Version1
             LoadDanhSachBan();
             LoadDanhSachDoUong();
 
-            //dgvDanhSachBan.DataSource = dsBan;
-            //dgvDanhMuc.DataSource = dsDanhMuc;
-            //dgvDoUong.DataSource = dsDoUong;
+            dgvDanhSachBan.DataSource = dsBan;
+            dgvDanhMuc.DataSource = dsDanhMuc;
+            dgvDoUong.DataSource = dsDoUong;
 
             BindingBan();
             BindingDanhMuc();
             BindingDoUong();
+            BindingcbDanhMucTheoTen(cbThuocDanhMuc);
         }
 
         public void LoadDanmuc()
         {
-            dgvDanhMuc.DataSource = DanhMucDAL.Instance.LayDanhSachDanhMuc();
+            dsDanhMuc.DataSource = DanhMucDAL.Instance.LayDanhSachDanhMuc();
         }
         public void LoadDanhSachBan()
         {
-            dgvDanhSachBan.DataSource = BanDAL.Instance.LayDanhSachBan();
+            dsBan.DataSource = BanDAL.Instance.LayDanhSachBan();
         }
         public void LoadDanhSachDoUong()
         {
-            dgvDoUong.DataSource = DoUongDAL.Instance.LayDanhSachDoUong();
+            dsDoUong.DataSource = DoUongDAL.Instance.LayDanhSachDoUong();
         }
 
         #region Binding
 
         void BindingBan()
         {
-            this.txtIDBan.DataBindings.Add(new Binding("Text", dsBan, "_ID", true, DataSourceUpdateMode.Never));
+            this.txtIDBan.DataBindings.Add(new Binding("Text", dgvDanhSachBan.DataSource, "_ID", true, DataSourceUpdateMode.Never));
             this.txtTenBan.DataBindings.Add(new Binding("Text", dgvDanhSachBan.DataSource, "tenBan", true, DataSourceUpdateMode.Never));
             this.cbTrangThai.DataBindings.Add(new Binding("text", dgvDanhSachBan.DataSource, "trangThai", true, DataSourceUpdateMode.Never));
         }
@@ -74,8 +75,13 @@ namespace Cafe_Version1
         {
             this.txtIDDoUong.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "ID", true, DataSourceUpdateMode.Never));
             this.txtTenDoUong.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "tenDoUong", true, DataSourceUpdateMode.Never));
-            this.cbThuocDanhMuc.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "IDDanhMuc", true, DataSourceUpdateMode.Never));
             this.txtGiaTien.DataBindings.Add(new Binding("Text", dgvDoUong.DataSource, "giaTien", true, DataSourceUpdateMode.Never));
+        }
+
+        void BindingcbDanhMucTheoTen(ComboBox cb)
+        {
+            cb.DataSource = DanhMucDAL.Instance.LayDanhSachDanhMuc();
+            cb.DisplayMember = "tenDanhMuc";
         }
 
         #endregion
@@ -204,6 +210,24 @@ namespace Cafe_Version1
             }
         }
 
+        #region
+        public void ResetFormDoUong()
+        {
+            this.txtTenDoUong.Enabled = false;
+            this.cbThuocDanhMuc.Enabled = false;
+            this.txtGiaTien.Enabled = false;
+        }
+
+        public void ResetFormDanhMuc()
+        {
+
+        }
+
+        public void ResetFormBan()
+        {
+
+        }
+        #endregion
 
         private void btnThemDoUong_Click(object sender, EventArgs e)
         {
@@ -235,17 +259,12 @@ namespace Cafe_Version1
         private void btnSaveDoUong_Click(object sender, EventArgs e)
         {
             int idDoUong = int.Parse(txtIDDoUong.Text);
+
             string tenNuoc = this.txtTenDoUong.Text;
             int thuocDM = (cbThuocDanhMuc.SelectedItem as DanhMuc)._ID;
-            string dm = (cbThuocDanhMuc.SelectedItem as DanhMuc).TenDanhMuc;
-
-            List<DanhMuc> dmDoUong = DanhMucDAL.Instance.LayDanhSachDanhMuc();
-            cbThuocDanhMuc.DataSource = dmDoUong;
-            cbThuocDanhMuc.DisplayMember = "tenDanhMuc";
-
             float giaTien = float.Parse(this.txtGiaTien.Text);
 
-            if (tenDoUong.Equals(tenNuoc))
+            if (tenNuoc == "")
             {
                 MessageBox.Show("Tên bị trùng rồi !");
             }
@@ -255,7 +274,6 @@ namespace Cafe_Version1
                 {
                     if (DoUongDAL.Instance.ThemDoUong(tenNuoc, thuocDM, giaTien))
                     {
-                        LoadDanhSachDoUong();
                         MessageBox.Show("Thêm thành công !", "Thông báo");
                     }
                 }
@@ -263,15 +281,58 @@ namespace Cafe_Version1
                 {
                     if (DoUongDAL.Instance.SuaDoUong(idDoUong, tenNuoc, thuocDM, giaTien))
                     {
-                        LoadDanhSachDoUong();
                         MessageBox.Show("Sữa thành công !", "Thông báo");
                     }
                 }
+                LoadDanhSachDoUong();
+                this.ResetFormDoUong();
             }
+
         }
+
 
         #endregion
 
+        private void txtIDDoUong_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvDoUong.SelectedCells.Count > 0)
+            {
+                int id = (int)(dgvDoUong.SelectedCells[0].OwningRow.Cells["IDDanhMuc"].Value);
 
+                DanhMuc category = DanhMucDAL.Instance.LayDanhSachDanhMucTheoID(id);
+                int index = -1;
+                int i = 0;
+                foreach (DanhMuc item in cbThuocDanhMuc.Items)
+                {
+                    if (item._ID == category._ID)
+                    {
+                        index = i;
+                        break;
+                    }
+                    i++;
+                }
+                cbThuocDanhMuc.SelectedIndex = index;
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnHuyDanhMuc_Click(object sender, EventArgs e)
+        {
+            this.txtTenDanhMuc.Enabled = false;
+        }
+
+        private void btnHuyDoUong_Click(object sender, EventArgs e)
+        {
+            this.ResetFormDoUong();
+        }
+
+        private void btnHuyBan_Click(object sender, EventArgs e)
+        {
+            this.txtTenBan.Enabled = false;
+        }
     }
 }

@@ -54,7 +54,8 @@ namespace Cafe_Version1
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-
+            formQLTaiKhoan fTaiKhoan = new formQLTaiKhoan();
+            fTaiKhoan.ShowDialog();
         }
 
 
@@ -102,24 +103,11 @@ namespace Cafe_Version1
             }
         }
 
-        private void pnHeader_MouseDown(object sender, MouseEventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)
         {
-            this.drag = true;
-            this.startPoint = new Point(e.X, e.Y);
-        }
-
-        private void pnHeader_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (this.drag)
-            {
-                Point p = PointToScreen(e.Location);
-                this.Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
-            }
-        }
-
-        private void pnHeader_MouseUp(object sender, MouseEventArgs e)
-        {
-            drag = false;
+            Random ran = new Random();
+            Color mau = Color.FromArgb(ran.Next(256), ran.Next(256), ran.Next(256));
+            pnThoiGian.BackColor = mau;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -133,5 +121,54 @@ namespace Cafe_Version1
             f.ShowDialog();
         }
 
+        private void formTrangChu_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.drag = true;
+            this.startPoint = new Point(e.X, e.Y);
+        }
+
+        private void formTrangChu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (this.drag)
+            {
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - startPoint.X, p.Y - startPoint.Y);
+            }
+        }
+
+        private void formTrangChu_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
+
+        private void picAvatar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ContextMenuStrip menu = new ContextMenuStrip();
+            if (e.Button == MouseButtons.Right)
+            {
+                menu.Items.Add("Chỉnh sửa").Name = "Chỉnh sửa";
+                menu.Items.Add("Đăng xuất").Name = "Đăng xuất";
+                menu.Items.Add("Hủy").Name = "Hủy";
+                menu.Show(picAvatar, new Point(e.X, e.Y));
+            }
+
+            menu.ItemClicked += Menu_ItemClicked;
+        }
+
+        private void Menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Name == "Chỉnh sửa")
+            {
+                MessageBox.Show("Chỉnh sửa");
+            }
+            else if (e.ClickedItem.Name == "Đăng xuất")
+            {
+
+            }
+            else
+            {
+
+            }
+        }
     }
 }

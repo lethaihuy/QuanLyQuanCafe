@@ -35,16 +35,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTenHienThi = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnSuaUser = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSuaUser = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnheader.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,12 +57,12 @@
             // 
             // pnheader
             // 
-            this.pnheader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.pnheader.BackColor = System.Drawing.Color.White;
             this.pnheader.Controls.Add(this.panel2);
             this.pnheader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnheader.Location = new System.Drawing.Point(0, 0);
             this.pnheader.Name = "pnheader";
-            this.pnheader.Size = new System.Drawing.Size(520, 320);
+            this.pnheader.Size = new System.Drawing.Size(520, 300);
             this.pnheader.TabIndex = 3;
             this.pnheader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnheader_MouseDown);
             this.pnheader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnheader_MouseMove);
@@ -84,16 +84,16 @@
             this.panel2.Controls.Add(this.bunifuMetroTextbox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 45);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(520, 275);
+            this.panel2.Size = new System.Drawing.Size(520, 300);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pictureBox1.Location = new System.Drawing.Point(408, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(393, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 103);
             this.pictureBox1.TabIndex = 0;
@@ -102,72 +102,57 @@
             // lbTenHienThi
             // 
             this.lbTenHienThi.AutoSize = true;
-            this.lbTenHienThi.Location = new System.Drawing.Point(418, 125);
+            this.lbTenHienThi.Location = new System.Drawing.Point(403, 149);
             this.lbTenHienThi.Name = "lbTenHienThi";
             this.lbTenHienThi.Size = new System.Drawing.Size(71, 19);
             this.lbTenHienThi.TabIndex = 2;
             this.lbTenHienThi.Text = "(huylethai)";
             // 
-            // label1
+            // comboBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(131, 187);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(229, 27);
+            this.comboBox1.TabIndex = 3;
             // 
-            // bunifuMetroTextbox1
+            // btnClose
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.DodgerBlue;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(146, 53);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(229, 28);
-            this.bunifuMetroTextbox1.TabIndex = 1;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnClose.BackColor = System.Drawing.Color.Yellow;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(419, 248);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(74, 34);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label2
+            // btnSuaUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên hiển thị:";
+            this.btnSuaUser.BackColor = System.Drawing.Color.Yellow;
+            this.btnSuaUser.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnSuaUser.FlatAppearance.BorderSize = 0;
+            this.btnSuaUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaUser.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaUser.Image")));
+            this.btnSuaUser.Location = new System.Drawing.Point(323, 248);
+            this.btnSuaUser.Name = "btnSuaUser";
+            this.btnSuaUser.Size = new System.Drawing.Size(74, 34);
+            this.btnSuaUser.TabIndex = 2;
+            this.btnSuaUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSuaUser.UseVisualStyleBackColor = false;
             // 
-            // bunifuMetroTextbox2
+            // label4
             // 
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.DodgerBlue;
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.Gray;
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.bunifuMetroTextbox2.BorderThickness = 1;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(146, 89);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(229, 28);
-            this.bunifuMetroTextbox2.TabIndex = 1;
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Password:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Loại tài khoản:";
             // 
             // bunifuMetroTextbox3
             // 
@@ -179,65 +164,80 @@
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(146, 125);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(131, 149);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(229, 28);
             this.bunifuMetroTextbox3.TabIndex = 1;
             this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Loại tài khoản:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Password:";
             // 
-            // btnSuaUser
+            // bunifuMetroTextbox2
             // 
-            this.btnSuaUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnSuaUser.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnSuaUser.FlatAppearance.BorderSize = 0;
-            this.btnSuaUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaUser.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaUser.Image")));
-            this.btnSuaUser.Location = new System.Drawing.Point(338, 224);
-            this.btnSuaUser.Name = "btnSuaUser";
-            this.btnSuaUser.Size = new System.Drawing.Size(74, 34);
-            this.btnSuaUser.TabIndex = 2;
-            this.btnSuaUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSuaUser.UseVisualStyleBackColor = false;
+            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.DodgerBlue;
+            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.Gray;
+            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.bunifuMetroTextbox2.BorderThickness = 1;
+            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox2.isPassword = false;
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(131, 113);
+            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
+            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(229, 28);
+            this.bunifuMetroTextbox2.TabIndex = 1;
+            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnClose
+            // label2
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(434, 224);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(74, 34);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Đóng";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên hiển thị:";
             // 
-            // comboBox1
+            // bunifuMetroTextbox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 163);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 27);
-            this.comboBox1.TabIndex = 3;
+            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.DodgerBlue;
+            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.Gray;
+            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.bunifuMetroTextbox1.BorderThickness = 1;
+            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox1.isPassword = false;
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(131, 77);
+            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(229, 28);
+            this.bunifuMetroTextbox1.TabIndex = 1;
+            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Username:";
             // 
             // formUser
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 320);
+            this.ClientSize = new System.Drawing.Size(520, 300);
             this.Controls.Add(this.pnheader);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

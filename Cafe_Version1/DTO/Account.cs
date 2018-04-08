@@ -9,25 +9,7 @@ namespace Cafe_Version1.DTO
 {
     public class Account
     {
-        private string username, password, tenHienThi;
-        private int loaiTaiKhoan;
-        private static Account instance;
-
-        public Account(string name, string password, string tenHienThi, int loaiTaiKhoan)
-        {
-            this.username = name;
-            this.password = password;
-            this.tenHienThi = tenHienThi;
-            this.loaiTaiKhoan = loaiTaiKhoan;
-        }
-
-        public Account(DataRow item)
-        {
-            this.username = item["username"].ToString();
-            this.password = item["password"].ToString();
-            this.tenHienThi = item["tenHienThi"].ToString();
-            this.loaiTaiKhoan = int.Parse(item["loaiTaiKhoan"].ToString());
-        }
+        private string username, password, tenHienThi, loaiTaiKhoan;
 
         public string Username
         {
@@ -68,17 +50,34 @@ namespace Cafe_Version1.DTO
             }
         }
 
-        public static Account Instance
+        public string LoaiTaiKhoan
         {
             get
             {
-                return instance;
+                return loaiTaiKhoan;
             }
 
             set
             {
-                instance = value;
+                loaiTaiKhoan = value;
             }
         }
+
+        public Account(string name, string password, string tenHienThi, string loaiTaiKhoan)
+        {
+            this.Username = name;
+            this.Password = password;
+            this.TenHienThi = tenHienThi;
+            this.LoaiTaiKhoan = loaiTaiKhoan;
+        }
+
+        public Account(DataRow item)
+        {
+            this.Username = item["username"].ToString();
+            this.Password = item["password"].ToString();
+            this.TenHienThi = item["tenHienThi"].ToString();
+            this.LoaiTaiKhoan = item["loaiTaiKhoan"].ToString();
+        }
+
     }
 }

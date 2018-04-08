@@ -33,13 +33,10 @@
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lbUsername = new System.Windows.Forms.Label();
-            this.lbPassword = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.lbThoat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -57,8 +54,6 @@
             this.txtPassword.LineThickness = 3;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
-            this.txtPassword.MouseHover += new System.EventHandler(this.txtPassword_MouseHover);
             // 
             // txtUsername
             // 
@@ -75,24 +70,12 @@
             this.txtUsername.LineThickness = 3;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
-            this.txtUsername.MouseHover += new System.EventHandler(this.txtUsername_MouseHover);
             // 
             // bunifuCustomLabel1
             // 
             resources.ApplyResources(this.bunifuCustomLabel1, "bunifuCustomLabel1");
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.btnClose, "btnClose");
-            this.btnClose.ImageActive = null;
-            this.btnClose.Name = "btnClose";
-            this.btnClose.TabStop = false;
-            this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel1
             // 
@@ -115,20 +98,12 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // lbUsername
+            // lbThoat
             // 
-            resources.ApplyResources(this.lbUsername, "lbUsername");
-            this.lbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Click += new System.EventHandler(this.lbUsername_Click);
-            // 
-            // lbPassword
-            // 
-            resources.ApplyResources(this.lbPassword, "lbPassword");
-            this.lbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.lbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
-            this.lbPassword.Name = "lbPassword";
+            resources.ApplyResources(this.lbThoat, "lbThoat");
+            this.lbThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.lbThoat.Name = "lbThoat";
+            this.lbThoat.Click += new System.EventHandler(this.lbThoat_Click);
             // 
             // formDangNhap
             // 
@@ -136,10 +111,8 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lbPassword);
-            this.Controls.Add(this.lbUsername);
+            this.Controls.Add(this.lbThoat);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
@@ -149,7 +122,6 @@
             this.Name = "formDangNhap";
             this.Load += new System.EventHandler(this.formDangNhap_Load);
             this.MouseHover += new System.EventHandler(this.formDangNhap_MouseHover);
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,11 +133,9 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private System.Windows.Forms.Button btnDangNhap;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.Label lbThoat;
     }
 }
 

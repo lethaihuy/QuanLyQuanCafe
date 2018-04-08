@@ -202,3 +202,4 @@ D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\de\DevExpres
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\es\DevExpress.Xpo.v16.1.resources.dll
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\ja\DevExpress.Xpo.v16.1.resources.dll
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
+D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version1.formQLTaiKhoan.resources

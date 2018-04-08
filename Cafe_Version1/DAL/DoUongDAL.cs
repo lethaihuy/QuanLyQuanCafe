@@ -54,13 +54,13 @@ namespace Cafe_Version1.DAL
 
         public bool ThemDoUong(string tenDoUong, int thuocDM, float giaTien)
         {
-            string them = string.Format("INSERT DoUong(tenDoUong, IDDanhMuc, gia) VALUES(N'{0}', {1}, {2})", tenDoUong, thuocDM, giaTien);
+            string them = string.Format("INSERT DoUong(tenThucUong, IDDanhMuc, gia) VALUES(N'{0}', {1}, {2})", tenDoUong, thuocDM, giaTien);
             return DataProvider.Instance.ExecuteQuerySuccess(them) > 0;
         }
 
         public bool SuaDoUong(int id, string tenDoUong, int thuocDM, float giaTien)
         {
-            string them = string.Format("UPDATE DoUong SET tenDoUong = N'{0}' , IDDanhMuc = {1} , giaTien = {2} WHERE ID = {3}", tenDoUong, thuocDM, giaTien, id);
+            string them = string.Format("UPDATE DoUong SET tenThucUong = N'{0}' , IDDanhMuc = {1} , gia = {2} WHERE ID = {3}", tenDoUong, thuocDM, giaTien, id);
             return DataProvider.Instance.ExecuteQuerySuccess(them) > 0;
         }
 

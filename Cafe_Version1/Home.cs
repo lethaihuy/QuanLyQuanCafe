@@ -14,6 +14,7 @@ namespace Cafe_Version1
 {
     public partial class formHome : Form
     {
+
         bool drag = false;
         Point startPoint = new Point(0, 0);
         public formHome()
@@ -44,7 +45,7 @@ namespace Cafe_Version1
                 }
                 else
                 {
-                    btnBan.BackColor = Color.LightPink;
+                    btnBan.BackColor = Color.Yellow;
                 }
 
                 flpDanhSachBan.Controls.Add(btnBan);

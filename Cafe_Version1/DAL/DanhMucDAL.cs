@@ -27,7 +27,7 @@ namespace Cafe_Version1.DAL
         public DanhMuc LayDanhSachDanhMucTheoID(int id)
         {
             DanhMuc dm = null;
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELCT * FROM DanhMuc WHERE ID = " + id);
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM DanhMuc WHERE ID = " + id);
             foreach (DataRow item in data.Rows)
             {
                 dm = new DanhMuc(item);
