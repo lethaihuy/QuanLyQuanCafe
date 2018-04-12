@@ -66,7 +66,8 @@ namespace Cafe_Version1.DTO
             this.trangThai = trangThai;
         }
 
-
-
+        public Ban()
+        {
+        }
     }
 }

@@ -59,21 +59,27 @@ namespace Cafe_Version1.DAL
             return dsAcc;
         }
 
-        public bool ThemTaiKhoan(string username, string password, string  tenHienThi, string loaiTK)
+        public bool ThemTaiKhoan(string username, string password, string tenHienThi, string loaiTK)
         {
             string query = string.Format("INSERT Account VALUES('{0}', '{1}', N'{2}', N'{3}')", username, password, tenHienThi, loaiTK);
             return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
         }
 
-        public bool SuaTaiKhoan(string username, string password, string tenHienThi, string loaiTK)
+        public bool SuaTaiKhoan(string username, string password, string tenHienThi)
         {
-            string query = string.Format("UPDATE Account SET password = '{0} , tenHienThi = N'{1}' , loaiTaiKhoan = N'{2}' WHERE username = '{3}')", password, tenHienThi, loaiTK, username);
+            string query = string.Format("UPDATE Account SET tenHienThi = N'{0}' WHERE username = '{1}'  AND password = '{2}'", tenHienThi, username, password);
+            return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
+        }
+
+        public bool ThayDoiMatKhau(string username, string password, string tenHienThi)
+        {
+            string query = string.Format("UPDATE Account SET password = '{0}' , tenHienThi = N'{1}' WHERE username = '{2}'", password, tenHienThi, username);
             return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
         }
 
         public bool XoaTaiKhoan(string username)
         {
-            return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM Account WHERE username = '"+username+"'") > 0;
+            return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM Account WHERE username = '" + username + "'") > 0;
         }
     }
 }

@@ -67,13 +67,25 @@
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.btnGopBan = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lbThuNgan = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lbBanTrong = new System.Windows.Forms.Label();
+            this.lbBanCoKhach = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lbGio = new System.Windows.Forms.Label();
+            this.lbNgayThang = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.pnHeaderHome.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tileGroup1
@@ -188,16 +200,15 @@
             // 
             this.flpDanhSachBan.AutoScroll = true;
             this.flpDanhSachBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.flpDanhSachBan.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpDanhSachBan.Location = new System.Drawing.Point(0, 30);
             this.flpDanhSachBan.Name = "flpDanhSachBan";
-            this.flpDanhSachBan.Size = new System.Drawing.Size(548, 570);
+            this.flpDanhSachBan.Size = new System.Drawing.Size(548, 566);
             this.flpDanhSachBan.TabIndex = 3;
             // 
             // cbDanhMuc
             // 
             this.cbDanhMuc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbDanhMuc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbDanhMuc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbDanhMuc.DisplayMember = "tenDanhMuc";
             this.cbDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDanhMuc.FormattingEnabled = true;
@@ -213,7 +224,7 @@
             this.flpDoUongTheoDanhMuc.BackColor = System.Drawing.Color.White;
             this.flpDoUongTheoDanhMuc.Location = new System.Drawing.Point(561, 150);
             this.flpDoUongTheoDanhMuc.Name = "flpDoUongTheoDanhMuc";
-            this.flpDoUongTheoDanhMuc.Size = new System.Drawing.Size(192, 443);
+            this.flpDoUongTheoDanhMuc.Size = new System.Drawing.Size(192, 446);
             this.flpDoUongTheoDanhMuc.TabIndex = 5;
             // 
             // bunifuElipse1
@@ -226,6 +237,9 @@
             this.listViewHoaDon.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listViewHoaDon.Alignment = System.Windows.Forms.ListViewAlignment.Default;
             this.listViewHoaDon.AllowColumnReorder = true;
+            this.listViewHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -238,7 +252,7 @@
             this.listViewHoaDon.HideSelection = false;
             this.listViewHoaDon.HoverSelection = true;
             this.listViewHoaDon.LabelEdit = true;
-            this.listViewHoaDon.Location = new System.Drawing.Point(764, 63);
+            this.listViewHoaDon.Location = new System.Drawing.Point(763, 178);
             this.listViewHoaDon.Name = "listViewHoaDon";
             this.listViewHoaDon.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listViewHoaDon.ShowGroups = false;
@@ -276,7 +290,7 @@
             this.lbTongTien.AutoSize = true;
             this.lbTongTien.BackColor = System.Drawing.Color.White;
             this.lbTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lbTongTien.Location = new System.Drawing.Point(6, 39);
+            this.lbTongTien.Location = new System.Drawing.Point(6, 43);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(72, 19);
             this.lbTongTien.TabIndex = 11;
@@ -284,7 +298,7 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(764, 412);
+            this.btnThanhToan.Location = new System.Drawing.Point(764, 519);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(104, 36);
             this.btnThanhToan.TabIndex = 12;
@@ -296,7 +310,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(765, 35);
+            this.panel1.Location = new System.Drawing.Point(764, 150);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(201, 28);
             this.panel1.TabIndex = 13;
@@ -314,7 +328,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(965, 35);
+            this.panel2.Location = new System.Drawing.Point(964, 150);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(51, 28);
             this.panel2.TabIndex = 14;
@@ -332,7 +346,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(1105, 35);
+            this.panel3.Location = new System.Drawing.Point(1104, 150);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(105, 28);
             this.panel3.TabIndex = 15;
@@ -350,7 +364,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(1015, 35);
+            this.panel4.Location = new System.Drawing.Point(1014, 150);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(90, 28);
             this.panel4.TabIndex = 15;
@@ -376,16 +390,21 @@
             // 
             // btnChuyenBan
             // 
-            this.btnChuyenBan.Location = new System.Drawing.Point(912, 412);
+            this.btnChuyenBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChuyenBan.Location = new System.Drawing.Point(911, 519);
             this.btnChuyenBan.Name = "btnChuyenBan";
             this.btnChuyenBan.Size = new System.Drawing.Size(104, 36);
             this.btnChuyenBan.TabIndex = 17;
-            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.Text = "Chuyển đến";
             this.btnChuyenBan.UseVisualStyleBackColor = true;
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
             // 
             // btnGopBan
             // 
-            this.btnGopBan.Location = new System.Drawing.Point(1054, 412);
+            this.btnGopBan.AllowDrop = true;
+            this.btnGopBan.Location = new System.Drawing.Point(764, 561);
             this.btnGopBan.Name = "btnGopBan";
             this.btnGopBan.Size = new System.Drawing.Size(104, 36);
             this.btnGopBan.TabIndex = 17;
@@ -395,29 +414,136 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.lbThuNgan);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.txtTongTien);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.lbTongTien);
             this.panel5.Controls.Add(this.lbDangChon);
-            this.panel5.Location = new System.Drawing.Point(559, 35);
+            this.panel5.Location = new System.Drawing.Point(763, 36);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(194, 63);
+            this.panel5.Size = new System.Drawing.Size(445, 101);
             this.panel5.TabIndex = 18;
+            // 
+            // lbThuNgan
+            // 
+            this.lbThuNgan.AutoSize = true;
+            this.lbThuNgan.Location = new System.Drawing.Point(79, 73);
+            this.lbThuNgan.Name = "lbThuNgan";
+            this.lbThuNgan.Size = new System.Drawing.Size(45, 19);
+            this.lbThuNgan.TabIndex = 23;
+            this.lbThuNgan.Text = "label6";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel7.Controls.Add(this.lbBanTrong);
+            this.panel7.Controls.Add(this.lbBanCoKhach);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(234, 10);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(211, 91);
+            this.panel7.TabIndex = 22;
+            // 
+            // lbBanTrong
+            // 
+            this.lbBanTrong.AutoSize = true;
+            this.lbBanTrong.Location = new System.Drawing.Point(3, 33);
+            this.lbBanTrong.Name = "lbBanTrong";
+            this.lbBanTrong.Size = new System.Drawing.Size(71, 19);
+            this.lbBanTrong.TabIndex = 0;
+            this.lbBanTrong.Text = "Bàn trống:";
+            // 
+            // lbBanCoKhach
+            // 
+            this.lbBanCoKhach.AutoSize = true;
+            this.lbBanCoKhach.Location = new System.Drawing.Point(3, 3);
+            this.lbBanCoKhach.Name = "lbBanCoKhach";
+            this.lbBanCoKhach.Size = new System.Drawing.Size(95, 19);
+            this.lbBanCoKhach.TabIndex = 0;
+            this.lbBanCoKhach.Text = "Bàn có khách:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 19);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Thu ngân:";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongTien.Location = new System.Drawing.Point(84, 42);
+            this.txtTongTien.Multiline = true;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(112, 20);
+            this.txtTongTien.TabIndex = 20;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.panel6.BackColor = System.Drawing.Color.Lime;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 10);
+            this.panel6.Size = new System.Drawing.Size(445, 10);
             this.panel6.TabIndex = 19;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(0, 598);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1216, 10);
+            this.panel8.TabIndex = 19;
+            // 
+            // lbGio
+            // 
+            this.lbGio.AutoSize = true;
+            this.lbGio.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGio.Location = new System.Drawing.Point(555, 36);
+            this.lbGio.Name = "lbGio";
+            this.lbGio.Size = new System.Drawing.Size(76, 31);
+            this.lbGio.TabIndex = 20;
+            this.lbGio.Text = "12:00";
+            // 
+            // lbNgayThang
+            // 
+            this.lbNgayThang.AutoSize = true;
+            this.lbNgayThang.Location = new System.Drawing.Point(561, 71);
+            this.lbNgayThang.Name = "lbNgayThang";
+            this.lbNgayThang.Size = new System.Drawing.Size(126, 19);
+            this.lbNgayThang.TabIndex = 21;
+            this.lbNgayThang.Text = "Thứ 2, 10/10/2018";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // cbChuyenBan
+            // 
+            this.cbChuyenBan.AllowDrop = true;
+            this.cbChuyenBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbChuyenBan.FormattingEnabled = true;
+            this.cbChuyenBan.Location = new System.Drawing.Point(1014, 525);
+            this.cbChuyenBan.MaxDropDownItems = 50;
+            this.cbChuyenBan.Name = "cbChuyenBan";
+            this.cbChuyenBan.Size = new System.Drawing.Size(102, 27);
+            this.cbChuyenBan.TabIndex = 22;
             // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1216, 600);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1216, 608);
+            this.Controls.Add(this.cbChuyenBan);
+            this.Controls.Add(this.lbNgayThang);
+            this.Controls.Add(this.lbGio);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnGopBan);
             this.Controls.Add(this.btnChuyenBan);
@@ -451,7 +577,10 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -494,5 +623,16 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnGopBan;
         private System.Windows.Forms.Button btnChuyenBan;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lbThuNgan;
+        private System.Windows.Forms.Label lbBanTrong;
+        private System.Windows.Forms.Label lbBanCoKhach;
+        private System.Windows.Forms.Label lbNgayThang;
+        private System.Windows.Forms.Label lbGio;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox cbChuyenBan;
     }
 }

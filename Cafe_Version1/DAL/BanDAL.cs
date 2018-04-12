@@ -44,6 +44,13 @@ namespace Cafe_Version1.DAL
             return dsBan;
         }
 
+        //Binding cho dữ liệu
+
+        public DataTable LayDanhSachBanDataTable()
+        {
+           return DataProvider.Instance.ExecuteQuery("EXEC USP_LayDanhSachBan");
+        }
+
         public bool ThemBan(string tenBan)
         {
             int a = DataProvider.Instance.ExecuteQuerySuccess("INSERT Ban(tenBan) VALUES(N'" + tenBan + "')");
@@ -59,6 +66,11 @@ namespace Cafe_Version1.DAL
         public bool XoaBan(int id)
         {
             return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM Ban WHERE ID = " + id) > 0;
+        }
+
+        public void ChuyenBan(int idBan1, int idBan2, string nguoiTao)
+        {
+            DataProvider.Instance.ExecuteQuery("EXEC USP_ChuyenBan @idBan1 , @idBan2 , @nguoiTao", new object[] { idBan1, idBan2, nguoiTao });
         }
     }
 }

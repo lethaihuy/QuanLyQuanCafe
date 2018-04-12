@@ -86,6 +86,12 @@
     <Compile Include="formDanhMuc.Designer.cs">
       <DependentUpon>formDanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoanhthu.Designer.cs">
+      <DependentUpon>FormDoanhthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,14 +118,17 @@
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="user.cs">
+    <Compile Include="formUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user.Designer.cs">
-      <DependentUpon>user.cs</DependentUpon>
+    <Compile Include="formUser.Designer.cs">
+      <DependentUpon>formUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formDanhMuc.resx">
       <DependentUpon>formDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoanhthu.resx">
+      <DependentUpon>FormDoanhthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -144,8 +153,8 @@
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user.resx">
-      <DependentUpon>user.cs</DependentUpon>
+    <EmbeddedResource Include="formUser.resx">
+      <DependentUpon>formUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

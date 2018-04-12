@@ -36,8 +36,8 @@
             this.lbThoiGian = new System.Windows.Forms.Label();
             this.btnQLNhanVien = new System.Windows.Forms.Button();
             this.btnDoanhThu = new System.Windows.Forms.Button();
-            this.btnDoUong = new System.Windows.Forms.Button();
-            this.btnDanhMuc = new System.Windows.Forms.Button();
+            this.btnQuanLyKhoHang = new System.Windows.Forms.Button();
+            this.btnThietLap = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -47,8 +47,8 @@
             this.lbThu = new System.Windows.Forms.Label();
             this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
             this.picAvatar = new System.Windows.Forms.PictureBox();
-            this.lbUser = new System.Windows.Forms.Label();
-            this.lbNguoiDangNhap = new System.Windows.Forms.Label();
+            this.lbPhanQuyen = new System.Windows.Forms.Label();
+            this.lbTenTaiKhoanDangNhap = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -106,6 +106,7 @@
             // 
             this.btnQLNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(112)))), ((int)(((byte)(184)))));
             this.btnQLNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLNhanVien.Enabled = false;
             this.btnQLNhanVien.FlatAppearance.BorderSize = 0;
             this.btnQLNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,7 +120,7 @@
             this.btnQLNhanVien.Text = "QUẢN LÝ NHÂN VIÊN";
             this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnQLNhanVien.UseVisualStyleBackColor = false;
-            this.btnQLNhanVien.Click += new System.EventHandler(this.btnDoanhThu_Click);
+            this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
             // 
             // btnDoanhThu
             // 
@@ -140,43 +141,43 @@
             this.btnDoanhThu.UseVisualStyleBackColor = false;
             this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
             // 
-            // btnDoUong
+            // btnQuanLyKhoHang
             // 
-            this.btnDoUong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnDoUong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoUong.FlatAppearance.BorderSize = 0;
-            this.btnDoUong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoUong.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoUong.ForeColor = System.Drawing.Color.White;
-            this.btnDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnDoUong.Image")));
-            this.btnDoUong.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDoUong.Location = new System.Drawing.Point(308, 200);
-            this.btnDoUong.Name = "btnDoUong";
-            this.btnDoUong.Size = new System.Drawing.Size(277, 100);
-            this.btnDoUong.TabIndex = 0;
-            this.btnDoUong.Text = "QUẢN LÝ KHO HÀNG";
-            this.btnDoUong.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnDoUong.UseVisualStyleBackColor = false;
-            this.btnDoUong.Click += new System.EventHandler(this.btnDoUong_Click);
+            this.btnQuanLyKhoHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
+            this.btnQuanLyKhoHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuanLyKhoHang.FlatAppearance.BorderSize = 0;
+            this.btnQuanLyKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyKhoHang.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyKhoHang.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyKhoHang.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyKhoHang.Image")));
+            this.btnQuanLyKhoHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnQuanLyKhoHang.Location = new System.Drawing.Point(308, 200);
+            this.btnQuanLyKhoHang.Name = "btnQuanLyKhoHang";
+            this.btnQuanLyKhoHang.Size = new System.Drawing.Size(277, 100);
+            this.btnQuanLyKhoHang.TabIndex = 0;
+            this.btnQuanLyKhoHang.Text = "QUẢN LÝ KHO HÀNG";
+            this.btnQuanLyKhoHang.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnQuanLyKhoHang.UseVisualStyleBackColor = false;
             // 
-            // btnDanhMuc
+            // btnThietLap
             // 
-            this.btnDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.btnDanhMuc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDanhMuc.FlatAppearance.BorderSize = 0;
-            this.btnDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDanhMuc.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMuc.ForeColor = System.Drawing.Color.White;
-            this.btnDanhMuc.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhMuc.Image")));
-            this.btnDanhMuc.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDanhMuc.Location = new System.Drawing.Point(41, 334);
-            this.btnDanhMuc.Name = "btnDanhMuc";
-            this.btnDanhMuc.Size = new System.Drawing.Size(176, 100);
-            this.btnDanhMuc.TabIndex = 0;
-            this.btnDanhMuc.Text = "THIẾT LẬP QUÁN";
-            this.btnDanhMuc.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnDanhMuc.UseVisualStyleBackColor = false;
-            this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
+            this.btnThietLap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.btnThietLap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThietLap.Enabled = false;
+            this.btnThietLap.FlatAppearance.BorderSize = 0;
+            this.btnThietLap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThietLap.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThietLap.ForeColor = System.Drawing.Color.White;
+            this.btnThietLap.Image = ((System.Drawing.Image)(resources.GetObject("btnThietLap.Image")));
+            this.btnThietLap.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnThietLap.Location = new System.Drawing.Point(41, 334);
+            this.btnThietLap.Name = "btnThietLap";
+            this.btnThietLap.Size = new System.Drawing.Size(176, 100);
+            this.btnThietLap.TabIndex = 0;
+            this.btnThietLap.Text = "THIẾT LẬP QUÁN";
+            this.btnThietLap.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnThietLap.UseVisualStyleBackColor = false;
+            this.btnThietLap.Click += new System.EventHandler(this.btnThietLap_Click);
             // 
             // btnThanhToan
             // 
@@ -233,7 +234,7 @@
             this.lbNgay.AutoSize = true;
             this.lbNgay.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgay.ForeColor = System.Drawing.Color.White;
-            this.lbNgay.Location = new System.Drawing.Point(157, 42);
+            this.lbNgay.Location = new System.Drawing.Point(150, 42);
             this.lbNgay.Name = "lbNgay";
             this.lbNgay.Size = new System.Drawing.Size(45, 35);
             this.lbNgay.TabIndex = 3;
@@ -242,12 +243,13 @@
             // lbThu
             // 
             this.lbThu.AutoSize = true;
+            this.lbThu.BackColor = System.Drawing.Color.Transparent;
             this.lbThu.ForeColor = System.Drawing.Color.White;
-            this.lbThu.Location = new System.Drawing.Point(156, 23);
+            this.lbThu.Location = new System.Drawing.Point(148, 23);
             this.lbThu.Name = "lbThu";
-            this.lbThu.Size = new System.Drawing.Size(46, 19);
+            this.lbThu.Size = new System.Drawing.Size(63, 19);
             this.lbThu.TabIndex = 3;
-            this.lbThu.Text = "Thứ 2";
+            this.lbThu.Text = "Chủ nhật";
             // 
             // tileGroup1
             // 
@@ -264,29 +266,29 @@
             this.picAvatar.TabStop = false;
             this.picAvatar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picAvatar_MouseDown);
             // 
-            // lbUser
+            // lbPhanQuyen
             // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.BackColor = System.Drawing.Color.Transparent;
-            this.lbUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.ForeColor = System.Drawing.Color.White;
-            this.lbUser.Location = new System.Drawing.Point(191, 158);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(75, 19);
-            this.lbUser.TabIndex = 6;
-            this.lbUser.Text = "Nhân viên";
+            this.lbPhanQuyen.AutoSize = true;
+            this.lbPhanQuyen.BackColor = System.Drawing.Color.Transparent;
+            this.lbPhanQuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhanQuyen.ForeColor = System.Drawing.Color.White;
+            this.lbPhanQuyen.Location = new System.Drawing.Point(191, 158);
+            this.lbPhanQuyen.Name = "lbPhanQuyen";
+            this.lbPhanQuyen.Size = new System.Drawing.Size(68, 19);
+            this.lbPhanQuyen.TabIndex = 6;
+            this.lbPhanQuyen.Text = "nhanvien";
             // 
-            // lbNguoiDangNhap
+            // lbTenTaiKhoanDangNhap
             // 
-            this.lbNguoiDangNhap.AutoSize = true;
-            this.lbNguoiDangNhap.BackColor = System.Drawing.Color.Transparent;
-            this.lbNguoiDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNguoiDangNhap.ForeColor = System.Drawing.Color.White;
-            this.lbNguoiDangNhap.Location = new System.Drawing.Point(191, 181);
-            this.lbNguoiDangNhap.Name = "lbNguoiDangNhap";
-            this.lbNguoiDangNhap.Size = new System.Drawing.Size(68, 19);
-            this.lbNguoiDangNhap.TabIndex = 7;
-            this.lbNguoiDangNhap.Text = "huylethai";
+            this.lbTenTaiKhoanDangNhap.AutoSize = true;
+            this.lbTenTaiKhoanDangNhap.BackColor = System.Drawing.Color.Transparent;
+            this.lbTenTaiKhoanDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenTaiKhoanDangNhap.ForeColor = System.Drawing.Color.Gray;
+            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(191, 181);
+            this.lbTenTaiKhoanDangNhap.Name = "lbTenTaiKhoanDangNhap";
+            this.lbTenTaiKhoanDangNhap.Size = new System.Drawing.Size(71, 19);
+            this.lbTenTaiKhoanDangNhap.TabIndex = 7;
+            this.lbTenTaiKhoanDangNhap.Text = "username";
             // 
             // pictureBox1
             // 
@@ -331,15 +333,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picAvatar);
-            this.Controls.Add(this.lbNguoiDangNhap);
+            this.Controls.Add(this.lbTenTaiKhoanDangNhap);
             this.Controls.Add(this.pnThoiGian);
-            this.Controls.Add(this.lbUser);
+            this.Controls.Add(this.lbPhanQuyen);
             this.Controls.Add(this.btnQLNhanVien);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDoanhThu);
-            this.Controls.Add(this.btnDoUong);
+            this.Controls.Add(this.btnQuanLyKhoHang);
             this.Controls.Add(this.btnThanhToan);
-            this.Controls.Add(this.btnDanhMuc);
+            this.Controls.Add(this.btnThietLap);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -360,8 +362,8 @@
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnDoUong;
-        private System.Windows.Forms.Button btnDanhMuc;
+        private System.Windows.Forms.Button btnQuanLyKhoHang;
+        private System.Windows.Forms.Button btnThietLap;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Button btnQLNhanVien;
@@ -376,8 +378,8 @@
         private System.Windows.Forms.Label lbThu;
         private System.Windows.Forms.PictureBox picAvatar;
         private DevExpress.XtraEditors.TileGroup tileGroup1;
-        private System.Windows.Forms.Label lbNguoiDangNhap;
-        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.Label lbTenTaiKhoanDangNhap;
+        private System.Windows.Forms.Label lbPhanQuyen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer2;

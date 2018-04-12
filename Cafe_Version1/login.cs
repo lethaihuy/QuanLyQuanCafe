@@ -31,10 +31,11 @@ namespace Cafe_Version1
             if (DangNhapHienTai(username, password) == true)
             {
                 Account accLogin = AccountDAL.Instance.LayTaiKhoanDangNhap(username);
-                formTrangChu fTrangChu = new formTrangChu();
+                formHome.thuNgan = username;
+                formUser.TaiKhoanHienTai = accLogin;
+                formTrangChu fTrangChu = new formTrangChu(accLogin);
                 this.Hide();
                 fTrangChu.ShowDialog();
-                this.Show();
             }
             else
             {

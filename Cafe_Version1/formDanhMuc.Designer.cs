@@ -40,6 +40,7 @@
             this.btnSuaBan = new System.Windows.Forms.Button();
             this.btnThemDanhMuc = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHuyBan = new System.Windows.Forms.Button();
             this.btnSaveBan = new System.Windows.Forms.Button();
             this.cbTrangThai = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.btnSuaDM = new System.Windows.Forms.Button();
             this.btnDanhMuc = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHuyDanhMuc = new System.Windows.Forms.Button();
             this.btnSaveDanhMuc = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,6 +67,7 @@
             this.btnSuaDoUong = new System.Windows.Forms.Button();
             this.btnThemDoUong = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnHuyDoUong = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.btnSaveDoUong = new System.Windows.Forms.Button();
@@ -83,9 +86,6 @@
             this.btnBack = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnBackHome = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnHuyBan = new System.Windows.Forms.Button();
-            this.btnHuyDanhMuc = new System.Windows.Forms.Button();
-            this.btnHuyDoUong = new System.Windows.Forms.Button();
             this.tbcAdmin.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachBan)).BeginInit();
@@ -228,6 +228,18 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // btnHuyBan
+            // 
+            this.btnHuyBan.BackColor = System.Drawing.Color.White;
+            this.btnHuyBan.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBan.Image")));
+            this.btnHuyBan.Location = new System.Drawing.Point(207, 149);
+            this.btnHuyBan.Name = "btnHuyBan";
+            this.btnHuyBan.Size = new System.Drawing.Size(47, 36);
+            this.btnHuyBan.TabIndex = 3;
+            this.btnHuyBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyBan.UseVisualStyleBackColor = false;
+            this.btnHuyBan.Click += new System.EventHandler(this.btnHuyBan_Click);
             // 
             // btnSaveBan
             // 
@@ -381,6 +393,18 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
+            // 
+            // btnHuyDanhMuc
+            // 
+            this.btnHuyDanhMuc.BackColor = System.Drawing.Color.White;
+            this.btnHuyDanhMuc.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyDanhMuc.Image")));
+            this.btnHuyDanhMuc.Location = new System.Drawing.Point(210, 117);
+            this.btnHuyDanhMuc.Name = "btnHuyDanhMuc";
+            this.btnHuyDanhMuc.Size = new System.Drawing.Size(47, 36);
+            this.btnHuyDanhMuc.TabIndex = 4;
+            this.btnHuyDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyDanhMuc.UseVisualStyleBackColor = false;
+            this.btnHuyDanhMuc.Click += new System.EventHandler(this.btnHuyDanhMuc_Click);
             // 
             // btnSaveDanhMuc
             // 
@@ -541,6 +565,18 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin";
+            // 
+            // btnHuyDoUong
+            // 
+            this.btnHuyDoUong.BackColor = System.Drawing.Color.White;
+            this.btnHuyDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyDoUong.Image")));
+            this.btnHuyDoUong.Location = new System.Drawing.Point(202, 191);
+            this.btnHuyDoUong.Name = "btnHuyDoUong";
+            this.btnHuyDoUong.Size = new System.Drawing.Size(47, 36);
+            this.btnHuyDoUong.TabIndex = 6;
+            this.btnHuyDoUong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuyDoUong.UseVisualStyleBackColor = false;
+            this.btnHuyDoUong.Click += new System.EventHandler(this.btnHuyDoUong_Click);
             // 
             // label9
             // 
@@ -761,42 +797,6 @@
             this.btnBackHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBackHome.Textcolor = System.Drawing.Color.White;
             this.btnBackHome.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnHuyBan
-            // 
-            this.btnHuyBan.BackColor = System.Drawing.Color.White;
-            this.btnHuyBan.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBan.Image")));
-            this.btnHuyBan.Location = new System.Drawing.Point(207, 149);
-            this.btnHuyBan.Name = "btnHuyBan";
-            this.btnHuyBan.Size = new System.Drawing.Size(47, 36);
-            this.btnHuyBan.TabIndex = 3;
-            this.btnHuyBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHuyBan.UseVisualStyleBackColor = false;
-            this.btnHuyBan.Click += new System.EventHandler(this.btnHuyBan_Click);
-            // 
-            // btnHuyDanhMuc
-            // 
-            this.btnHuyDanhMuc.BackColor = System.Drawing.Color.White;
-            this.btnHuyDanhMuc.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyDanhMuc.Image")));
-            this.btnHuyDanhMuc.Location = new System.Drawing.Point(210, 117);
-            this.btnHuyDanhMuc.Name = "btnHuyDanhMuc";
-            this.btnHuyDanhMuc.Size = new System.Drawing.Size(47, 36);
-            this.btnHuyDanhMuc.TabIndex = 4;
-            this.btnHuyDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHuyDanhMuc.UseVisualStyleBackColor = false;
-            this.btnHuyDanhMuc.Click += new System.EventHandler(this.btnHuyDanhMuc_Click);
-            // 
-            // btnHuyDoUong
-            // 
-            this.btnHuyDoUong.BackColor = System.Drawing.Color.White;
-            this.btnHuyDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyDoUong.Image")));
-            this.btnHuyDoUong.Location = new System.Drawing.Point(202, 191);
-            this.btnHuyDoUong.Name = "btnHuyDoUong";
-            this.btnHuyDoUong.Size = new System.Drawing.Size(47, 36);
-            this.btnHuyDoUong.TabIndex = 6;
-            this.btnHuyDoUong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHuyDoUong.UseVisualStyleBackColor = false;
-            this.btnHuyDoUong.Click += new System.EventHandler(this.btnHuyDoUong_Click);
             // 
             // formDanhMuc
             // 

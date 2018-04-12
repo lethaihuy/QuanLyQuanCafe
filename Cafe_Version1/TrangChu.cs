@@ -16,12 +16,43 @@ namespace Cafe_Version1
         bool drag = false;
         Point startPoint = new Point(0, 0);
         public DateTime time;
-        public formTrangChu()
+        public formTrangChu(Account acc)
         {
             InitializeComponent();
-            timer1.Start();
+
+            this.TaiKhoanDangNhap = acc;
+
         }
 
+        private Account taiKhoanDangNhap;
+
+
+        public Account TaiKhoanDangNhap
+        {
+            get
+            {
+                return taiKhoanDangNhap;
+            }
+
+            set
+            {
+                taiKhoanDangNhap = value;
+                DoiTaiKhoan(taiKhoanDangNhap.LoaiTaiKhoan);
+            }
+        }
+
+        void DoiTaiKhoan(string loaiTK)
+        {
+            //Phân quyền admin và nhân viên
+            if (loaiTK == "Admin")
+            {
+                this.btnQLNhanVien.Enabled = true;
+                this.btnThietLap.Enabled = true;
+            }
+           
+            this.lbPhanQuyen.Text = TaiKhoanDangNhap.LoaiTaiKhoan;
+            this.lbTenTaiKhoanDangNhap.Text = TaiKhoanDangNhap.TenHienThi;
+        }
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             Color.FromArgb(128, 204, 255);
@@ -33,26 +64,16 @@ namespace Cafe_Version1
 
         private void formTrangChu_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
 
-        private void btnDanhMuc_Click(object sender, EventArgs e)
+        private void btnThietLap_Click(object sender, EventArgs e)
         {
             formDanhMuc fDanhMuc = new formDanhMuc();
             fDanhMuc.ShowDialog();
         }
 
-        private void btnDoUong_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnBan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDoanhThu_Click(object sender, EventArgs e)
+        private void btnQLNhanVien_Click(object sender, EventArgs e)
         {
             formQLTaiKhoan fTaiKhoan = new formQLTaiKhoan();
             fTaiKhoan.ShowDialog();
@@ -60,13 +81,12 @@ namespace Cafe_Version1
 
 
         int chay = 10;
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             time = DateTime.Now;
-            lbThoiGian.Text = time.ToString("HH:mm:ss");
-
-            lbNgay.Text = time.ToString("dd");
-            lbThangNam.Text = time.ToString("MM/yyyy");
+                   
             if (time.DayOfWeek == DayOfWeek.Monday)
             {
                 lbThu.Text = "Thứ 2";
@@ -96,6 +116,13 @@ namespace Cafe_Version1
                 lbThu.Text = "Chủ nhật";
             }
 
+            lbThoiGian.Text = time.ToString("HH:mm:ss");
+
+            lbNgay.Text = time.ToString("dd");
+            lbThangNam.Text = time.ToString("MM/yyyy");
+
+            formHome.Ngaythang = lbThu.Text+", " + time.ToString("dd/MM/yyyy");
+
             lbXinChao.Location = new Point(lbXinChao.Location.X + chay, lbXinChao.Location.Y);
             if (lbXinChao.Location.X > 877)
             {
@@ -112,7 +139,7 @@ namespace Cafe_Version1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
 
         private void itemUser_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
@@ -147,6 +174,7 @@ namespace Cafe_Version1
             if (e.Button == MouseButtons.Right)
             {
                 menu.Items.Add("Chỉnh sửa").Name = "Chỉnh sửa";
+                menu.Items.Add("Đổi mật khẩu").Name = "Đổi mật khẩu";
                 menu.Items.Add("Đăng xuất").Name = "Đăng xuất";
                 menu.Items.Add("Hủy").Name = "Hủy";
                 menu.Show(picAvatar, new Point(e.X, e.Y));
@@ -159,16 +187,34 @@ namespace Cafe_Version1
         {
             if (e.ClickedItem.Name == "Chỉnh sửa")
             {
-                MessageBox.Show("Chỉnh sửa");
+                formUser fSua = new formUser();
+                formUser.ThayDoi = false;
+                fSua.ShowDialog();
+            }
+            else if (e.ClickedItem.Name == "Đổi mật khẩu")
+            {
+                formUser fSua = new formUser();
+                formUser.ThayDoi = true;
+                fSua.ShowDialog();
             }
             else if (e.ClickedItem.Name == "Đăng xuất")
             {
-
-            }
-            else
-            {
-
+                formDangNhap fDangNhap = new formDangNhap();
+                this.Close();
+                fDangNhap.ShowDialog();
             }
         }
+
+        #region  Event
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            FormDoanhthu fDoanhthu = new FormDoanhthu();
+            this.Hide();
+            fDoanhthu.ShowDialog();
+            this.Show();
+        }
+
+        #endregion
     }
 }
