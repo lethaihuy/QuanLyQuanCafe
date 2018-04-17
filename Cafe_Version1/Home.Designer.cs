@@ -79,6 +79,8 @@
             this.lbNgayThang = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnInHoaDon = new System.Windows.Forms.Button();
             this.pnHeaderHome.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,6 +88,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tileGroup1
@@ -199,7 +202,7 @@
             // flpDanhSachBan
             // 
             this.flpDanhSachBan.AutoScroll = true;
-            this.flpDanhSachBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flpDanhSachBan.BackColor = System.Drawing.Color.White;
             this.flpDanhSachBan.Location = new System.Drawing.Point(0, 30);
             this.flpDanhSachBan.Name = "flpDanhSachBan";
             this.flpDanhSachBan.Size = new System.Drawing.Size(548, 566);
@@ -410,6 +413,7 @@
             this.btnGopBan.TabIndex = 17;
             this.btnGopBan.Text = "Gộp bàn";
             this.btnGopBan.UseVisualStyleBackColor = true;
+            this.btnGopBan.Click += new System.EventHandler(this.btnGopBan_Click);
             // 
             // panel5
             // 
@@ -504,7 +508,7 @@
             // 
             this.lbGio.AutoSize = true;
             this.lbGio.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGio.Location = new System.Drawing.Point(555, 36);
+            this.lbGio.Location = new System.Drawing.Point(593, 33);
             this.lbGio.Name = "lbGio";
             this.lbGio.Size = new System.Drawing.Size(76, 31);
             this.lbGio.TabIndex = 20;
@@ -513,7 +517,7 @@
             // lbNgayThang
             // 
             this.lbNgayThang.AutoSize = true;
-            this.lbNgayThang.Location = new System.Drawing.Point(561, 71);
+            this.lbNgayThang.Location = new System.Drawing.Point(557, 67);
             this.lbNgayThang.Name = "lbNgayThang";
             this.lbNgayThang.Size = new System.Drawing.Size(126, 19);
             this.lbNgayThang.TabIndex = 21;
@@ -525,8 +529,6 @@
             // 
             // cbChuyenBan
             // 
-            this.cbChuyenBan.AllowDrop = true;
-            this.cbChuyenBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbChuyenBan.FormattingEnabled = true;
             this.cbChuyenBan.Location = new System.Drawing.Point(1014, 525);
             this.cbChuyenBan.MaxDropDownItems = 50;
@@ -534,12 +536,34 @@
             this.cbChuyenBan.Size = new System.Drawing.Size(102, 27);
             this.cbChuyenBan.TabIndex = 22;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(561, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnInHoaDon
+            // 
+            this.btnInHoaDon.Location = new System.Drawing.Point(911, 562);
+            this.btnInHoaDon.Name = "btnInHoaDon";
+            this.btnInHoaDon.Size = new System.Drawing.Size(92, 30);
+            this.btnInHoaDon.TabIndex = 24;
+            this.btnInHoaDon.Text = "In hóa đơn";
+            this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1216, 608);
+            this.Controls.Add(this.btnInHoaDon);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbChuyenBan);
             this.Controls.Add(this.lbNgayThang);
             this.Controls.Add(this.lbGio);
@@ -579,6 +603,7 @@
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,5 +659,7 @@
         private System.Windows.Forms.Label lbGio;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox cbChuyenBan;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnInHoaDon;
     }
 }

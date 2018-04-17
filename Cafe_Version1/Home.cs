@@ -20,7 +20,6 @@ namespace Cafe_Version1
         private static string ngaythang = string.Empty;
         public DateTime time;
 
-
         bool drag = false;
         Point startPoint = new Point(0, 0);
 
@@ -61,18 +60,23 @@ namespace Cafe_Version1
                 btnBan.FlatAppearance.BorderSize = 0;
                 btnBan.Cursor = Cursors.Hand;
                 btnBan.Text = item.TenBan;
+                btnBan.TextAlign = ContentAlignment.BottomCenter;
+                btnBan.ForeColor = Color.Red;
                 btnBan.Tag = item;
+                btnBan.BackgroundImageLayout = ImageLayout.Center;
                 //Sự kiện click vào button trên danh sách bàn.
                 btnBan.Click += BtnBan_Click;
 
                 if (item.TrangThai == "Trống")
                 {
-                    btnBan.BackColor = Color.WhiteSmoke;
+                    //btnBan.BackColor = Color.Pink;
+                    btnBan.BackgroundImage= Image.FromFile(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\icon\coffee-cup-64.png");
                     demBanTrong++;
                 }
                 else
                 {
-                    btnBan.BackColor = Color.Yellow;
+                    //btnBan.BackColor = Color.Yellow;
+                    btnBan.BackgroundImage = Image.FromFile(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\icon\hot-coffee.png");
                     demBanCoKhach++;
                 }
 
@@ -113,6 +117,7 @@ namespace Cafe_Version1
             int IDBan = ((sender as Button).Tag as Ban)._ID;
             listViewHoaDon.Tag = (sender as Button).Tag;
             lbDangChon.Text = "Đang chọn: " + (listViewHoaDon.Tag as Ban).TenBan;
+
             HienThiHoaDonTheoBan(IDBan);
         }
         private void cbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,10 +147,6 @@ namespace Cafe_Version1
 
         }
 
-        void LoadMotBan(int idban)
-        {
-
-        }
 
         private void BtnDoUong_MouseDown(object sender, MouseEventArgs e)
         {
@@ -178,9 +179,10 @@ namespace Cafe_Version1
                 ChiTietHoaDonDAL.Instance.ThemChiTietHoaDon(idHoaDon, idDoUong, 1);
             }
 
-            HienThiHoaDonTheoBan(ban._ID);
-            //Load bàn khi thêm đồ uống
 
+            HienThiHoaDonTheoBan(ban._ID);
+
+            //Load bàn khi thêm đồ uống
             LoadDanhSachBan();
         }
 
@@ -283,5 +285,26 @@ namespace Cafe_Version1
             HienThiHoaDonTheoBan(idBan2);
         }
 
+        private void btnGopBan_Click(object sender, EventArgs e)
+        {
+            int idBan1 = (listViewHoaDon.Tag as Ban)._ID;
+            int idBan2 = (cbChuyenBan.SelectedItem as Ban)._ID;
+
+            if (MessageBox.Show(string.Format("Bạn muốn gộp {0} vào {1} ?", (listViewHoaDon.Tag as Ban).TenBan, (cbChuyenBan.SelectedItem as Ban).TenBan), "Thông báo ", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                BanDAL.Instance.GopBan(idBan1, idBan2);
+            }
+            LoadDanhSachBan();
+            HienThiHoaDonTheoBan(idBan2);
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            //int idBan = (listViewHoaDon.Tag as Ban)._ID;
+            //formInHoaDon.idBanInHoaDon = idBan;
+            formInHoaDon fI = new formInHoaDon();
+            fI.Show();
+            
+        }
     }
 }

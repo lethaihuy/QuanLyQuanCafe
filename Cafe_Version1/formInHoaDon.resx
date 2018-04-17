@@ -117,31 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="USP_InHoaDonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>212, 17</value>
+  </metadata>
+  <metadata name="CAFE_VERSION_1DataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSaveImage.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACzSURBVDhP1dE5
-        CgJBEIXhPoCBscfQQBR3BSNNzRQzb2fiXQwEDV3AwAUM9X/Vdtw1ieCDD6aGqZqZrvBXaWKLHTq6USRq
-        eOD9tYc7XVxwRxpwgCs9qHmANp54YYhs+lCzhih1HDG2KpMJ1NywKg47oWVVJlPoTTWr4ucXbq5aFf/V
-        3axV6WHtW9GhnTGyypEN5vHShukMXKetlHFDBUuk1bmzgPZ7xRrpN9xZYYaSVb9LCB8BcSYuX8UYcgAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnLoadAnh.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACzSURBVDhP1dE5
-        CgJBEIXhPoCBscfQQBR3BSNNzRQzb2fiXQwEDV3AwAUM9X/Vdtw1ieCDD6aGqZqZrvBXaWKLHTq6USRq
-        eOD9tYc7XVxwRxpwgCs9qHmANp54YYhs+lCzhih1HDG2KpMJ1NywKg47oWVVJlPoTTWr4ucXbq5aFf/V
-        3axV6WHtW9GhnTGyypEN5vHShukMXKetlHFDBUuk1bmzgPZ7xRrpN9xZYYaSVb9LCB8BcSYuX8UYcgAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 17</value>
+  <metadata name="USP_InHoaDonTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>425, 17</value>
   </metadata>
 </root>

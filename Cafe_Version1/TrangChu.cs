@@ -49,6 +49,7 @@ namespace Cafe_Version1
                 this.btnQLNhanVien.Enabled = true;
                 this.btnThietLap.Enabled = true;
             }
+       
            
             this.lbPhanQuyen.Text = TaiKhoanDangNhap.LoaiTaiKhoan;
             this.lbTenTaiKhoanDangNhap.Text = TaiKhoanDangNhap.TenHienThi;
@@ -134,7 +135,8 @@ namespace Cafe_Version1
         {
             Random ran = new Random();
             Color mau = Color.FromArgb(ran.Next(256), ran.Next(256), ran.Next(256));
-            pnThoiGian.BackColor = mau;
+            //pnThoiGian.BackColor = mau;
+            lbTenQuan.ForeColor = mau;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -216,5 +218,6 @@ namespace Cafe_Version1
         }
 
         #endregion
+
     }
 }

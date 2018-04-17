@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -127,9 +128,9 @@ namespace Cafe_Version1
                     }
                 }
             }
-          
+
             //Đổi mật khẩu
-            
+
 
 
         }
@@ -146,6 +147,41 @@ namespace Cafe_Version1
                 this.lbPasswordMoi.Visible = true;
                 this.lbNhapLaiPassword.Visible = true;
             }
+        }
+
+        private void btnLoadAnh_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string file = openFileDialog1.FileName;
+            if (string.IsNullOrEmpty(file))
+                return;
+            Image myImage = Image.FromFile(file);
+            picAvatar.Image = myImage;
+        }
+
+        byte[] ConvertImageToBinary(Image img)
+        {
+            string file = openFileDialog1.FileName;
+            Image myImage = Image.FromFile(file);
+            FileStream fs;
+            fs = new FileStream(file, FileMode.Open, FileAccess.Read);
+            byte[] picbyte = new byte[fs.Length];
+            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
+            fs.Close();
+            return picbyte;
+        }
+
+        Image ByteToImg(string byteString)
+        {
+            byte[] imgBytes = Convert.FromBase64String(byteString);
+            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
+            ms.Write(imgBytes, 0, imgBytes.Length);
+            Image image = picAvatar.Image;
+            return image;
+        }
+        private void btnSaveImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

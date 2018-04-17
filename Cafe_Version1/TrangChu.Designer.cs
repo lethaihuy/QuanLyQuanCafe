@@ -52,6 +52,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbTenQuan = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnThoiGian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +63,8 @@
             // lbXinChao
             // 
             this.lbXinChao.AutoSize = true;
-            this.lbXinChao.Location = new System.Drawing.Point(548, 18);
+            this.lbXinChao.BackColor = System.Drawing.Color.Transparent;
+            this.lbXinChao.Location = new System.Drawing.Point(672, 51);
             this.lbXinChao.Name = "lbXinChao";
             this.lbXinChao.Size = new System.Drawing.Size(169, 19);
             this.lbXinChao.TabIndex = 5;
@@ -85,7 +89,7 @@
             // 
             this.lbThangNam.AutoSize = true;
             this.lbThangNam.ForeColor = System.Drawing.Color.White;
-            this.lbThangNam.Location = new System.Drawing.Point(141, 77);
+            this.lbThangNam.Location = new System.Drawing.Point(167, 73);
             this.lbThangNam.Name = "lbThangNam";
             this.lbThangNam.Size = new System.Drawing.Size(61, 19);
             this.lbThangNam.TabIndex = 2;
@@ -104,7 +108,7 @@
             // 
             // btnQLNhanVien
             // 
-            this.btnQLNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(112)))), ((int)(((byte)(184)))));
+            this.btnQLNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.btnQLNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLNhanVien.Enabled = false;
             this.btnQLNhanVien.FlatAppearance.BorderSize = 0;
@@ -112,13 +116,12 @@
             this.btnQLNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNhanVien.ForeColor = System.Drawing.Color.White;
             this.btnQLNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.Image")));
-            this.btnQLNhanVien.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnQLNhanVien.Location = new System.Drawing.Point(41, 215);
+            this.btnQLNhanVien.Location = new System.Drawing.Point(60, 222);
             this.btnQLNhanVien.Name = "btnQLNhanVien";
-            this.btnQLNhanVien.Size = new System.Drawing.Size(176, 100);
+            this.btnQLNhanVien.Size = new System.Drawing.Size(188, 211);
             this.btnQLNhanVien.TabIndex = 0;
             this.btnQLNhanVien.Text = "QUẢN LÝ NHÂN VIÊN";
-            this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLNhanVien.UseVisualStyleBackColor = false;
             this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
             // 
@@ -132,9 +135,9 @@
             this.btnDoanhThu.ForeColor = System.Drawing.Color.White;
             this.btnDoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.Image")));
             this.btnDoanhThu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDoanhThu.Location = new System.Drawing.Point(451, 92);
+            this.btnDoanhThu.Location = new System.Drawing.Point(577, 222);
             this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Size = new System.Drawing.Size(134, 98);
+            this.btnDoanhThu.Size = new System.Drawing.Size(231, 96);
             this.btnDoanhThu.TabIndex = 0;
             this.btnDoanhThu.Text = "DOANH THU";
             this.btnDoanhThu.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -151,9 +154,9 @@
             this.btnQuanLyKhoHang.ForeColor = System.Drawing.Color.White;
             this.btnQuanLyKhoHang.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyKhoHang.Image")));
             this.btnQuanLyKhoHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnQuanLyKhoHang.Location = new System.Drawing.Point(308, 200);
+            this.btnQuanLyKhoHang.Location = new System.Drawing.Point(286, 336);
             this.btnQuanLyKhoHang.Name = "btnQuanLyKhoHang";
-            this.btnQuanLyKhoHang.Size = new System.Drawing.Size(277, 100);
+            this.btnQuanLyKhoHang.Size = new System.Drawing.Size(231, 96);
             this.btnQuanLyKhoHang.TabIndex = 0;
             this.btnQuanLyKhoHang.Text = "QUẢN LÝ KHO HÀNG";
             this.btnQuanLyKhoHang.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -170,9 +173,9 @@
             this.btnThietLap.ForeColor = System.Drawing.Color.White;
             this.btnThietLap.Image = ((System.Drawing.Image)(resources.GetObject("btnThietLap.Image")));
             this.btnThietLap.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThietLap.Location = new System.Drawing.Point(41, 334);
+            this.btnThietLap.Location = new System.Drawing.Point(286, 222);
             this.btnThietLap.Name = "btnThietLap";
-            this.btnThietLap.Size = new System.Drawing.Size(176, 100);
+            this.btnThietLap.Size = new System.Drawing.Size(231, 96);
             this.btnThietLap.TabIndex = 0;
             this.btnThietLap.Text = "THIẾT LẬP QUÁN";
             this.btnThietLap.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -189,9 +192,9 @@
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
             this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThanhToan.Location = new System.Drawing.Point(308, 91);
+            this.btnThanhToan.Location = new System.Drawing.Point(286, 108);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(134, 98);
+            this.btnThanhToan.Size = new System.Drawing.Size(231, 96);
             this.btnThanhToan.TabIndex = 0;
             this.btnThanhToan.Text = "BÁN HÀNG";
             this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -224,9 +227,9 @@
             this.pnThoiGian.Controls.Add(this.lbThu);
             this.pnThoiGian.Controls.Add(this.lbThoiGian);
             this.pnThoiGian.Controls.Add(this.lbThangNam);
-            this.pnThoiGian.Location = new System.Drawing.Point(635, 91);
+            this.pnThoiGian.Location = new System.Drawing.Point(577, 108);
             this.pnThoiGian.Name = "pnThoiGian";
-            this.pnThoiGian.Size = new System.Drawing.Size(206, 98);
+            this.pnThoiGian.Size = new System.Drawing.Size(231, 96);
             this.pnThoiGian.TabIndex = 4;
             // 
             // lbNgay
@@ -234,7 +237,7 @@
             this.lbNgay.AutoSize = true;
             this.lbNgay.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgay.ForeColor = System.Drawing.Color.White;
-            this.lbNgay.Location = new System.Drawing.Point(150, 42);
+            this.lbNgay.Location = new System.Drawing.Point(175, 38);
             this.lbNgay.Name = "lbNgay";
             this.lbNgay.Size = new System.Drawing.Size(45, 35);
             this.lbNgay.TabIndex = 3;
@@ -244,10 +247,11 @@
             // 
             this.lbThu.AutoSize = true;
             this.lbThu.BackColor = System.Drawing.Color.Transparent;
+            this.lbThu.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThu.ForeColor = System.Drawing.Color.White;
-            this.lbThu.Location = new System.Drawing.Point(148, 23);
+            this.lbThu.Location = new System.Drawing.Point(155, 20);
             this.lbThu.Name = "lbThu";
-            this.lbThu.Size = new System.Drawing.Size(63, 19);
+            this.lbThu.Size = new System.Drawing.Size(77, 21);
             this.lbThu.TabIndex = 3;
             this.lbThu.Text = "Chủ nhật";
             // 
@@ -258,9 +262,9 @@
             // picAvatar
             // 
             this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
-            this.picAvatar.Location = new System.Drawing.Point(41, 91);
+            this.picAvatar.Location = new System.Drawing.Point(60, 87);
             this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(144, 109);
+            this.picAvatar.Size = new System.Drawing.Size(125, 128);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatar.TabIndex = 5;
             this.picAvatar.TabStop = false;
@@ -272,7 +276,7 @@
             this.lbPhanQuyen.BackColor = System.Drawing.Color.Transparent;
             this.lbPhanQuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhanQuyen.ForeColor = System.Drawing.Color.White;
-            this.lbPhanQuyen.Location = new System.Drawing.Point(191, 158);
+            this.lbPhanQuyen.Location = new System.Drawing.Point(191, 162);
             this.lbPhanQuyen.Name = "lbPhanQuyen";
             this.lbPhanQuyen.Size = new System.Drawing.Size(68, 19);
             this.lbPhanQuyen.TabIndex = 6;
@@ -284,7 +288,7 @@
             this.lbTenTaiKhoanDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lbTenTaiKhoanDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenTaiKhoanDangNhap.ForeColor = System.Drawing.Color.Gray;
-            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(191, 181);
+            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(191, 185);
             this.lbTenTaiKhoanDangNhap.Name = "lbTenTaiKhoanDangNhap";
             this.lbTenTaiKhoanDangNhap.Size = new System.Drawing.Size(71, 19);
             this.lbTenTaiKhoanDangNhap.TabIndex = 7;
@@ -320,6 +324,54 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(695, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 96);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "PHẢN HỒI";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lbTenQuan
+            // 
+            this.lbTenQuan.AutoSize = true;
+            this.lbTenQuan.BackColor = System.Drawing.Color.Transparent;
+            this.lbTenQuan.Font = new System.Drawing.Font("Arial Narrow", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenQuan.ForeColor = System.Drawing.Color.Red;
+            this.lbTenQuan.Location = new System.Drawing.Point(238, 16);
+            this.lbTenQuan.Name = "lbTenQuan";
+            this.lbTenQuan.Size = new System.Drawing.Size(378, 46);
+            this.lbTenQuan.TabIndex = 11;
+            this.lbTenQuan.Text = "GARDEN VIEW COFFE";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(577, 337);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 96);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "HƯỚNG DẪN";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // formTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -328,6 +380,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(876, 509);
+            this.Controls.Add(this.lbTenQuan);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbXinChao);
             this.Controls.Add(this.label1);
@@ -339,6 +393,7 @@
             this.Controls.Add(this.btnQLNhanVien);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDoanhThu);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnQuanLyKhoHang);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnThietLap);
@@ -383,5 +438,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbTenQuan;
+        private System.Windows.Forms.Button button2;
     }
 }

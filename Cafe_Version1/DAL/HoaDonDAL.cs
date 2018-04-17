@@ -88,6 +88,11 @@ namespace Cafe_Version1.DAL
             return DataProvider.Instance.ExecuteScalar("SELECT SUM(tongTien) FROM HoaDon WHERE MONTH(ngayVao) = '" + thang + "'");
         }
 
+        public DataTable InHoaDon(int idBan)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_InHoaDon @idBan", new object[] { idBan });
+        }
+
         internal static HoaDonDAL Instance
         {
             get

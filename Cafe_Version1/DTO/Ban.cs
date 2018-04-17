@@ -54,9 +54,9 @@ namespace Cafe_Version1.DTO
 
         public Ban(DataRow item)
         {
-            this.ID = int.Parse(item["ID"].ToString());
-            this.tenBan = item["tenBan"].ToString();
-            this.trangThai = item["trangThai"].ToString();
+            ID = int.Parse(item["ID"].ToString());
+            tenBan = item["tenBan"].ToString();
+            trangThai = item["trangThai"].ToString();
         }
 
         public Ban(int id, string ten, string trangThai)
@@ -64,10 +64,6 @@ namespace Cafe_Version1.DTO
             this.ID = id;
             this.tenBan = ten;
             this.trangThai = trangThai;
-        }
-
-        public Ban()
-        {
         }
     }
 }

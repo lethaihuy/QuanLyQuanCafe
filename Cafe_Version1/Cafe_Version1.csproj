@@ -49,11 +49,14 @@
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +68,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAFE_VERSION_1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAFE_VERSION_1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAFE_VERSION_1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAFE_VERSION_1DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\AccountDAL.cs" />
     <Compile Include="DAL\BanDAL.cs" />
     <Compile Include="DAL\ChiTietHoaDonDAL.cs" />
@@ -91,6 +104,12 @@
     </Compile>
     <Compile Include="FormDoanhthu.Designer.cs">
       <DependentUpon>FormDoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInHoaDon.Designer.cs">
+      <DependentUpon>formInHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -130,6 +149,9 @@
     <EmbeddedResource Include="FormDoanhthu.resx">
       <DependentUpon>FormDoanhthu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formInHoaDon.resx">
+      <DependentUpon>formInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +169,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Taikhoan.resx">
       <DependentUpon>Taikhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +179,28 @@
     <EmbeddedResource Include="formUser.resx">
       <DependentUpon>formUser.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CAFE_VERSION_1DataSet.xsc">
+      <DependentUpon>CAFE_VERSION_1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAFE_VERSION_1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAFE_VERSION_1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAFE_VERSION_1DataSet.xss">
+      <DependentUpon>CAFE_VERSION_1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAFE_VERSION_1DataSet1.xsc">
+      <DependentUpon>CAFE_VERSION_1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CAFE_VERSION_1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAFE_VERSION_1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAFE_VERSION_1DataSet1.xss">
+      <DependentUpon>CAFE_VERSION_1DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

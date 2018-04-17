@@ -122,14 +122,14 @@
     <value>Times New Roman, 11pt</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 141</value>
+    <value>340, 155</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 35</value>
+    <value>209, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
@@ -148,19 +148,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="txtUsername.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 11pt</value>
   </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 82</value>
+    <value>340, 104</value>
   </data>
   <data name="txtUsername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 4, 4, 8</value>
   </data>
   <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 35</value>
+    <value>209, 28</value>
   </data>
   <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="bunifuCustomLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -190,7 +190,7 @@
     <value>NoControl</value>
   </data>
   <data name="bunifuCustomLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>334, 31</value>
+    <value>334, 34</value>
   </data>
   <data name="bunifuCustomLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 34</value>
@@ -214,7 +214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCustomLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -12452,7 +12452,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 276</value>
+    <value>316, 276</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -12467,25 +12467,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnDangNhap.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+    <value>7</value>
   </data>
   <data name="btnDangNhap.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 13pt</value>
   </data>
+  <data name="btnDangNhap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEVSURBVEhL5ZYx
+        SkNBEIYfBCtzBrGIl5AgkhNYS2oPYZXKHCB1DqEXsPAIegCLqKC2gjbRbzYMzIbd7OwGLJIPPnjzmJn/
+        wXsk2yU4wCk+42+jMis7ZFcWaUgNt3iDWV5Qms5D1cYIZcciVBn0abaluGf3g65wsLqsojroGz/wNFR+
+        ikHr6MAPjuWGk+YgcYkT9JAMuke7sOQMe7gJ7Y2wS7ze4iHm0L4Iu6DGRzzCFNoTYYdrfMJjTKE9EXbY
+        6x32MYf2RTygXVJyjhv/AkB73dgA+byv0UNz0BdeyA0nxaD1BvkJ+sRhqPxUB13iyeqyiuqgVvYw6A2l
+        ofblW85QdryGKsO/Hbf0APmOqWGPMmsOkF33B3Ix8oqlFKpZAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnDangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 193</value>
+    <value>340, 201</value>
   </data>
   <data name="btnDangNhap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 36</value>
+    <value>46, 36</value>
   </data>
   <data name="btnDangNhap.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="btnDangNhap.Text" xml:space="preserve">
-    <value>Đăng nhập</value>
   </data>
   <data name="&gt;&gt;btnDangNhap.Name" xml:space="preserve">
     <value>btnDangNhap</value>
@@ -12497,7 +12502,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDangNhap.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -12514,35 +12519,109 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>581, 276</value>
   </data>
-  <data name="lbThoat.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbThoat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Underline</value>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="lbThoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 261</value>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="lbThoat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>337, 142</value>
   </data>
-  <data name="lbThoat.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 15</value>
   </data>
-  <data name="lbThoat.Text" xml:space="preserve">
-    <value>Thoát</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="&gt;&gt;lbThoat.Name" xml:space="preserve">
-    <value>lbThoat</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Password:</value>
   </data>
-  <data name="&gt;&gt;lbThoat.Type" xml:space="preserve">
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbThoat.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbThoat.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>337, 90</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnThoat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 13pt</value>
+  </data>
+  <data name="btnThoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHBSURBVEhLrZbJ
+        LgVBFIZbbAyxYmFKTCFixXtICEJiwdaQGIJ4BS8gsbRBDLEQuXgSsSASL2Cep/+TKjrtqj7XvV/yRZ/T
+        VXXa7apzb5RCqfvr+XDGSY4x0STX5aksJuFIFuDemVyTjSQsjMhryUJPslN6kgW65LMkdyWHZZAF+S6Z
+        sCnrZJxkAaiXO5I8c2dkVgYlA0KDshXwzEs/v59EHJ7iRjL5zycQoQIwJ7nPx1VLwsNL4gb/aoi0ArAr
+        GbP6FQme/lU+uusQlgINks3By68hsSiZtEGQgqUAbEnG8V6iIxcMEKRgLTAkGZchuHCB5aBYC7RIxp0T
+        3LvAcuStBcok4+4I/PYsJygQFZI16QjRiQvaCApEu2TNY4IDF/BiCgU9iTX3CSZdYNmmVvw2HSOgob1I
+        DkcziTxplRyy74MGK5KKHPN8KJJ7krWWSXhoTP47YJbEP/HN7lJWk4jTI98kH9cUiRyhC9PTWKObRDZ4
+        evo5T8GLonGlQQfYlsxh8WkZpE/eSiY8SHYXX6MdssTJ9ajkHl2YsRzYXmmiSi5JCjA5JK2GsZUyZ9hm
+        E5KOyy8Mnha5PpTj8tfL/CGKPgGCIpB1OGxVCQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnThoat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>401, 201</value>
+  </data>
+  <data name="btnThoat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 36</value>
+  </data>
+  <data name="btnThoat.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Name" xml:space="preserve">
+    <value>btnThoat</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -12553,10 +12632,19 @@
   <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;bunifuDragControl1.Name" xml:space="preserve">
+    <value>bunifuDragControl1</value>
+  </data>
+  <data name="&gt;&gt;bunifuDragControl1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>formDangNhap</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
 </root>

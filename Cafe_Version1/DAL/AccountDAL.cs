@@ -59,9 +59,9 @@ namespace Cafe_Version1.DAL
             return dsAcc;
         }
 
-        public bool ThemTaiKhoan(string username, string password, string tenHienThi, string loaiTK)
+        public bool ThemTaiKhoan(string username, string password, string tenHienThi, string loaiTK, string image)
         {
-            string query = string.Format("INSERT Account VALUES('{0}', '{1}', N'{2}', N'{3}')", username, password, tenHienThi, loaiTK);
+            string query = string.Format("INSERT Account VALUES('{0}', '{1}', N'{2}', N'{3} , @{4}')", username, password, tenHienThi, loaiTK, image);
             return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
         }
 

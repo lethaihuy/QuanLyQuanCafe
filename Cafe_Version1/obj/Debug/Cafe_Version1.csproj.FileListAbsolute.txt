@@ -204,3 +204,7 @@ D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\ja\DevExpres
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\ru\DevExpress.Xpo.v16.1.resources.dll
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version1.formQLTaiKhoan.resources
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version1.FormDoanhthu.resources
+D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\RdlCompile.cache
+D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\RdlCompile.compiled
+D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version1.formInHoaDon.resources

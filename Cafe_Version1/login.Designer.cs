@@ -36,7 +36,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lbThoat = new System.Windows.Forms.Label();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -85,8 +88,9 @@
             // btnDangNhap
             // 
             this.btnDangNhap.AutoEllipsis = true;
-            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
+            this.btnDangNhap.BackColor = System.Drawing.Color.White;
             this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangNhap.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             resources.ApplyResources(this.btnDangNhap, "btnDangNhap");
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnDangNhap.Name = "btnDangNhap";
@@ -98,12 +102,36 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // lbThoat
+            // bunifuDragControl1
             // 
-            resources.ApplyResources(this.lbThoat, "lbThoat");
-            this.lbThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.lbThoat.Name = "lbThoat";
-            this.lbThoat.Click += new System.EventHandler(this.lbThoat_Click);
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
+            this.label2.Name = "label2";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.AutoEllipsis = true;
+            this.btnThoat.BackColor = System.Drawing.Color.White;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            resources.ApplyResources(this.btnThoat, "btnThoat");
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // formDangNhap
             // 
@@ -111,7 +139,9 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lbThoat);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.txtUsername);
@@ -135,7 +165,10 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Button btnDangNhap;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Label lbThoat;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
 

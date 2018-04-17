@@ -54,7 +54,7 @@ namespace Cafe_Version1
             this.formDangNhap_Load(sender, e);
         }
 
-        private void lbThoat_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

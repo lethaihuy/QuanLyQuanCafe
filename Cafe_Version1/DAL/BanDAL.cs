@@ -46,9 +46,16 @@ namespace Cafe_Version1.DAL
 
         //Binding cho dữ liệu
 
-        public DataTable LayDanhSachBanDataTable()
+        public List<Ban> TraVeDoiTuongBan(int idBan)
         {
-           return DataProvider.Instance.ExecuteQuery("EXEC USP_LayDanhSachBan");
+            List<Ban> dsBan = new List<Ban>();
+            DataTable obj = DataProvider.Instance.ExecuteQuery("SELECT * FROM Ban WHERE ID = " + idBan);
+            foreach (DataRow item in obj.Rows)
+            {
+                Ban b =  new Ban(item);
+                dsBan.Add(b);
+            }
+            return dsBan;
         }
 
         public bool ThemBan(string tenBan)
@@ -71,6 +78,11 @@ namespace Cafe_Version1.DAL
         public void ChuyenBan(int idBan1, int idBan2, string nguoiTao)
         {
             DataProvider.Instance.ExecuteQuery("EXEC USP_ChuyenBan @idBan1 , @idBan2 , @nguoiTao", new object[] { idBan1, idBan2, nguoiTao });
+        }
+
+        public void GopBan(int idBan1, int idBan2)
+        {
+            DataProvider.Instance.ExecuteQuery("EXEC USP_GopBan @idBan1 , @idBan2", new object[] { idBan1, idBan1});
         }
     }
 }

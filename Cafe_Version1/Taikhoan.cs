@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,16 +71,19 @@ namespace Cafe_Version1
             string password = txtPassword.Text;
             string tenHienThi = txtTenHienThi.Text;
             string loaiTaiKhoan = cbLoaiTaiKhoan.SelectedItem.ToString();
+
+            string file = openFileDialog1.FileName;
+
             //Username không dc trùng
             try
             {
                 if (this.dsAcc.Equals(username) == true && username == "")
                 {
-                    MessageBox.Show("Username này đã tồn tại !", "Thông báo");
+                    MessageBox.Show("username này đã tồn tại !", "thông báo");
                 }
                 else
                 {
-                    if (AccountDAL.Instance.ThemTaiKhoan(username, password, tenHienThi, loaiTaiKhoan))
+                    if (AccountDAL.Instance.ThemTaiKhoan(username, password, tenHienThi, loaiTaiKhoan, file))
                     {
                         MessageBox.Show("Thêm tài khoản thành công!", "Thông báo");
                     }
@@ -93,7 +97,7 @@ namespace Cafe_Version1
             }
             catch (Exception)
             {
-                MessageBox.Show("Username này đã tồn tại! Vui lòng kiểm tra lại !", "Thông báo");
+                MessageBox.Show("Username này đã tồn tại! Vui lòng kiểm tra lại !", "Thông báo lỗi");
                 ResetFormTaiKhoan();
             }
 
@@ -105,5 +109,35 @@ namespace Cafe_Version1
         }
         #endregion
 
+        private void btnLoadAnh_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string file = openFileDialog1.FileName;
+            if (string.IsNullOrEmpty(file))
+                return;
+            Image myImage = Image.FromFile(file);
+            picAnh.Image = myImage;
+        }
+
+        byte[] ConvertImageToBinary(Image img)
+        {
+            string file = openFileDialog1.FileName;
+            Image myImage = Image.FromFile(file);
+            FileStream fs;
+            fs = new FileStream(file, FileMode.Open, FileAccess.Read);
+            byte[] picbyte = new byte[fs.Length];
+            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
+            fs.Close();
+            return picbyte;
+        }
+
+        Image ByteToImg(string byteString)
+        {
+            byte[] imgBytes = Convert.FromBase64String(byteString);
+            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
+            ms.Write(imgBytes, 0, imgBytes.Length);
+            Image image = picAnh.Image;
+            return image;
+        }
     }
 }
