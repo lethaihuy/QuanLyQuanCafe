@@ -124,11 +124,11 @@ namespace Cafe_Version1
 
             formHome.Ngaythang = lbThu.Text+", " + time.ToString("dd/MM/yyyy");
 
-            lbXinChao.Location = new Point(lbXinChao.Location.X + chay, lbXinChao.Location.Y);
-            if (lbXinChao.Location.X > 877)
-            {
-                lbXinChao.Location = new Point(lbXinChao.Location.X - 385, lbXinChao.Location.Y);
-            }
+            //lbXinChao.Location = new Point(lbXinChao.Location.X + chay, lbXinChao.Location.Y);
+            //if (lbXinChao.Location.X > 877)
+            //{
+            //    lbXinChao.Location = new Point(lbXinChao.Location.X - 385, lbXinChao.Location.Y);
+            //}
         }
 
         private void timer2_Tick(object sender, EventArgs e)

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTrangChu));
-            this.lbXinChao = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.lbThangNam = new System.Windows.Forms.Label();
             this.lbThoiGian = new System.Windows.Forms.Label();
@@ -59,16 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbXinChao
-            // 
-            this.lbXinChao.AutoSize = true;
-            this.lbXinChao.BackColor = System.Drawing.Color.Transparent;
-            this.lbXinChao.Location = new System.Drawing.Point(672, 51);
-            this.lbXinChao.Name = "lbXinChao";
-            this.lbXinChao.Size = new System.Drawing.Size(169, 19);
-            this.lbXinChao.TabIndex = 5;
-            this.lbXinChao.Text = "Kính chào quý khách hàng";
             // 
             // btnBack
             // 
@@ -383,7 +372,6 @@
             this.Controls.Add(this.lbTenQuan);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lbXinChao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picAvatar);
@@ -426,7 +414,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbThangNam;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label lbXinChao;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel pnThoiGian;
         private System.Windows.Forms.Label lbNgay;

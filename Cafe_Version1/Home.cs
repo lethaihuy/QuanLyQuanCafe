@@ -248,7 +248,6 @@ namespace Cafe_Version1
         private void formHome_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            listViewHoaDon.CheckBoxes = true;
 
             if (!string.IsNullOrEmpty(thuNgan))
             {
@@ -305,6 +304,34 @@ namespace Cafe_Version1
             formInHoaDon fI = new formInHoaDon();
             fI.Show();
             
+        }
+
+        void LayItemDangChonTrongzListview()
+        {
+            for (int i = 0; i < listViewHoaDon.Items.Count; i++)
+            {
+                if(listViewHoaDon.Items[i].Checked)
+                {
+                    Ban ban = listViewHoaDon.Tag as Ban;
+
+                    int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
+
+                    DoUong doUong = listViewHoaDon.Items[i].Tag as DoUong;
+
+                    //int idDoUong = ChiTietHoaDonDAL.Instance.LayIDDoUongTuIDHoaDon(idHoaDon);
+
+
+
+                    MessageBox.Show(" ID Hoa don" + idHoaDon);
+
+                    MessageBox.Show(" " + doUong.TenDoUong);
+                }
+            }
+        }
+
+        private void btnHuyDoUong_Click(object sender, EventArgs e)
+        {
+            LayItemDangChonTrongzListview();
         }
     }
 }

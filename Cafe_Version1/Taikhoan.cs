@@ -77,7 +77,7 @@ namespace Cafe_Version1
             //Username không dc trùng
             try
             {
-                if (this.dsAcc.Equals(username) == true && username == "")
+                if (username == "")
                 {
                     MessageBox.Show("username này đã tồn tại !", "thông báo");
                 }

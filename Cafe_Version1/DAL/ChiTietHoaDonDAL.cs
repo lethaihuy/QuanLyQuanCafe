@@ -11,8 +11,19 @@ namespace Cafe_Version1.DAL
     class ChiTietHoaDonDAL
     {
         private static ChiTietHoaDonDAL instance;
-        
+
         public ChiTietHoaDonDAL() { }
+
+        public int LayIDDoUongTuIDHoaDon(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT IDDoUong FROM ThongTinHoaDon WHERE IDHoaDon = '" + id + "'");
+            if (data.Rows.Count > 0)
+            {
+                DoUong du = new DoUong(data.Rows[2]);
+                return du.ID;
+            }
+            return -1;
+        }
 
         public List<ChiTietHoaDon> LaydanhSachChiTietHoaDon(int idHoaDon)
         {

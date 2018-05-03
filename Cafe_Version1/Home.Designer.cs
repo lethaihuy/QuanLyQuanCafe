@@ -81,6 +81,7 @@
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInHoaDon = new System.Windows.Forms.Button();
+            this.btnHuyDoUong = new System.Windows.Forms.Button();
             this.pnHeaderHome.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -244,6 +245,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listViewHoaDon.CheckBoxes = true;
             this.listViewHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -530,7 +532,7 @@
             // cbChuyenBan
             // 
             this.cbChuyenBan.FormattingEnabled = true;
-            this.cbChuyenBan.Location = new System.Drawing.Point(1014, 525);
+            this.cbChuyenBan.Location = new System.Drawing.Point(1034, 525);
             this.cbChuyenBan.MaxDropDownItems = 50;
             this.cbChuyenBan.Name = "cbChuyenBan";
             this.cbChuyenBan.Size = new System.Drawing.Size(102, 27);
@@ -550,11 +552,21 @@
             // 
             this.btnInHoaDon.Location = new System.Drawing.Point(911, 562);
             this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.Size = new System.Drawing.Size(92, 30);
+            this.btnInHoaDon.Size = new System.Drawing.Size(92, 35);
             this.btnInHoaDon.TabIndex = 24;
             this.btnInHoaDon.Text = "In hóa đơn";
             this.btnInHoaDon.UseVisualStyleBackColor = true;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            // 
+            // btnHuyDoUong
+            // 
+            this.btnHuyDoUong.Location = new System.Drawing.Point(1034, 564);
+            this.btnHuyDoUong.Name = "btnHuyDoUong";
+            this.btnHuyDoUong.Size = new System.Drawing.Size(105, 30);
+            this.btnHuyDoUong.TabIndex = 24;
+            this.btnHuyDoUong.Text = "Hủy đồ uống";
+            this.btnHuyDoUong.UseVisualStyleBackColor = true;
+            this.btnHuyDoUong.Click += new System.EventHandler(this.btnHuyDoUong_Click);
             // 
             // formHome
             // 
@@ -562,6 +574,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1216, 608);
+            this.Controls.Add(this.btnHuyDoUong);
             this.Controls.Add(this.btnInHoaDon);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbChuyenBan);
@@ -661,5 +674,6 @@
         private System.Windows.Forms.ComboBox cbChuyenBan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnInHoaDon;
+        private System.Windows.Forms.Button btnHuyDoUong;
     }
 }

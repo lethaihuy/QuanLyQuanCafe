@@ -24,6 +24,8 @@ namespace Cafe_Version1.DAL
             return -1;
         }
 
+
+
         public DataTable LayDanhSachHoaDonDaThanhToan()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT B.tenBan, A.tongTien, A.ngayVao, A.nguoiTao FROM HoaDon AS A, Ban AS B WHERE A.trangThai = 1 AND A.IDBan = B.ID");
