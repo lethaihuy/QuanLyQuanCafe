@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formUser));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLoadAnh = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPasswordMoi = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lbPasswordMoi = new System.Windows.Forms.Label();
@@ -46,9 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLoadAnh = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSaveImage = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +60,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnSaveImage);
             this.panel2.Controls.Add(this.btnLoadAnh);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtPasswordMoi);
@@ -82,6 +80,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(518, 296);
             this.panel2.TabIndex = 0;
+            // 
+            // btnLoadAnh
+            // 
+            this.btnLoadAnh.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoadAnh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLoadAnh.BackgroundImage")));
+            this.btnLoadAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLoadAnh.FlatAppearance.BorderSize = 0;
+            this.btnLoadAnh.Location = new System.Drawing.Point(379, 177);
+            this.btnLoadAnh.Name = "btnLoadAnh";
+            this.btnLoadAnh.Size = new System.Drawing.Size(33, 28);
+            this.btnLoadAnh.TabIndex = 11;
+            this.btnLoadAnh.UseVisualStyleBackColor = false;
+            this.btnLoadAnh.Click += new System.EventHandler(this.btnLoadAnh_Click);
             // 
             // label6
             // 
@@ -268,35 +279,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
-            // btnLoadAnh
-            // 
-            this.btnLoadAnh.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoadAnh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLoadAnh.BackgroundImage")));
-            this.btnLoadAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLoadAnh.FlatAppearance.BorderSize = 0;
-            this.btnLoadAnh.Location = new System.Drawing.Point(379, 177);
-            this.btnLoadAnh.Name = "btnLoadAnh";
-            this.btnLoadAnh.Size = new System.Drawing.Size(33, 28);
-            this.btnLoadAnh.TabIndex = 11;
-            this.btnLoadAnh.UseVisualStyleBackColor = false;
-            this.btnLoadAnh.Click += new System.EventHandler(this.btnLoadAnh_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnSaveImage
-            // 
-            this.btnSaveImage.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.BackgroundImage")));
-            this.btnSaveImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSaveImage.FlatAppearance.BorderSize = 0;
-            this.btnSaveImage.Location = new System.Drawing.Point(434, 177);
-            this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(33, 28);
-            this.btnSaveImage.TabIndex = 11;
-            this.btnSaveImage.UseVisualStyleBackColor = false;
-            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
             // formUser
             // 
@@ -339,6 +324,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnLoadAnh;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnSaveImage;
     }
 }

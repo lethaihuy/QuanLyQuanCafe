@@ -69,6 +69,16 @@ namespace Cafe_Version1
         {
             this.Close();
         }
+        public string filename = string.Empty;
+        private void btnLoadAnh_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            filename = openFileDialog1.FileName;
+            if (string.IsNullOrEmpty(filename))
+                return;
+            Image myImage = Image.FromFile(filename);
+            picAvatar.Image = myImage;
+        }
 
         void DoiMatKhau(string username, string tenHienThi, string passwordcu, string passwordMoi, string nhapLaiPass)
         {
@@ -95,6 +105,11 @@ namespace Cafe_Version1
                 }
             }
         }
+
+        bool KiemTraPass(string username, string password)
+        {
+            return AccountDAL.Instance.Login(username, password) == true;
+        }
         private void btnSuaUser_Click(object sender, EventArgs e)
         {
             string username = this.txtUsername.Text;
@@ -102,7 +117,6 @@ namespace Cafe_Version1
             string passwordcu = this.txtPassword.Text;
             string passwordMoi = this.txtPasswordMoi.Text;
             string nhapLaiPass = this.txtNhapLaiPassword.Text;
-
             if (thayDoi)
             {
                 if (!string.IsNullOrEmpty(passwordMoi) || !string.IsNullOrEmpty(nhapLaiPass))
@@ -112,27 +126,40 @@ namespace Cafe_Version1
             }
             else
             {
-                if (tenHienThi == "" || passwordcu == "")
+                try
                 {
-                    MessageBox.Show("Không dược để trống!", "Thông báo");
-                }
-                else
-                {
-                    if (AccountDAL.Instance.SuaTaiKhoan(username, passwordcu, tenHienThi))
+                    if (tenHienThi == "" || passwordcu == "")
                     {
-                        MessageBox.Show("Cập nhật tài khoản thành công !", "Thông báo");
+                        MessageBox.Show("Không dược để trống!", "Thông báo");
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật tài khoản không thành công! Xin kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (KiemTraPass(username, passwordcu) == true)
+                        {
+                            if (AccountDAL.Instance.SuaTaiKhoan(username, filename, passwordcu, tenHienThi))
+                            {
+                                MessageBox.Show("Cập nhật tài khoản thành công !", "Thông báo");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cập nhật tài khoản không thành công! Xin kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Password không đúng");
+                        }
+
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
             }
 
             //Đổi mật khẩu
-
-
-
         }
 
         private void formUser_Load(object sender, EventArgs e)
@@ -146,42 +173,11 @@ namespace Cafe_Version1
                 this.txtNhapLaiPassword.Visible = true;
                 this.lbPasswordMoi.Visible = true;
                 this.lbNhapLaiPassword.Visible = true;
+                picAvatar.Visible = false;
+                btnLoadAnh.Visible = false;
             }
         }
 
-        private void btnLoadAnh_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.ShowDialog();
-            string file = openFileDialog1.FileName;
-            if (string.IsNullOrEmpty(file))
-                return;
-            Image myImage = Image.FromFile(file);
-            picAvatar.Image = myImage;
-        }
 
-        byte[] ConvertImageToBinary(Image img)
-        {
-            string file = openFileDialog1.FileName;
-            Image myImage = Image.FromFile(file);
-            FileStream fs;
-            fs = new FileStream(file, FileMode.Open, FileAccess.Read);
-            byte[] picbyte = new byte[fs.Length];
-            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
-            fs.Close();
-            return picbyte;
-        }
-
-        Image ByteToImg(string byteString)
-        {
-            byte[] imgBytes = Convert.FromBase64String(byteString);
-            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
-            ms.Write(imgBytes, 0, imgBytes.Length);
-            Image image = picAvatar.Image;
-            return image;
-        }
-        private void btnSaveImage_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
