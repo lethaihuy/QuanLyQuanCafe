@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Cafe_Version1.DAL
 {
@@ -59,9 +60,9 @@ namespace Cafe_Version1.DAL
             return dsAcc;
         }
 
-        public bool ThemTaiKhoan(string username, string password, string tenHienThi, string loaiTK, string image)
+        public bool ThemTaiKhoan(string username, string password, string tenHienThi, string loaiTK, string anhDaiDien)
         {
-            string query = string.Format("INSERT Account VALUES('{0}', '{1}', N'{2}', N'{3} , @{4}')", username, password, tenHienThi, loaiTK, image);
+            string query = string.Format("INSERT Account VALUES('{0}' , '{1}' , N'{2}' , N'{3}' , '{4}')", username, password, tenHienThi, loaiTK, anhDaiDien);
             return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
         }
 

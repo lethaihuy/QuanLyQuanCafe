@@ -420,6 +420,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lbThuNgan);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.label5);
@@ -447,9 +448,9 @@
             this.panel7.Controls.Add(this.lbBanTrong);
             this.panel7.Controls.Add(this.lbBanCoKhach);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(234, 10);
+            this.panel7.Location = new System.Drawing.Point(232, 10);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(211, 91);
+            this.panel7.Size = new System.Drawing.Size(211, 89);
             this.panel7.TabIndex = 22;
             // 
             // lbBanTrong
@@ -494,7 +495,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(445, 10);
+            this.panel6.Size = new System.Drawing.Size(443, 10);
             this.panel6.TabIndex = 19;
             // 
             // panel8
@@ -509,6 +510,7 @@
             // lbGio
             // 
             this.lbGio.AutoSize = true;
+            this.lbGio.BackColor = System.Drawing.Color.Transparent;
             this.lbGio.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGio.Location = new System.Drawing.Point(593, 33);
             this.lbGio.Name = "lbGio";
@@ -519,6 +521,7 @@
             // lbNgayThang
             // 
             this.lbNgayThang.AutoSize = true;
+            this.lbNgayThang.BackColor = System.Drawing.Color.Transparent;
             this.lbNgayThang.Location = new System.Drawing.Point(557, 67);
             this.lbNgayThang.Name = "lbNgayThang";
             this.lbNgayThang.Size = new System.Drawing.Size(126, 19);
@@ -540,6 +543,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(561, 36);
             this.pictureBox1.Name = "pictureBox1";
@@ -572,7 +576,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1216, 608);
             this.Controls.Add(this.btnHuyDoUong);
             this.Controls.Add(this.btnInHoaDon);

@@ -105,9 +105,9 @@
             this.btnQLNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNhanVien.ForeColor = System.Drawing.Color.White;
             this.btnQLNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.Image")));
-            this.btnQLNhanVien.Location = new System.Drawing.Point(60, 222);
+            this.btnQLNhanVien.Location = new System.Drawing.Point(60, 302);
             this.btnQLNhanVien.Name = "btnQLNhanVien";
-            this.btnQLNhanVien.Size = new System.Drawing.Size(188, 211);
+            this.btnQLNhanVien.Size = new System.Drawing.Size(178, 131);
             this.btnQLNhanVien.TabIndex = 0;
             this.btnQLNhanVien.Text = "QUẢN LÝ NHÂN VIÊN";
             this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -236,11 +236,11 @@
             // 
             this.lbThu.AutoSize = true;
             this.lbThu.BackColor = System.Drawing.Color.Transparent;
-            this.lbThu.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThu.ForeColor = System.Drawing.Color.White;
-            this.lbThu.Location = new System.Drawing.Point(155, 20);
+            this.lbThu.Location = new System.Drawing.Point(166, 22);
             this.lbThu.Name = "lbThu";
-            this.lbThu.Size = new System.Drawing.Size(77, 21);
+            this.lbThu.Size = new System.Drawing.Size(63, 19);
             this.lbThu.TabIndex = 3;
             this.lbThu.Text = "Chủ nhật";
             // 
@@ -250,10 +250,9 @@
             // 
             // picAvatar
             // 
-            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
-            this.picAvatar.Location = new System.Drawing.Point(60, 87);
+            this.picAvatar.Location = new System.Drawing.Point(60, 96);
             this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(125, 128);
+            this.picAvatar.Size = new System.Drawing.Size(165, 164);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatar.TabIndex = 5;
             this.picAvatar.TabStop = false;
@@ -265,7 +264,7 @@
             this.lbPhanQuyen.BackColor = System.Drawing.Color.Transparent;
             this.lbPhanQuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhanQuyen.ForeColor = System.Drawing.Color.White;
-            this.lbPhanQuyen.Location = new System.Drawing.Point(191, 162);
+            this.lbPhanQuyen.Location = new System.Drawing.Point(68, 282);
             this.lbPhanQuyen.Name = "lbPhanQuyen";
             this.lbPhanQuyen.Size = new System.Drawing.Size(68, 19);
             this.lbPhanQuyen.TabIndex = 6;
@@ -276,8 +275,8 @@
             this.lbTenTaiKhoanDangNhap.AutoSize = true;
             this.lbTenTaiKhoanDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lbTenTaiKhoanDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenTaiKhoanDangNhap.ForeColor = System.Drawing.Color.Gray;
-            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(191, 185);
+            this.lbTenTaiKhoanDangNhap.ForeColor = System.Drawing.Color.White;
+            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(56, 263);
             this.lbTenTaiKhoanDangNhap.Name = "lbTenTaiKhoanDangNhap";
             this.lbTenTaiKhoanDangNhap.Size = new System.Drawing.Size(71, 19);
             this.lbTenTaiKhoanDangNhap.TabIndex = 7;
@@ -310,7 +309,7 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 4000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // button1
@@ -335,13 +334,13 @@
             // 
             this.lbTenQuan.AutoSize = true;
             this.lbTenQuan.BackColor = System.Drawing.Color.Transparent;
-            this.lbTenQuan.Font = new System.Drawing.Font("Arial Narrow", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenQuan.ForeColor = System.Drawing.Color.Red;
-            this.lbTenQuan.Location = new System.Drawing.Point(238, 16);
+            this.lbTenQuan.Font = new System.Drawing.Font("Garamond", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenQuan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
+            this.lbTenQuan.Location = new System.Drawing.Point(278, 21);
             this.lbTenQuan.Name = "lbTenQuan";
-            this.lbTenQuan.Size = new System.Drawing.Size(378, 46);
+            this.lbTenQuan.Size = new System.Drawing.Size(351, 45);
             this.lbTenQuan.TabIndex = 11;
-            this.lbTenQuan.Text = "GARDEN VIEW COFFE";
+            this.lbTenQuan.Text = "aBc coffee xin chào";
             // 
             // button2
             // 

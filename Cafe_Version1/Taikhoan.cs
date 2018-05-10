@@ -1,4 +1,5 @@
 ﻿using Cafe_Version1.DAL;
+using Cafe_Version1.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,13 +16,15 @@ namespace Cafe_Version1
     public partial class formQLTaiKhoan : Form
     {
         BindingSource dsAcc = new BindingSource();
+
+        string filename = string.Empty;
         public formQLTaiKhoan()
         {
             InitializeComponent();
-
             dgvTaiKhoan.DataSource = dsAcc;
             LoadDanhSachTaikhoan();
             BindingTaiKhoan();
+
         }
 
         void LoadDanhSachTaikhoan()
@@ -35,6 +38,7 @@ namespace Cafe_Version1
             txtPassword.DataBindings.Add(new Binding("text", dgvTaiKhoan.DataSource, "password", true, DataSourceUpdateMode.Never));
             txtTenHienThi.DataBindings.Add(new Binding("text", dgvTaiKhoan.DataSource, "tenHienThi", true, DataSourceUpdateMode.Never));
             cbLoaiTaiKhoan.DataBindings.Add(new Binding("text", dgvTaiKhoan.DataSource, "loaiTaiKhoan", true, DataSourceUpdateMode.Never));
+            txtFilename.DataBindings.Add(new Binding("text", dgvTaiKhoan.DataSource, "anhDaiDien", true, DataSourceUpdateMode.Never));
         }
         public bool flag = false;
 
@@ -65,14 +69,25 @@ namespace Cafe_Version1
             }
         }
 
+        private void btnLoadAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFile.ShowDialog();
+            this.filename = openFile.FileName;
+            if (string.IsNullOrEmpty(this.filename))
+                return;
+            Image myImage = Image.FromFile(this.filename);
+            picAnh.Image = myImage;
+        }
+
         private void btnSaveTaiKhoan_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             string tenHienThi = txtTenHienThi.Text;
             string loaiTaiKhoan = cbLoaiTaiKhoan.SelectedItem.ToString();
-
-            string file = openFileDialog1.FileName;
+            
 
             //Username không dc trùng
             try
@@ -83,7 +98,7 @@ namespace Cafe_Version1
                 }
                 else
                 {
-                    if (AccountDAL.Instance.ThemTaiKhoan(username, password, tenHienThi, loaiTaiKhoan, file))
+                    if (AccountDAL.Instance.ThemTaiKhoan(username, password, tenHienThi, loaiTaiKhoan, this.filename))
                     {
                         MessageBox.Show("Thêm tài khoản thành công!", "Thông báo");
                     }
@@ -107,37 +122,19 @@ namespace Cafe_Version1
         {
             ResetFormTaiKhoan();
         }
+
         #endregion
 
-        private void btnLoadAnh_Click(object sender, EventArgs e)
+        private void txtFilename_TextChanged(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            string file = openFileDialog1.FileName;
-            if (string.IsNullOrEmpty(file))
-                return;
-            Image myImage = Image.FromFile(file);
-            picAnh.Image = myImage;
-        }
-
-        byte[] ConvertImageToBinary(Image img)
-        {
-            string file = openFileDialog1.FileName;
-            Image myImage = Image.FromFile(file);
-            FileStream fs;
-            fs = new FileStream(file, FileMode.Open, FileAccess.Read);
-            byte[] picbyte = new byte[fs.Length];
-            fs.Read(picbyte, 0, System.Convert.ToInt32(fs.Length));
-            fs.Close();
-            return picbyte;
-        }
-
-        Image ByteToImg(string byteString)
-        {
-            byte[] imgBytes = Convert.FromBase64String(byteString);
-            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
-            ms.Write(imgBytes, 0, imgBytes.Length);
-            Image image = picAnh.Image;
-            return image;
+            try
+            {
+                picAnh.Image = Image.FromFile(txtFilename.Text);
+            }
+            catch (Exception)
+            {
+            }
+        
         }
     }
 }

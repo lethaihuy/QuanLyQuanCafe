@@ -43,14 +43,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
+            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
+            this.btnThemTaiKhoan = new System.Windows.Forms.Button();
+            this.picAnh = new System.Windows.Forms.PictureBox();
             this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiTaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
-            this.btnThemTaiKhoan = new System.Windows.Forms.Button();
-            this.picAnh = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtFilename = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
@@ -217,33 +217,8 @@
             this.dgvTaiKhoan.GridColor = System.Drawing.Color.LightGray;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(325, 7);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(454, 354);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(522, 319);
             this.dgvTaiKhoan.TabIndex = 1;
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "Password";
-            this.password.Name = "password";
-            // 
-            // tenHienThi
-            // 
-            this.tenHienThi.DataPropertyName = "tenHienThi";
-            this.tenHienThi.HeaderText = "Tên hiển thị";
-            this.tenHienThi.Name = "tenHienThi";
-            // 
-            // loaiTaikhoan
-            // 
-            this.loaiTaikhoan.DataPropertyName = "loaiTaiKhoan";
-            this.loaiTaikhoan.HeaderText = "Loại TK";
-            this.loaiTaikhoan.Name = "loaiTaikhoan";
-            this.loaiTaikhoan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnXoaTaiKhoan
             // 
@@ -252,7 +227,7 @@
             this.btnXoaTaiKhoan.ForeColor = System.Drawing.Color.Red;
             this.btnXoaTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaTaiKhoan.Image")));
             this.btnXoaTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(7, 59);
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(7, 61);
             this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
             this.btnXoaTaiKhoan.Size = new System.Drawing.Size(69, 36);
             this.btnXoaTaiKhoan.TabIndex = 4;
@@ -287,16 +262,56 @@
             this.picAnh.TabIndex = 7;
             this.picAnh.TabStop = false;
             // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.FillWeight = 87.29955F;
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.FillWeight = 81.19404F;
+            this.password.HeaderText = "Password";
+            this.password.Name = "password";
+            // 
+            // tenHienThi
+            // 
+            this.tenHienThi.DataPropertyName = "tenHienThi";
+            this.tenHienThi.FillWeight = 152.2843F;
+            this.tenHienThi.HeaderText = "Tên hiển thị";
+            this.tenHienThi.Name = "tenHienThi";
+            // 
+            // loaiTaikhoan
+            // 
+            this.loaiTaikhoan.DataPropertyName = "loaiTaiKhoan";
+            this.loaiTaikhoan.FillWeight = 73.07727F;
+            this.loaiTaikhoan.HeaderText = "Loại TK";
+            this.loaiTaikhoan.Name = "loaiTaikhoan";
+            this.loaiTaikhoan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // txtFilename
+            // 
+            this.txtFilename.AcceptsReturn = true;
+            this.txtFilename.Location = new System.Drawing.Point(325, 335);
+            this.txtFilename.Name = "txtFilename";
+            this.txtFilename.Size = new System.Drawing.Size(522, 26);
+            this.txtFilename.TabIndex = 1;
+            this.txtFilename.TextChanged += new System.EventHandler(this.txtFilename_TextChanged);
+            // 
             // formQLTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 365);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(849, 365);
             this.Controls.Add(this.picAnh);
             this.Controls.Add(this.btnXoaTaiKhoan);
             this.Controls.Add(this.btnThemTaiKhoan);
             this.Controls.Add(this.dgvTaiKhoan);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtFilename);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formQLTaiKhoan";
@@ -306,6 +321,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -325,13 +341,13 @@
         private System.Windows.Forms.Button btnThemTaiKhoan;
         private System.Windows.Forms.Button btnHuyTaiKhoan;
         private System.Windows.Forms.Button btnSaveTaiKhoan;
+        private System.Windows.Forms.Button btnLoadAnh;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox picAnh;
         private System.Windows.Forms.DataGridViewTextBoxColumn username;
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenHienThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiTaikhoan;
-        private System.Windows.Forms.Button btnLoadAnh;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox picAnh;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtFilename;
     }
 }

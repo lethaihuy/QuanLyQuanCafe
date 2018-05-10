@@ -10,6 +10,7 @@ namespace Cafe_Version1.DTO
     public class Account
     {
         private string username, password, tenHienThi, loaiTaiKhoan;
+        private string anhDaiDien;
 
         public string Username
         {
@@ -63,12 +64,26 @@ namespace Cafe_Version1.DTO
             }
         }
 
-        public Account(string name, string password, string tenHienThi, string loaiTaiKhoan)
+        public string AnhDaiDien
+        {
+            get
+            {
+                return anhDaiDien;
+            }
+
+            set
+            {
+                anhDaiDien = value;
+            }
+        }
+
+        public Account(string name, string password, string tenHienThi, string loaiTaiKhoan, string anh)
         {
             this.Username = name;
             this.Password = password;
             this.TenHienThi = tenHienThi;
             this.LoaiTaiKhoan = loaiTaiKhoan;
+            this.anhDaiDien = anh;
         }
 
         public Account(DataRow item)
@@ -77,6 +92,7 @@ namespace Cafe_Version1.DTO
             this.Password = item["password"].ToString();
             this.TenHienThi = item["tenHienThi"].ToString();
             this.LoaiTaiKhoan = item["loaiTaiKhoan"].ToString();
+            this.anhDaiDien = item["anhDaiDien"].ToString();
         }
 
     }

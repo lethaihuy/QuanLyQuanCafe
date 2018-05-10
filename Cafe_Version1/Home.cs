@@ -179,7 +179,6 @@ namespace Cafe_Version1
                 ChiTietHoaDonDAL.Instance.ThemChiTietHoaDon(idHoaDon, idDoUong, 1);
             }
 
-
             HienThiHoaDonTheoBan(ban._ID);
 
             //Load bàn khi thêm đồ uống
