@@ -201,14 +201,21 @@ namespace Cafe_Version1
                 }
                 else if (idHoaDon != -1)
                 {
-                    if (MessageBox.Show("Bạn muốn thanh toán " + ban.TenBan + " ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    if (MessageBox.Show("Bạn muốn thanh toán va in hóa đơn " + ban.TenBan + " ?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                     {
+                        int idBan = (listViewHoaDon.Tag as Ban)._ID;
+                        string tenBan = (listViewHoaDon.Tag as Ban).TenBan;
+                        formInHoaDon.tenBanInHD = tenBan;
+                        formInHoaDon.idBanInHD = idBan;
+                        formInHoaDon.tenThuNganInHD = thuNgan;
+                        formInHoaDon fI = new formInHoaDon();
+                        fI.Show();
+
                         HoaDonDAL.Instance.ThanhToan(idHoaDon, (float)tongTien);
                         HienThiHoaDonTheoBan(ban._ID);
                         LoadDanhSachBan();
                     }
                 }
-
             }
             catch (Exception)
             {
@@ -283,54 +290,43 @@ namespace Cafe_Version1
             HienThiHoaDonTheoBan(idBan2);
         }
 
-        private void btnGopBan_Click(object sender, EventArgs e)
-        {
-            int idBan1 = (listViewHoaDon.Tag as Ban)._ID;
-            int idBan2 = (cbChuyenBan.SelectedItem as Ban)._ID;
-
-            if (MessageBox.Show(string.Format("Bạn muốn gộp {0} vào {1} ?", (listViewHoaDon.Tag as Ban).TenBan, (cbChuyenBan.SelectedItem as Ban).TenBan), "Thông báo ", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                BanDAL.Instance.GopBan(idBan1, idBan2);
-            }
-            LoadDanhSachBan();
-            HienThiHoaDonTheoBan(idBan2);
-        }
-
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            //int idBan = (listViewHoaDon.Tag as Ban)._ID;
-            //formInHoaDon.idBanInHoaDon = idBan;
-            formInHoaDon fI = new formInHoaDon();
-            fI.Show();
-            
-        }
-
-        void LayItemDangChonTrongzListview()
-        {
-            for (int i = 0; i < listViewHoaDon.Items.Count; i++)
+            try
             {
-                if(listViewHoaDon.Items[i].Checked)
-                {
-                    Ban ban = listViewHoaDon.Tag as Ban;
+                int idBan = (listViewHoaDon.Tag as Ban)._ID;
+                string tenBan = (listViewHoaDon.Tag as Ban).TenBan;
+                formInHoaDon.tenBanInHD = tenBan;
+                formInHoaDon.idBanInHD = idBan;
+                formInHoaDon.tenThuNganInHD = thuNgan;
+                formInHoaDon fI = new formInHoaDon();
+                fI.Show();
+            }
+            catch (Exception)
+            {
 
-                    int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
-
-                    DoUong doUong = listViewHoaDon.Items[i].Tag as DoUong;
-
-                    //int idDoUong = ChiTietHoaDonDAL.Instance.LayIDDoUongTuIDHoaDon(idHoaDon);
-
-
-
-                    MessageBox.Show(" ID Hoa don" + idHoaDon);
-
-                    MessageBox.Show(" " + doUong.TenDoUong);
-                }
             }
         }
 
-        private void btnHuyDoUong_Click(object sender, EventArgs e)
+        private void btnHuyHoaDon_Click(object sender, EventArgs e)
         {
-            LayItemDangChonTrongzListview();
+            Ban ban = listViewHoaDon.Tag as Ban;      
+            int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
+
+            try
+            {
+                if (MessageBox.Show("Bạn muốn hủy hóa đơn cho " + ban.TenBan, "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    HoaDonDAL.Instance.HuyHoaDon(idHoaDon, ban._ID);
+                    this.LoadDanhSachBan();
+                    HienThiHoaDonTheoBan(ban._ID);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo lỗi");
+            }
         }
     }
 }

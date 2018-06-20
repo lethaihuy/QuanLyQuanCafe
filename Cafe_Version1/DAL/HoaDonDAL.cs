@@ -81,7 +81,7 @@ namespace Cafe_Version1.DAL
         }
         public object TongTienTheoNgay(string ngay)
         {
-            string query = string.Format("SELECT SUM(tongTien) FROM HoaDon WHERE ngayVao = '{0}'", ngay);
+            string query = string.Format("SELECT SUM(tongTien) FROM HoaDon WHERE ngayVao >= '{0}' and ngayVao < DATEADD(day, 1 , '{0}')", ngay);
             return DataProvider.Instance.ExecuteScalar(query);
         }
 
@@ -93,6 +93,11 @@ namespace Cafe_Version1.DAL
         public DataTable InHoaDon(int idBan)
         {
             return DataProvider.Instance.ExecuteQuery("EXEC USP_InHoaDon @idBan", new object[] { idBan });
+        }
+
+        public object HuyHoaDon(int idHoaDon, int idBan)
+        {
+            return DataProvider.Instance.ExecuteScalar("EXEC USP_HuyHoaDon @idHoaDon , @idBan", new object[] { idHoaDon, idBan });
         }
 
         internal static HoaDonDAL Instance

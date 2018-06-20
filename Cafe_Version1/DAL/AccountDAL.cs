@@ -68,7 +68,7 @@ namespace Cafe_Version1.DAL
 
         public bool SuaTaiKhoan(string username, string password, string tenHienThi, string anhDaiDien)
         {
-            string query = string.Format("UPDATE Account SET tenHienThi = N'{0} , anhDaiDien = '{1}'' WHERE username = '{2}'  AND password = '{3}' ", tenHienThi, anhDaiDien, username, password);
+            string query = string.Format("UPDATE Account SET tenHienThi = N'{0}' , anhDaiDien = '{1}' WHERE username = '{2}'  AND password = '{3}' ", tenHienThi, anhDaiDien, username, password);
             return DataProvider.Instance.ExecuteQuerySuccess(query) > 0;
         }
 

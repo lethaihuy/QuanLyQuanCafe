@@ -289,5 +289,12 @@ namespace Cafe_Version1
         {
             this.Close();
         }
+
+        private void pnBieuDo_Click(object sender, EventArgs e)
+        {
+            chart ch = new chart();
+            this.Hide();
+            ch.Show();
+        }
     }
 }

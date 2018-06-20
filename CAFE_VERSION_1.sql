@@ -236,7 +236,7 @@ SELECT B.tenBan, A.tongTien, A.ngayVao, A.nguoiTao FROM HoaDon AS A, Ban AS B WH
 Select * from HoaDon
 
 
-Select SUM(tongTien) from HoaDon WHERE MONTH(ngayVao) = '2'
+Select SUM(tongTien) from HoaDon WHERE MONTH(ngayVao) = '6'
 
 Select SUM(tongTien) from HoaDon WHERE ngayVao = '2018/04/10'
 
@@ -362,7 +362,7 @@ BEGIN
 	WHERE A.ID = B.IDHoaDon AND B.IDDoUong = C.ID AND A.trangThai = 0 AND A.IDBan = @idBan
 END
 
-EXEC USP_InHoaDon @idBan = 1
+EXEC USP_InHoaDon @idBan = 3
 
 --
 select * from HoaDon Where trangThai = 0
@@ -374,3 +374,5 @@ Delete from ThongTinHoaDon where IDHoaDon  = 184 AND
 SELECT * FROM ThongTinHoaDon WHERE IDHoaDon = 185
 
 SELECT * FROM HoaDon WHERE IDBan = 2 and trangThai = 0
+
+UPDATE Account SET tenHienThi = N'Huy Lê Thái' , anhDaiDien = 'C:\Users\HUY\Desktop\pic1.jpg' WHERE username = 'huy'  AND password = '456' 

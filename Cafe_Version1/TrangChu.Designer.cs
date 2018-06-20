@@ -35,7 +35,6 @@
             this.lbThoiGian = new System.Windows.Forms.Label();
             this.btnQLNhanVien = new System.Windows.Forms.Button();
             this.btnDoanhThu = new System.Windows.Forms.Button();
-            this.btnQuanLyKhoHang = new System.Windows.Forms.Button();
             this.btnThietLap = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,7 +50,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.lbTenQuan = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pnThoiGian.SuspendLayout();
@@ -105,13 +103,14 @@
             this.btnQLNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNhanVien.ForeColor = System.Drawing.Color.White;
             this.btnQLNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.Image")));
-            this.btnQLNhanVien.Location = new System.Drawing.Point(60, 302);
+            this.btnQLNhanVien.Location = new System.Drawing.Point(286, 337);
             this.btnQLNhanVien.Name = "btnQLNhanVien";
-            this.btnQLNhanVien.Size = new System.Drawing.Size(178, 131);
+            this.btnQLNhanVien.Size = new System.Drawing.Size(231, 96);
             this.btnQLNhanVien.TabIndex = 0;
             this.btnQLNhanVien.Text = "QUẢN LÝ NHÂN VIÊN";
             this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLNhanVien.UseVisualStyleBackColor = false;
+            this.btnQLNhanVien.Visible = false;
             this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
             // 
             // btnDoanhThu
@@ -124,7 +123,7 @@
             this.btnDoanhThu.ForeColor = System.Drawing.Color.White;
             this.btnDoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.Image")));
             this.btnDoanhThu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDoanhThu.Location = new System.Drawing.Point(577, 222);
+            this.btnDoanhThu.Location = new System.Drawing.Point(286, 217);
             this.btnDoanhThu.Name = "btnDoanhThu";
             this.btnDoanhThu.Size = new System.Drawing.Size(231, 96);
             this.btnDoanhThu.TabIndex = 0;
@@ -132,24 +131,6 @@
             this.btnDoanhThu.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnDoanhThu.UseVisualStyleBackColor = false;
             this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
-            // 
-            // btnQuanLyKhoHang
-            // 
-            this.btnQuanLyKhoHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
-            this.btnQuanLyKhoHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuanLyKhoHang.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyKhoHang.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyKhoHang.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyKhoHang.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyKhoHang.Image")));
-            this.btnQuanLyKhoHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnQuanLyKhoHang.Location = new System.Drawing.Point(286, 336);
-            this.btnQuanLyKhoHang.Name = "btnQuanLyKhoHang";
-            this.btnQuanLyKhoHang.Size = new System.Drawing.Size(231, 96);
-            this.btnQuanLyKhoHang.TabIndex = 0;
-            this.btnQuanLyKhoHang.Text = "QUẢN LÝ KHO HÀNG";
-            this.btnQuanLyKhoHang.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnQuanLyKhoHang.UseVisualStyleBackColor = false;
             // 
             // btnThietLap
             // 
@@ -162,13 +143,14 @@
             this.btnThietLap.ForeColor = System.Drawing.Color.White;
             this.btnThietLap.Image = ((System.Drawing.Image)(resources.GetObject("btnThietLap.Image")));
             this.btnThietLap.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThietLap.Location = new System.Drawing.Point(286, 222);
+            this.btnThietLap.Location = new System.Drawing.Point(577, 337);
             this.btnThietLap.Name = "btnThietLap";
             this.btnThietLap.Size = new System.Drawing.Size(231, 96);
             this.btnThietLap.TabIndex = 0;
             this.btnThietLap.Text = "THIẾT LẬP QUÁN";
             this.btnThietLap.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnThietLap.UseVisualStyleBackColor = false;
+            this.btnThietLap.Visible = false;
             this.btnThietLap.Click += new System.EventHandler(this.btnThietLap_Click);
             // 
             // btnThanhToan
@@ -250,9 +232,9 @@
             // 
             // picAvatar
             // 
-            this.picAvatar.Location = new System.Drawing.Point(60, 96);
+            this.picAvatar.Location = new System.Drawing.Point(60, 108);
             this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(165, 164);
+            this.picAvatar.Size = new System.Drawing.Size(188, 205);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatar.TabIndex = 5;
             this.picAvatar.TabStop = false;
@@ -264,7 +246,7 @@
             this.lbPhanQuyen.BackColor = System.Drawing.Color.Transparent;
             this.lbPhanQuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhanQuyen.ForeColor = System.Drawing.Color.White;
-            this.lbPhanQuyen.Location = new System.Drawing.Point(68, 282);
+            this.lbPhanQuyen.Location = new System.Drawing.Point(61, 335);
             this.lbPhanQuyen.Name = "lbPhanQuyen";
             this.lbPhanQuyen.Size = new System.Drawing.Size(68, 19);
             this.lbPhanQuyen.TabIndex = 6;
@@ -276,7 +258,7 @@
             this.lbTenTaiKhoanDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lbTenTaiKhoanDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenTaiKhoanDangNhap.ForeColor = System.Drawing.Color.White;
-            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(56, 263);
+            this.lbTenTaiKhoanDangNhap.Location = new System.Drawing.Point(58, 316);
             this.lbTenTaiKhoanDangNhap.Name = "lbTenTaiKhoanDangNhap";
             this.lbTenTaiKhoanDangNhap.Size = new System.Drawing.Size(71, 19);
             this.lbTenTaiKhoanDangNhap.TabIndex = 7;
@@ -286,9 +268,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(790, 431);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 412);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 68);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -299,7 +281,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(676, 467);
+            this.label1.Location = new System.Drawing.Point(135, 464);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 32);
             this.label1.TabIndex = 9;
@@ -311,24 +293,6 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 4000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(695, 337);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 96);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "PHẢN HỒI";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // lbTenQuan
             // 
@@ -352,9 +316,9 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(577, 337);
+            this.button2.Location = new System.Drawing.Point(577, 217);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 96);
+            this.button2.Size = new System.Drawing.Size(231, 96);
             this.button2.TabIndex = 0;
             this.button2.Text = "HƯỚNG DẪN";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -364,12 +328,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(876, 509);
             this.Controls.Add(this.lbTenQuan);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -381,7 +344,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDoanhThu);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnQuanLyKhoHang);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnThietLap);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -404,7 +366,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnQuanLyKhoHang;
         private System.Windows.Forms.Button btnThietLap;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnDoanhThu;
@@ -424,7 +385,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbTenQuan;
         private System.Windows.Forms.Button button2;
     }

@@ -41,7 +41,6 @@
             this.tileGroup11 = new DevExpress.XtraEditors.TileGroup();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.button2 = new System.Windows.Forms.Button();
-            this.pnHeaderHome = new System.Windows.Forms.Panel();
             this.btnBackHome = new Bunifu.Framework.UI.BunifuFlatButton();
             this.button1 = new System.Windows.Forms.Button();
             this.flpDanhSachBan = new System.Windows.Forms.FlowLayoutPanel();
@@ -54,7 +53,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbTongTien = new System.Windows.Forms.Label();
-            this.btnThanhToan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,8 +62,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lbDangChon = new System.Windows.Forms.Label();
-            this.btnChuyenBan = new System.Windows.Forms.Button();
-            this.btnGopBan = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbThuNgan = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -81,8 +77,10 @@
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInHoaDon = new System.Windows.Forms.Button();
-            this.btnHuyDoUong = new System.Windows.Forms.Button();
-            this.pnHeaderHome.SuspendLayout();
+            this.btnHuyHoaDon = new System.Windows.Forms.Button();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.pnHeaderHome = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -90,6 +88,7 @@
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnHeaderHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // tileGroup1
@@ -141,30 +140,16 @@
             this.button2.Text = "button1";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // pnHeaderHome
-            // 
-            this.pnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pnHeaderHome.Controls.Add(this.btnBackHome);
-            this.pnHeaderHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnHeaderHome.Location = new System.Drawing.Point(0, 0);
-            this.pnHeaderHome.Name = "pnHeaderHome";
-            this.pnHeaderHome.Size = new System.Drawing.Size(1216, 30);
-            this.pnHeaderHome.TabIndex = 1;
-            this.pnHeaderHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeaderHome_MouseDown);
-            this.pnHeaderHome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeaderHome_MouseMove);
-            this.pnHeaderHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnHeaderHome_MouseUp);
-            // 
             // btnBackHome
             // 
-            this.btnBackHome.Activecolor = System.Drawing.Color.White;
-            this.btnBackHome.BackColor = System.Drawing.Color.White;
+            this.btnBackHome.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBackHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnBackHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBackHome.BackgroundImage")));
             this.btnBackHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBackHome.BorderRadius = 0;
             this.btnBackHome.ButtonText = "";
             this.btnBackHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackHome.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBackHome.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnBackHome.Iconcolor = System.Drawing.Color.Transparent;
             this.btnBackHome.Iconimage = null;
             this.btnBackHome.Iconimage_right = null;
@@ -178,13 +163,13 @@
             this.btnBackHome.IconZoom = 50D;
             this.btnBackHome.IsTab = false;
             this.btnBackHome.Location = new System.Drawing.Point(0, 0);
-            this.btnBackHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBackHome.Name = "btnBackHome";
-            this.btnBackHome.Normalcolor = System.Drawing.Color.White;
-            this.btnBackHome.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBackHome.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBackHome.OnHovercolor = System.Drawing.Color.White;
             this.btnBackHome.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBackHome.selected = false;
-            this.btnBackHome.Size = new System.Drawing.Size(34, 30);
+            this.btnBackHome.Size = new System.Drawing.Size(34, 27);
             this.btnBackHome.TabIndex = 0;
             this.btnBackHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBackHome.Textcolor = System.Drawing.Color.White;
@@ -262,7 +247,7 @@
             this.listViewHoaDon.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listViewHoaDon.ShowGroups = false;
             this.listViewHoaDon.ShowItemToolTips = true;
-            this.listViewHoaDon.Size = new System.Drawing.Size(447, 321);
+            this.listViewHoaDon.Size = new System.Drawing.Size(447, 304);
             this.listViewHoaDon.TabIndex = 9;
             this.listViewHoaDon.UseCompatibleStateImageBehavior = false;
             this.listViewHoaDon.View = System.Windows.Forms.View.Details;
@@ -300,16 +285,6 @@
             this.lbTongTien.Size = new System.Drawing.Size(72, 19);
             this.lbTongTien.TabIndex = 11;
             this.lbTongTien.Text = "Tổng tiền: ";
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Location = new System.Drawing.Point(764, 519);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(104, 36);
-            this.btnThanhToan.TabIndex = 12;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // panel1
             // 
@@ -392,30 +367,6 @@
             this.lbDangChon.Size = new System.Drawing.Size(81, 19);
             this.lbDangChon.TabIndex = 16;
             this.lbDangChon.Text = "Đang chọn: ";
-            // 
-            // btnChuyenBan
-            // 
-            this.btnChuyenBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnChuyenBan.Location = new System.Drawing.Point(911, 519);
-            this.btnChuyenBan.Name = "btnChuyenBan";
-            this.btnChuyenBan.Size = new System.Drawing.Size(104, 36);
-            this.btnChuyenBan.TabIndex = 17;
-            this.btnChuyenBan.Text = "Chuyển đến";
-            this.btnChuyenBan.UseVisualStyleBackColor = true;
-            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
-            // 
-            // btnGopBan
-            // 
-            this.btnGopBan.AllowDrop = true;
-            this.btnGopBan.Location = new System.Drawing.Point(764, 561);
-            this.btnGopBan.Name = "btnGopBan";
-            this.btnGopBan.Size = new System.Drawing.Size(104, 36);
-            this.btnGopBan.TabIndex = 17;
-            this.btnGopBan.Text = "Gộp bàn";
-            this.btnGopBan.UseVisualStyleBackColor = true;
-            this.btnGopBan.Click += new System.EventHandler(this.btnGopBan_Click);
             // 
             // panel5
             // 
@@ -535,10 +486,10 @@
             // cbChuyenBan
             // 
             this.cbChuyenBan.FormattingEnabled = true;
-            this.cbChuyenBan.Location = new System.Drawing.Point(1034, 525);
+            this.cbChuyenBan.Location = new System.Drawing.Point(1100, 498);
             this.cbChuyenBan.MaxDropDownItems = 50;
             this.cbChuyenBan.Name = "cbChuyenBan";
-            this.cbChuyenBan.Size = new System.Drawing.Size(102, 27);
+            this.cbChuyenBan.Size = new System.Drawing.Size(109, 27);
             this.cbChuyenBan.TabIndex = 22;
             // 
             // pictureBox1
@@ -554,31 +505,80 @@
             // 
             // btnInHoaDon
             // 
-            this.btnInHoaDon.Location = new System.Drawing.Point(911, 562);
+            this.btnInHoaDon.BackColor = System.Drawing.Color.White;
+            this.btnInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.Image")));
+            this.btnInHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInHoaDon.Location = new System.Drawing.Point(964, 548);
             this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.Size = new System.Drawing.Size(92, 35);
-            this.btnInHoaDon.TabIndex = 24;
-            this.btnInHoaDon.Text = "In hóa đơn";
-            this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Size = new System.Drawing.Size(107, 35);
+            this.btnInHoaDon.TabIndex = 26;
+            this.btnInHoaDon.Text = "Xuất HD";
+            this.btnInHoaDon.UseVisualStyleBackColor = false;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
-            // btnHuyDoUong
+            // btnHuyHoaDon
             // 
-            this.btnHuyDoUong.Location = new System.Drawing.Point(1034, 564);
-            this.btnHuyDoUong.Name = "btnHuyDoUong";
-            this.btnHuyDoUong.Size = new System.Drawing.Size(105, 30);
-            this.btnHuyDoUong.TabIndex = 24;
-            this.btnHuyDoUong.Text = "Hủy đồ uống";
-            this.btnHuyDoUong.UseVisualStyleBackColor = true;
-            this.btnHuyDoUong.Click += new System.EventHandler(this.btnHuyDoUong_Click);
+            this.btnHuyHoaDon.BackColor = System.Drawing.Color.White;
+            this.btnHuyHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyHoaDon.Image")));
+            this.btnHuyHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuyHoaDon.Location = new System.Drawing.Point(1100, 548);
+            this.btnHuyHoaDon.Name = "btnHuyHoaDon";
+            this.btnHuyHoaDon.Size = new System.Drawing.Size(107, 35);
+            this.btnHuyHoaDon.TabIndex = 26;
+            this.btnHuyHoaDon.Text = "Hủy HD";
+            this.btnHuyHoaDon.UseVisualStyleBackColor = false;
+            this.btnHuyHoaDon.Click += new System.EventHandler(this.btnHuyHoaDon_Click);
+            // 
+            // btnChuyenBan
+            // 
+            this.btnChuyenBan.BackColor = System.Drawing.Color.White;
+            this.btnChuyenBan.Location = new System.Drawing.Point(963, 493);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(107, 35);
+            this.btnChuyenBan.TabIndex = 26;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = false;
+            this.btnChuyenBan.Click += new System.EventHandler(this.btnChuyenBan_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.AllowDrop = true;
+            this.btnThanhToan.AutoEllipsis = true;
+            this.btnThanhToan.BackColor = System.Drawing.Color.White;
+            this.btnThanhToan.ForeColor = System.Drawing.Color.Red;
+            this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThanhToan.Location = new System.Drawing.Point(759, 498);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(124, 66);
+            this.btnThanhToan.TabIndex = 26;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
+            // pnHeaderHome
+            // 
+            this.pnHeaderHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnHeaderHome.Controls.Add(this.btnBackHome);
+            this.pnHeaderHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnHeaderHome.Location = new System.Drawing.Point(0, 0);
+            this.pnHeaderHome.Name = "pnHeaderHome";
+            this.pnHeaderHome.Size = new System.Drawing.Size(1216, 27);
+            this.pnHeaderHome.TabIndex = 1;
+            this.pnHeaderHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeaderHome_MouseDown);
+            this.pnHeaderHome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeaderHome_MouseMove);
+            this.pnHeaderHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnHeaderHome_MouseUp);
             // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1216, 608);
-            this.Controls.Add(this.btnHuyDoUong);
+            this.Controls.Add(this.btnChuyenBan);
+            this.Controls.Add(this.btnHuyHoaDon);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnInHoaDon);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbChuyenBan);
@@ -586,13 +586,10 @@
             this.Controls.Add(this.lbGio);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btnGopBan);
-            this.Controls.Add(this.btnChuyenBan);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.listViewHoaDon);
             this.Controls.Add(this.flpDoUongTheoDanhMuc);
             this.Controls.Add(this.cbDanhMuc);
@@ -605,9 +602,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
+            this.Text = "4";
             this.Load += new System.EventHandler(this.formHome_Load);
-            this.pnHeaderHome.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -621,6 +617,7 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnHeaderHome.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -638,7 +635,6 @@
         private DevExpress.XtraEditors.TileGroup tileGroup11;
         private DevExpress.XtraEditors.TileGroup tileGroup2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel pnHeaderHome;
         private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuFlatButton btnBackHome;
         private System.Windows.Forms.FlowLayoutPanel flpDanhSachBan;
@@ -647,7 +643,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ListView listViewHoaDon;
         private System.Windows.Forms.Label lbTongTien;
-        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -663,8 +658,6 @@
         private System.Windows.Forms.Label lbDangChon;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnGopBan;
-        private System.Windows.Forms.Button btnChuyenBan;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel7;
@@ -677,7 +670,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox cbChuyenBan;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnChuyenBan;
+        private System.Windows.Forms.Button btnHuyHoaDon;
+        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnInHoaDon;
-        private System.Windows.Forms.Button btnHuyDoUong;
+        private System.Windows.Forms.Panel pnHeaderHome;
     }
 }

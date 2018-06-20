@@ -720,7 +720,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 33);
+            this.panel1.Size = new System.Drawing.Size(898, 29);
             this.panel1.TabIndex = 1;
             // 
             // btnBack
@@ -752,7 +752,7 @@
             this.btnBack.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnBack.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBack.selected = false;
-            this.btnBack.Size = new System.Drawing.Size(34, 33);
+            this.btnBack.Size = new System.Drawing.Size(34, 29);
             this.btnBack.TabIndex = 1;
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBack.Textcolor = System.Drawing.Color.White;

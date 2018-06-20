@@ -1,4 +1,5 @@
-﻿using Cafe_Version1.DAL;
+﻿using Cafe_Version1;
+using Cafe_Version1.DAL;
 using Cafe_Version1.DTO;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace Cafe_Version1
         public formUser()
         {
             InitializeComponent();
+            this.picAvatar.Image = Image.FromFile(TaiKhoanHienTai.AnhDaiDien.ToString());
         }
 
         private static Account taiKhoanHienTai;
@@ -69,7 +71,7 @@ namespace Cafe_Version1
         {
             this.Close();
         }
-        public string filename = string.Empty;
+        public  string filename= string.Empty;
         private void btnLoadAnh_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
@@ -94,14 +96,29 @@ namespace Cafe_Version1
                 }
                 else
                 {
-                    if (AccountDAL.Instance.ThayDoiMatKhau(username, passwordMoi, tenHienThi))
+                    if (KiemTraPass(username, passwordcu))
                     {
-                        MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo");
+                        if (AccountDAL.Instance.ThayDoiMatKhau(username, passwordMoi, tenHienThi))
+                        {
+                            if (MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            {
+                                formDangNhap f = new formDangNhap();
+                                this.Close();
+                                this.Hide();
+                                f.ShowDialog();
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đổi mật khẩu không thành công!", "Thông báo");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Đổi mật khẩu không thành công!", "Thông báo");
+                        MessageBox.Show("Password không đúng");
                     }
+
                 }
             }
         }
@@ -136,9 +153,12 @@ namespace Cafe_Version1
                     {
                         if (KiemTraPass(username, passwordcu) == true)
                         {
-                            if (AccountDAL.Instance.SuaTaiKhoan(username, filename, passwordcu, tenHienThi))
+                            if (AccountDAL.Instance.SuaTaiKhoan(username, passwordcu, tenHienThi, filename))
                             {
                                 MessageBox.Show("Cập nhật tài khoản thành công !", "Thông báo");
+                                formTrangChu.fileNameUser = filename;
+                                formTrangChu f = new formTrangChu();
+                                f.LoadAvatar();
                             }
                             else
                             {
@@ -156,7 +176,7 @@ namespace Cafe_Version1
                 {
                     MessageBox.Show(ex.Message);
                 }
-                
+
             }
 
             //Đổi mật khẩu

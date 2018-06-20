@@ -43,6 +43,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbDangXem = new System.Windows.Forms.Label();
             this.dtpkNgayHienTai = new System.Windows.Forms.DateTimePicker();
             this.cbCheDoXem = new System.Windows.Forms.ComboBox();
             this.dgvXemDoanhthu = new System.Windows.Forms.DataGridView();
@@ -53,18 +54,15 @@
             this.lbSLHDTheoNgay = new System.Windows.Forms.Label();
             this.lbTongTienTheoHD = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lbDangXem = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnBieuDo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbClose = new System.Windows.Forms.Label();
-            this.btnXemHet = new System.Windows.Forms.Button();
-            this.btnXuatExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXemDoanhthu)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.pnBieuDo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,8 +127,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnXuatExcel);
-            this.panel2.Controls.Add(this.btnXemHet);
             this.panel2.Controls.Add(this.lbDangXem);
             this.panel2.Controls.Add(this.dtpkNgayHienTai);
             this.panel2.Controls.Add(this.cbCheDoXem);
@@ -139,6 +135,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(779, 410);
             this.panel2.TabIndex = 1;
+            // 
+            // lbDangXem
+            // 
+            this.lbDangXem.AutoSize = true;
+            this.lbDangXem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbDangXem.Location = new System.Drawing.Point(156, 17);
+            this.lbDangXem.Name = "lbDangXem";
+            this.lbDangXem.Size = new System.Drawing.Size(77, 19);
+            this.lbDangXem.TabIndex = 4;
+            this.lbDangXem.Text = "Đang xem :";
             // 
             // dtpkNgayHienTai
             // 
@@ -273,35 +279,27 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // lbDangXem
+            // pnBieuDo
             // 
-            this.lbDangXem.AutoSize = true;
-            this.lbDangXem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbDangXem.Location = new System.Drawing.Point(156, 17);
-            this.lbDangXem.Name = "lbDangXem";
-            this.lbDangXem.Size = new System.Drawing.Size(77, 19);
-            this.lbDangXem.TabIndex = 4;
-            this.lbDangXem.Text = "Đang xem :";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(395, 8);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(155, 49);
-            this.panel5.TabIndex = 0;
+            this.pnBieuDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.pnBieuDo.Controls.Add(this.label1);
+            this.pnBieuDo.Location = new System.Drawing.Point(395, 8);
+            this.pnBieuDo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnBieuDo.Name = "pnBieuDo";
+            this.pnBieuDo.Size = new System.Drawing.Size(155, 49);
+            this.pnBieuDo.TabIndex = 0;
+            this.pnBieuDo.Click += new System.EventHandler(this.pnBieuDo_Click);
+            this.pnBieuDo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnBieuDo_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Location = new System.Drawing.Point(32, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.Size = new System.Drawing.Size(92, 19);
             this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.label1.Text = "Biểu đồ tháng";
             // 
             // lbClose
             // 
@@ -317,25 +315,6 @@
             this.lbClose.Text = "Close";
             this.lbClose.Click += new System.EventHandler(this.lbClose_Click);
             // 
-            // btnXemHet
-            // 
-            this.btnXemHet.Location = new System.Drawing.Point(392, 17);
-            this.btnXemHet.Name = "btnXemHet";
-            this.btnXemHet.Size = new System.Drawing.Size(92, 27);
-            this.btnXemHet.TabIndex = 5;
-            this.btnXemHet.Text = "Xem hết";
-            this.btnXemHet.UseVisualStyleBackColor = true;
-            // 
-            // btnXuatExcel
-            // 
-            this.btnXuatExcel.AutoEllipsis = true;
-            this.btnXuatExcel.Location = new System.Drawing.Point(510, 17);
-            this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.Size = new System.Drawing.Size(92, 27);
-            this.btnXuatExcel.TabIndex = 6;
-            this.btnXuatExcel.Text = "Xuất Excel";
-            this.btnXuatExcel.UseVisualStyleBackColor = true;
-            // 
             // FormDoanhthu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -348,7 +327,7 @@
             this.Controls.Add(this.lbSLHDTheoNgay);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnBieuDo);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -367,8 +346,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXemDoanhthu)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.pnBieuDo.ResumeLayout(false);
+            this.pnBieuDo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,10 +373,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayVao;
         private System.Windows.Forms.DataGridViewTextBoxColumn nguoiTao;
         private System.Windows.Forms.Label lbDangXem;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnBieuDo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbClose;
-        private System.Windows.Forms.Button btnXuatExcel;
-        private System.Windows.Forms.Button btnXemHet;
     }
 }

@@ -54,7 +54,6 @@ namespace Cafe_Version1
             List<string> danhSach = new List<string>();
             danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\1_R6X-YoVyhIgQQWAgPY8P9Q.jpeg");
             danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\bg.jpg");
-            danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\strawberry-fruit-fresh-strawberries-food-fruit.jpg");
             danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\night-sky-aurora-mechanic.jpg");
             danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\jellyfish-seas-under-water.jpg");
             danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\pencils_hires.jpg");
@@ -62,6 +61,7 @@ namespace Cafe_Version1
             danhSach.Add(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\image\hoa.jpg");
             return danhSach;
         }
+        public static string fileNameUser;
 
         void DoiTaiKhoan(string loaiTK)
         {
@@ -70,7 +70,10 @@ namespace Cafe_Version1
             {
                 this.btnQLNhanVien.Enabled = true;
                 this.btnThietLap.Enabled = true;
+                this.btnQLNhanVien.Visible = true;
+                this.btnThietLap.Visible = true;
             }
+
             try
             {
                 this.lbPhanQuyen.Text = TaiKhoanDangNhap.LoaiTaiKhoan;
@@ -103,6 +106,7 @@ namespace Cafe_Version1
         private void btnThietLap_Click(object sender, EventArgs e)
         {
             formDanhMuc fDanhMuc = new formDanhMuc();
+            this.Hide();
             fDanhMuc.ShowDialog();
         }
 
@@ -111,11 +115,20 @@ namespace Cafe_Version1
             formQLTaiKhoan fTaiKhoan = new formQLTaiKhoan();
             fTaiKhoan.ShowDialog();
         }
-
+        public void LoadAvatar()
+        {
+            if (fileNameUser != null)
+            {
+                this.lbTenTaiKhoanDangNhap.Text = "(" + TaiKhoanDangNhap.TenHienThi + ")";
+                this.picAvatar.Image = Image.FromFile(fileNameUser);
+                fileNameUser = null;
+            }
+        }
         //int chay = 10;
         private void timer1_Tick(object sender, EventArgs e)
         {
             time = DateTime.Now;
+            LoadAvatar();
 
             if (time.DayOfWeek == DayOfWeek.Monday)
             {
@@ -171,7 +184,7 @@ namespace Cafe_Version1
                 Color mau = Color.FromArgb(ran.Next(256), ran.Next(256), ran.Next(256));
                 lbTenQuan.ForeColor = mau;
 
-                this.BackgroundImage = Image.FromFile(ds[ran.Next(0, 8)]);
+                this.BackgroundImage = Image.FromFile(ds[ran.Next(1, 7)]);
 
             }
             catch (Exception ex)

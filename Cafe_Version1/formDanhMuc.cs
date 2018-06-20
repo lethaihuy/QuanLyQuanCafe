@@ -195,7 +195,7 @@ namespace Cafe_Version1
                     if (DanhMucDAL.Instance.ThemDanhMuc(tenDM))
                     {
                         MessageBox.Show("Thêm Thành công!", "Thông báo");
-                        this.LoadDanmuc();
+
                     }
                 }
                 else
@@ -203,10 +203,10 @@ namespace Cafe_Version1
                     if (DanhMucDAL.Instance.SuaDanhMuc(id, tenDM))
                     {
                         MessageBox.Show("Sửa Thành công!", "Thông báo");
-                        this.LoadDanmuc();
                     }
                 }
                 this.txtTenDanhMuc.Enabled = false;
+                this.LoadDanmuc();
             }
         }
 
@@ -217,20 +217,11 @@ namespace Cafe_Version1
             this.cbThuocDanhMuc.Enabled = false;
             this.txtGiaTien.Enabled = false;
         }
-
-        public void ResetFormDanhMuc()
-        {
-
-        }
-
-        public void ResetFormBan()
-        {
-
-        }
         #endregion
 
         private void btnThemDoUong_Click(object sender, EventArgs e)
         {
+            LoadDanmuc();
             this.txtTenDoUong.Enabled = true;
             this.cbThuocDanhMuc.Enabled = true;
             this.txtGiaTien.Enabled = true;
@@ -240,10 +231,12 @@ namespace Cafe_Version1
 
         private void btnSuaDoUong_Click(object sender, EventArgs e)
         {
+            LoadDanmuc();
             this.txtTenDoUong.Enabled = true;
             this.cbThuocDanhMuc.Enabled = true;
             this.txtGiaTien.Enabled = true;
             this.txtTenDoUong.Focus();
+            this.flag = false;
         }
 
         private void btnXoaDoUong_Click(object sender, EventArgs e)
@@ -270,7 +263,7 @@ namespace Cafe_Version1
             }
             else
             {
-                if (flag)
+                if (flag == true)
                 {
                     if (DoUongDAL.Instance.ThemDoUong(tenNuoc, thuocDM, giaTien))
                     {
