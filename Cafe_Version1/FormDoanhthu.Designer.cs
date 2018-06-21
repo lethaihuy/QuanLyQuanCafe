@@ -289,7 +289,6 @@
             this.pnBieuDo.Size = new System.Drawing.Size(155, 49);
             this.pnBieuDo.TabIndex = 0;
             this.pnBieuDo.Click += new System.EventHandler(this.pnBieuDo_Click);
-            this.pnBieuDo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnBieuDo_Paint);
             // 
             // label1
             // 

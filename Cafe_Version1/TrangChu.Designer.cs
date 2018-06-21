@@ -51,7 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.lbTenQuan = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHuongDan = new System.Windows.Forms.Button();
             this.pnThoiGian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,7 +115,7 @@
             // 
             // btnDoanhThu
             // 
-            this.btnDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnDoanhThu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoanhThu.FlatAppearance.BorderSize = 0;
             this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,7 +134,7 @@
             // 
             // btnThietLap
             // 
-            this.btnThietLap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.btnThietLap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnThietLap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThietLap.Enabled = false;
             this.btnThietLap.FlatAppearance.BorderSize = 0;
@@ -155,12 +155,12 @@
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(0)))));
+            this.btnThanhToan.BackColor = System.Drawing.Color.Yellow;
             this.btnThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThanhToan.FlatAppearance.BorderSize = 0;
             this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
             this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnThanhToan.Location = new System.Drawing.Point(286, 108);
@@ -220,7 +220,7 @@
             this.lbThu.BackColor = System.Drawing.Color.Transparent;
             this.lbThu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThu.ForeColor = System.Drawing.Color.White;
-            this.lbThu.Location = new System.Drawing.Point(166, 22);
+            this.lbThu.Location = new System.Drawing.Point(171, 22);
             this.lbThu.Name = "lbThu";
             this.lbThu.Size = new System.Drawing.Size(63, 19);
             this.lbThu.TabIndex = 3;
@@ -291,38 +291,40 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 4000;
+            this.timer2.Interval = 7000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // lbTenQuan
             // 
             this.lbTenQuan.AutoSize = true;
             this.lbTenQuan.BackColor = System.Drawing.Color.Transparent;
-            this.lbTenQuan.Font = new System.Drawing.Font("Garamond", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenQuan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
+            this.lbTenQuan.Font = new System.Drawing.Font("Garamond", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenQuan.ForeColor = System.Drawing.Color.White;
             this.lbTenQuan.Location = new System.Drawing.Point(278, 21);
             this.lbTenQuan.Name = "lbTenQuan";
-            this.lbTenQuan.Size = new System.Drawing.Size(351, 45);
+            this.lbTenQuan.Size = new System.Drawing.Size(304, 45);
             this.lbTenQuan.TabIndex = 11;
-            this.lbTenQuan.Text = "aBc coffee xin chào";
+            this.lbTenQuan.Text = "Viva Start Coffee";
+            this.lbTenQuan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button2
+            // btnHuongDan
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(577, 217);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(231, 96);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "HƯỚNG DẪN";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnHuongDan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnHuongDan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuongDan.FlatAppearance.BorderSize = 0;
+            this.btnHuongDan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuongDan.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuongDan.ForeColor = System.Drawing.Color.Black;
+            this.btnHuongDan.Image = ((System.Drawing.Image)(resources.GetObject("btnHuongDan.Image")));
+            this.btnHuongDan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnHuongDan.Location = new System.Drawing.Point(577, 217);
+            this.btnHuongDan.Name = "btnHuongDan";
+            this.btnHuongDan.Size = new System.Drawing.Size(231, 96);
+            this.btnHuongDan.TabIndex = 0;
+            this.btnHuongDan.Text = "HƯỚNG DẪN";
+            this.btnHuongDan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHuongDan.UseVisualStyleBackColor = false;
+            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
             // 
             // formTrangChu
             // 
@@ -343,7 +345,7 @@
             this.Controls.Add(this.btnQLNhanVien);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDoanhThu);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnHuongDan);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnThietLap);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -386,6 +388,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label lbTenQuan;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHuongDan;
     }
 }

@@ -47,6 +47,7 @@ namespace Cafe_Version1.DAL
 
         public bool XoaDanhMuc(int id)
         {
+            DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM DoUong Where IDDanhMuc = " + id);
             return DataProvider.Instance.ExecuteQuerySuccess("DELETE FROM DanhMuc WHERE ID = " + id) > 0;
         }
         internal static DanhMucDAL Instance

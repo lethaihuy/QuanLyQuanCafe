@@ -209,3 +209,4 @@ D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\RdlCompile.cache
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\RdlCompile.compiled
 D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version1.chart.resources
+D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\obj\Debug\Cafe_Version1.fromHuongDan.resources

@@ -70,7 +70,7 @@ namespace Cafe_Version1
                 if (item.TrangThai == "Trống")
                 {
                     //btnBan.BackColor = Color.Pink;
-                    btnBan.BackgroundImage= Image.FromFile(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\icon\coffee-cup-64.png");
+                    btnBan.BackgroundImage = Image.FromFile(@"D:\Do An C#\He Quan Tri CSDL\QuanLyQuanCafe\Cafe_Version1\icon\coffee-cup-64.png");
                     demBanTrong++;
                 }
                 else
@@ -161,28 +161,29 @@ namespace Cafe_Version1
 
         private void BtnDoUong_MouseClick(object sender, MouseEventArgs e)
         {
-            Ban ban = listViewHoaDon.Tag as Ban;
-
-            int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
-
-            //int idBan = (flpDanhSachBan.Tag as Ban)._ID;
-
-            DoUong doUong = (sender as Button).Tag as DoUong;
-            int idDoUong = doUong.ID;
-            if (idHoaDon == -1)
+            try
             {
-                HoaDonDAL.Instance.ThemHoaDon(ban._ID, thuNgan);
-                ChiTietHoaDonDAL.Instance.ThemChiTietHoaDon(HoaDonDAL.Instance.MAXIDHoaDon(), idDoUong, 1);
-            }
-            else
-            {
-                ChiTietHoaDonDAL.Instance.ThemChiTietHoaDon(idHoaDon, idDoUong, 1);
-            }
+                Ban ban = listViewHoaDon.Tag as Ban;
+                int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
+                DoUong doUong = (sender as Button).Tag as DoUong;
+                int idDoUong = doUong.ID;
+                if (idHoaDon == -1)
+                {
+                    HoaDonDAL.Instance.ThemHoaDon(ban._ID, thuNgan);
+                    ChiTietHoaDonDAL.Instance.ThemChiTietHoaDon(HoaDonDAL.Instance.MAXIDHoaDon(), idDoUong, 1);
+                }
+                else
+                {
+                    ChiTietHoaDonDAL.Instance.ThemChiTietHoaDon(idHoaDon, idDoUong, 1);
+                }
 
-            HienThiHoaDonTheoBan(ban._ID);
+                HienThiHoaDonTheoBan(ban._ID);
+                //Load bàn khi thêm đồ uống
+                LoadDanhSachBan();
+            }
+            catch (Exception)
+            { }
 
-            //Load bàn khi thêm đồ uống
-            LoadDanhSachBan();
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -310,11 +311,10 @@ namespace Cafe_Version1
 
         private void btnHuyHoaDon_Click(object sender, EventArgs e)
         {
-            Ban ban = listViewHoaDon.Tag as Ban;      
-            int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
-
             try
             {
+                Ban ban = listViewHoaDon.Tag as Ban;
+                int idHoaDon = HoaDonDAL.Instance.LayIDHoaDonTuIDBan(ban._ID);
                 if (MessageBox.Show("Bạn muốn hủy hóa đơn cho " + ban.TenBan, "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     HoaDonDAL.Instance.HuyHoaDon(idHoaDon, ban._ID);

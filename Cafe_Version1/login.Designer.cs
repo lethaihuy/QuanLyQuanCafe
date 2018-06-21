@@ -50,7 +50,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
             this.txtPassword.HintText = "";
-            this.txtPassword.isPassword = false;
+            this.txtPassword.isPassword = true;
             this.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));
             this.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(111)))), ((int)(((byte)(150)))));

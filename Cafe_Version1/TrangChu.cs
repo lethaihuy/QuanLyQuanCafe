@@ -108,6 +108,7 @@ namespace Cafe_Version1
             formDanhMuc fDanhMuc = new formDanhMuc();
             this.Hide();
             fDanhMuc.ShowDialog();
+            this.Show();
         }
 
         private void btnQLNhanVien_Click(object sender, EventArgs e)
@@ -182,9 +183,9 @@ namespace Cafe_Version1
                 List<string> ds = DanhSachBackground();
                 Random ran = new Random();
                 Color mau = Color.FromArgb(ran.Next(256), ran.Next(256), ran.Next(256));
-                lbTenQuan.ForeColor = mau;
+                //lbTenQuan.ForeColor = mau;
 
-                this.BackgroundImage = Image.FromFile(ds[ran.Next(1, 7)]);
+                this.BackgroundImage = Image.FromFile(ds[ran.Next(0, 7)]);
 
             }
             catch (Exception ex)
@@ -274,5 +275,12 @@ namespace Cafe_Version1
 
         #endregion
 
+        private void btnHuongDan_Click(object sender, EventArgs e)
+        {
+            fromHuongDan fhd = new fromHuongDan();
+            this.Hide();
+            fhd.ShowDialog();
+            this.Show();
+        }
     }
 }

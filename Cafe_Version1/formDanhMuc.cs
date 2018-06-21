@@ -29,7 +29,7 @@ namespace Cafe_Version1
 
         public void LoadData()
         {
-            LoadDanmuc();
+            LoadDanhMuc();
             LoadDanhSachBan();
             LoadDanhSachDoUong();
 
@@ -43,7 +43,7 @@ namespace Cafe_Version1
             BindingcbDanhMucTheoTen(cbThuocDanhMuc);
         }
 
-        public void LoadDanmuc()
+        public void LoadDanhMuc()
         {
             dsDanhMuc.DataSource = DanhMucDAL.Instance.LayDanhSachDanhMuc();
         }
@@ -173,7 +173,7 @@ namespace Cafe_Version1
             int id = int.Parse(txtIDDanhMuc.Text);
             if (DanhMucDAL.Instance.XoaDanhMuc(id))
             {
-                LoadDanmuc();
+                LoadDanhMuc();
                 MessageBox.Show("Đã xóa danh mục!", "Thông báo");
             }
         }
@@ -206,7 +206,7 @@ namespace Cafe_Version1
                     }
                 }
                 this.txtTenDanhMuc.Enabled = false;
-                this.LoadDanmuc();
+                this.LoadDanhMuc();
             }
         }
 
@@ -221,7 +221,8 @@ namespace Cafe_Version1
 
         private void btnThemDoUong_Click(object sender, EventArgs e)
         {
-            LoadDanmuc();
+            LoadDanhMuc();
+            BindingcbDanhMucTheoTen(cbThuocDanhMuc);
             this.txtTenDoUong.Enabled = true;
             this.cbThuocDanhMuc.Enabled = true;
             this.txtGiaTien.Enabled = true;
@@ -231,7 +232,8 @@ namespace Cafe_Version1
 
         private void btnSuaDoUong_Click(object sender, EventArgs e)
         {
-            LoadDanmuc();
+            LoadDanhMuc();
+            BindingcbDanhMucTheoTen(cbThuocDanhMuc);
             this.txtTenDoUong.Enabled = true;
             this.cbThuocDanhMuc.Enabled = true;
             this.txtGiaTien.Enabled = true;

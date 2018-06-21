@@ -294,7 +294,7 @@ namespace Cafe_Version1
         {
             chart ch = new chart();
             this.Hide();
-            ch.Show();
+            ch.ShowDialog();
         }
     }
 }

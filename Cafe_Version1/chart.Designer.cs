@@ -35,14 +35,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chart));
             this.panel1 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnheader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnheader.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,16 +71,16 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // panel2
+            // pnheader
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 44);
-            this.panel2.TabIndex = 0;
+            this.pnheader.BackColor = System.Drawing.Color.Black;
+            this.pnheader.Controls.Add(this.btnClose);
+            this.pnheader.Controls.Add(this.label1);
+            this.pnheader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnheader.Location = new System.Drawing.Point(0, 0);
+            this.pnheader.Name = "pnheader";
+            this.pnheader.Size = new System.Drawing.Size(892, 44);
+            this.pnheader.TabIndex = 0;
             // 
             // label1
             // 
@@ -107,16 +106,11 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.TargetControl = this.pnheader;
             this.bunifuDragControl1.Vertical = true;
             // 
             // chart
@@ -125,15 +119,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(892, 527);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnheader);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "chart";
             this.Text = "chart";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnheader.ResumeLayout(false);
+            this.pnheader.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -141,11 +135,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnheader;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

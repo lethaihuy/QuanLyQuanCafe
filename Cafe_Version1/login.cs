@@ -45,7 +45,8 @@ namespace Cafe_Version1
 
         private void formDangNhap_Load(object sender, EventArgs e)
         {
-            this.ResetMouseEventArgs();
+            //this.ResetMouseEventArgs();
+            txtPassword.isPassword = true;
         }
 
 
