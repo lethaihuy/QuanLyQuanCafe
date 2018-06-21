@@ -43,13 +43,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
-            this.btnThemTaiKhoan = new System.Windows.Forms.Button();
-            this.picAnh = new System.Windows.Forms.PictureBox();
             this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiTaikhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
+            this.btnThemTaiKhoan = new System.Windows.Forms.Button();
+            this.picAnh = new System.Windows.Forms.PictureBox();
             this.txtFilename = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
@@ -217,8 +217,37 @@
             this.dgvTaiKhoan.GridColor = System.Drawing.Color.LightGray;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(325, 7);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(522, 319);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(522, 354);
             this.dgvTaiKhoan.TabIndex = 1;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.FillWeight = 87.29955F;
+            this.username.HeaderText = "Username";
+            this.username.Name = "username";
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.FillWeight = 81.19404F;
+            this.password.HeaderText = "Password";
+            this.password.Name = "password";
+            // 
+            // tenHienThi
+            // 
+            this.tenHienThi.DataPropertyName = "tenHienThi";
+            this.tenHienThi.FillWeight = 152.2843F;
+            this.tenHienThi.HeaderText = "Tên hiển thị";
+            this.tenHienThi.Name = "tenHienThi";
+            // 
+            // loaiTaikhoan
+            // 
+            this.loaiTaikhoan.DataPropertyName = "loaiTaiKhoan";
+            this.loaiTaikhoan.FillWeight = 73.07727F;
+            this.loaiTaikhoan.HeaderText = "Loại TK";
+            this.loaiTaikhoan.Name = "loaiTaikhoan";
+            this.loaiTaikhoan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnXoaTaiKhoan
             // 
@@ -261,35 +290,6 @@
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAnh.TabIndex = 7;
             this.picAnh.TabStop = false;
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.FillWeight = 87.29955F;
-            this.username.HeaderText = "Username";
-            this.username.Name = "username";
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.FillWeight = 81.19404F;
-            this.password.HeaderText = "Password";
-            this.password.Name = "password";
-            // 
-            // tenHienThi
-            // 
-            this.tenHienThi.DataPropertyName = "tenHienThi";
-            this.tenHienThi.FillWeight = 152.2843F;
-            this.tenHienThi.HeaderText = "Tên hiển thị";
-            this.tenHienThi.Name = "tenHienThi";
-            // 
-            // loaiTaikhoan
-            // 
-            this.loaiTaikhoan.DataPropertyName = "loaiTaiKhoan";
-            this.loaiTaikhoan.FillWeight = 73.07727F;
-            this.loaiTaikhoan.HeaderText = "Loại TK";
-            this.loaiTaikhoan.Name = "loaiTaikhoan";
-            this.loaiTaikhoan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // txtFilename
             // 

@@ -32,8 +32,10 @@ namespace Cafe_Version1.DAL
 
         public bool Login(string username, string password)
         {
-            string query = "SELECT * FROM Account WHERE username = '" + username + "' AND password='" + password + "'";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            //string query = "SELECT * FROM Account WHERE username = '" + username + "' AND password='" + password + "'";
+            //DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            DataTable result = DataProvider.Instance.ExecuteQuery("Exec USP_Login @username , @password", new object[] { username, password});
+
             return result.Rows.Count > 0;
         }
 
